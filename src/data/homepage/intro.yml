@@ -1,0 +1,23 @@
+slug: intro
+title: Intro
+description: What I am all about.
+biography:
+  - 
+    Hi, my name is Vitor and I have been living in Berlin since 2013.
+    I was born in Brazil and finished a Bachelor in Systems Analysis
+    in 2009 and have been working as a Full Stack Software Engineer
+    for most of my career. PHP, MySQL and Symfony have always been my
+    best friends, along with HTML+CSS and React.js and Redux, which
+    are also part of my daily routine.
+  - 
+    I am a fan of writing code that anyone can read and maintain,
+    using an architecture that is scalable and maintainable for the
+    future. Whether this means extracting things into a microservice,
+    or refactoring old legacy code in a way they don&apos;t make
+    people cry when opening the source code, I always make sure the
+    code stays relevant and bug-free.
+  -
+    I love programming and feel very confortable with learning (and
+    using!) new technologies and tools. In fact, being a noob at
+    something and then quickly learning and mastering about it is
+    something that keeps me very motivated at work.

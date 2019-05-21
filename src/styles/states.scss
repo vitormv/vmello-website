@@ -1,0 +1,94 @@
+@include breakpoint($from: sm) {
+  .l-section__container {
+    padding: 3.15rem 3.5rem 3.15rem;
+  }
+}
+
+@include breakpoint($until: md) {
+  .l-section:not(.l-section--full-size) .l-section__header {
+    border-bottom: 1px solid #404242;
+    border-top: 1px solid #404242;
+    background: $shade4;
+  }
+}
+
+@include breakpoint($from: md) {
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+  }
+
+  .l-main {
+    height: 100%;
+  }
+
+  .l-section {
+    display: flex;
+    margin: auto;
+
+    &:nth-child(odd) {
+      background-color: $shade2;
+
+      .l-section__header {
+        background-color: $shade1;
+      }
+    }
+
+    &:nth-child(even) {
+      background-color: $shade1;
+
+      .l-section__header {
+        background-color: $shade3;
+      }
+    }
+
+    &__header {
+      box-sizing: border-box;
+      flex-basis: 32%;
+      justify-content: flex-end;
+      order: 1;
+      display: flex;
+
+      .l-section__container {
+        max-width: (1276px * 0.3);
+        align-content: flex-end;
+      }
+    }
+
+    .l-section__content {
+      order: 2;
+      flex: 1;
+
+      .l-section__container {
+        max-width: (1276px * 0.7);
+      }
+    }
+
+    &__container {
+      box-sizing: border-box;
+      max-width: (1276px * 0.3);
+      padding: 4.375rem;
+    }
+
+    &--full-size {
+      height: 100%;
+
+      .l-section__header {
+        height: 100%;
+      }
+
+      .l-section__content {
+        height: 100%;
+        padding-top: 5.8rem;
+        box-sizing: border-box;
+      }
+
+      .l-section__container {
+        height: 100%;
+        padding-top: 5.8rem;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
