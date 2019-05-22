@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { Layout } from 'src/components/Layout';
 import { SEO } from '../components/SEO';
 
 const NotFoundPage = () => (
-    <React.Fragment>
+    <Layout>
         <SEO title="404: Not found" />
+
         <header className="l-section l-section--full-size">
             <div className="l-section__header l-section__header--borderless" />
             <div className="l-section__content">
@@ -94,7 +96,7 @@ const NotFoundPage = () => (
                 </div>
             </div>
         </header>
-    </React.Fragment>
+    </Layout>
 );
 
 export default NotFoundPage;

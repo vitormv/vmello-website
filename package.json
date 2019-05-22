@@ -1,9 +1,16 @@
 {
-    "name": "gatsby-starter-default",
+    "name": "vmello-website",
+    "description": "Source code for my Vitor Mello's personal website, built with Gatsby, React and GraphQL",
+    "author": "Vitor Mello",
     "private": true,
-    "description": "A simple starter to get up and developing quickly with Gatsby",
-    "version": "0.1.0",
-    "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+    "version": "1.0.0",
+    "scripts": {
+        "build": "gatsby build",
+        "develop": "gatsby develop",
+        "start": "yarn develop",
+        "serve": "gatsby serve",
+        "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^5.8.2",
         "@fortawesome/fontawesome-svg-core": "^1.2.18",
@@ -41,18 +48,11 @@
         "node-sass": "^4.12.0"
     },
     "license": "MIT",
-    "scripts": {
-        "build": "gatsby build",
-        "develop": "gatsby develop",
-        "start": "yarn develop",
-        "serve": "gatsby serve",
-        "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
-    },
     "repository": {
         "type": "git",
-        "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+        "url": "https://github.com/vitormv/vmello-website"
     },
     "bugs": {
-        "url": "https://github.com/gatsbyjs/gatsby/issues"
+        "url": "https://github.com/vitormv/vmello-website/issues"
     }
 }
