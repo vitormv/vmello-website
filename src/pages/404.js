@@ -78,14 +78,14 @@ const NotFoundPage = () => (
                                 <div className="o-contact-info__item">
                                     <h4 className="o-contact-info__label">Web</h4>
                                     <span className="o-contact-info__value">
-                                    https://vmello.com
+                                        https://vmello.com
                                     </span>
                                 </div>
 
                                 <div className="o-contact-info__item">
                                     <h4 className="o-contact-info__label">Email</h4>
                                     <span className="o-contact-info__value">
-                                    vitor@vmello.com
+                                        vitor@vmello.com
                                     </span>
                                 </div>
                             </div>

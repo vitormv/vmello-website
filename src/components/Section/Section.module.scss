@@ -1,5 +1,21 @@
 @import "config.scss";
 
+@include breakpoint($from: sm) {
+  .cell {
+    padding: 3.15rem 3.5rem 3.15rem;
+  }
+}
+
+@include breakpoint($until: md) {
+  .section:not(.fullSize) {
+    .header {
+      border-bottom: 1px solid #404242;
+      border-top: 1px solid #404242;
+      background: $shade4;
+    }
+  }
+}
+
 .section {
   box-sizing: border-box;
 
@@ -102,6 +118,27 @@
       box-sizing: border-box;
       max-width: (1276px * 0.3);
       padding: 4.375rem;
+    }
+
+    &.fullSize {
+      height: 100vh;
+      min-height: 500px;
+
+      .header {
+        height: 100%;
+      }
+
+      .content {
+        height: 100%;
+        padding-top: 5.8rem;
+        box-sizing: border-box;
+      }
+
+      .cell {
+        height: 100%;
+        padding-top: 5.8rem;
+        box-sizing: border-box;
+      }
     }
   }
 }

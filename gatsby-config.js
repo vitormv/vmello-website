@@ -29,6 +29,14 @@ module.exports = {
                 path: `${__dirname}/src/data`,
             },
         },
+        {
+            resolve: 'gatsby-plugin-web-font-loader',
+            options: {
+                google: {
+                    families: ['Lato:300,400,700:latin'],
+                },
+            },
+        },
         'gatsby-transformer-sharp',
         'gatsby-plugin-sharp',
         {
