@@ -7,11 +7,17 @@
 }
 
 @include breakpoint($until: md) {
-  .section:not(.fullSize) {
-    .header {
-      border-bottom: 1px solid #404242;
-      border-top: 1px solid #404242;
-      background: $shade4;
+  .section {
+    &.fullSize {
+      padding-top: 80px;
+    }
+
+    &:not(.fullSize) {
+      .header {
+        border-bottom: 1px solid #404242;
+        border-top: 1px solid #404242;
+        background: $shade4;
+      }
     }
   }
 }
