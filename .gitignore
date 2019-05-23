@@ -71,3 +71,7 @@ yarn-error.log
 # IDEs
 .idea
 .history
+
+# Google Drive APIs
+credentials.json
+token.json

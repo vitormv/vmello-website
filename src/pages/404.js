@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { Layout } from 'src/components/Layout';
-import { SEO } from '../components/SEO';
+import { SEO } from 'src/components/SEO';
+import { SocialButtons } from 'src/components/SocialButtons';
 
 const NotFoundPage = () => (
     <Layout>
@@ -29,41 +30,7 @@ const NotFoundPage = () => (
                                 </h2>
                             </div>
 
-                            <ul className="o-headline__social-buttons o-social-buttons">
-                                <li className="o-social-buttons__item">
-                                    <a
-                                        className="o-social-buttons__button"
-                                        href="https://www.github.com/vitormv"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        title="Download CV/Resume"
-                                    >
-                                        <i className="fa fa-lg fa-download" />
-                                    </a>
-                                </li>
-                                <li className="o-social-buttons__item">
-                                    <a
-                                        className="o-social-buttons__button"
-                                        href="https://www.linkedin.com/in/vitormv"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        title="LinkedIn profile"
-                                    >
-                                        <i className="fab fa-lg fa-linkedin" />
-                                    </a>
-                                </li>
-                                <li className="o-social-buttons__item">
-                                    <a
-                                        className="o-social-buttons__button"
-                                        href="https://www.github.com/vitormv"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        title="GitHub profile"
-                                    >
-                                        <i className="fab fa-lg fa-github" />
-                                    </a>
-                                </li>
-                            </ul>
+                            <SocialButtons email={false} />
                         </div>
 
                         <div className="o-contact-info o-homepage__contact-info">

@@ -37,6 +37,7 @@ $breakpoint-lg: 1200px;
   @if type-of($from) == string {
     $from: get-breakpoint-value($from);
   }
+
   @if type-of($until) == string {
     $until: get-breakpoint-value($until);
   }
@@ -53,6 +54,7 @@ $breakpoint-lg: 1200px;
   } @else if $from == 0 and $until != 0 {
     $query: "(max-width: #{$untilBreakpoint})";
   }
+
   @media #{$query} {
     @content;
   }

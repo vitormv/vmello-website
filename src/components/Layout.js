@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import 'src/styles/main.scss';
+import 'normalize.css';
 
 const Layout = ({ children }) => (
     <React.Fragment>

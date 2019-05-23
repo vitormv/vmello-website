@@ -6,12 +6,13 @@ import { Layout } from 'src/components/Layout';
 import { SEO } from 'src/components/SEO';
 import { Footer } from 'src/components/Footer';
 import { SocialButtons } from 'src/components/SocialButtons';
+import { SkillsList } from 'src/components/SkillsList';
 
 const IndexPage = ({ data }) => (
     <Layout>
         <SEO title="Home" />
 
-        <Section isFullSize>
+        <Section fullSize>
             <div className="o-homepage">
                 <div className="o-headline o-homepage__headline">
                     <div className="o-headline__brand o-brand">
@@ -81,19 +82,7 @@ const IndexPage = ({ data }) => (
             title={data.expertise.title}
             description={data.expertise.description}
         >
-            <ul className="o-skills">
-                {data.expertise.items.map((item, index) => (
-                    <li className="o-skills__item">
-                        <span className="o-skills__prefix">{String(index + 1).padStart(2, '0')}</span>
-                        <div className="o-skills__content">
-                            <h3 className="o-skills__name">{item.title}</h3>
-                            <p className="o-skills__description">
-                                {item.description}
-                            </p>
-                        </div>
-                    </li>
-                ))}
-            </ul>
+            <SkillsList skills={data.expertise.items} />
         </Section>
 
         <Footer />

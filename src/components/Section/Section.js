@@ -8,12 +8,12 @@ const Section = ({
     description,
     children,
     isTextBlock,
-    isFullSize,
+    fullSize,
 }) => (
     <section
         className={cn({
             [styles.section]: true,
-            [styles.fullSize]: isFullSize,
+            [styles.fullSize]: fullSize,
         })}
     >
         <div className={styles.header}>
@@ -31,8 +31,8 @@ const Section = ({
                     )}
                 </div>
             )}
-
         </div>
+
         <div className={styles.content}>
             <div
                 className={cn({
@@ -50,7 +50,7 @@ Section.propTypes = {
     title: PropTypes.string,
     description: PropTypes.string,
     isTextBlock: PropTypes.bool,
-    isFullSize: PropTypes.bool,
+    fullSize: PropTypes.bool,
     children: PropTypes.node.isRequired,
 };
 
@@ -58,7 +58,7 @@ Section.defaultProps = {
     title: '',
     description: '',
     isTextBlock: false,
-    isFullSize: false,
+    fullSize: false,
 };
 
 export { Section };

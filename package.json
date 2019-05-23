@@ -1,6 +1,6 @@
 {
     "name": "vmello-website",
-    "description": "Source code for my Vitor Mello's personal website, built with Gatsby, React and GraphQL",
+    "description": "Source code for Vitor Mello's personal website, built with Gatsby, React and GraphQL",
     "author": "Vitor Mello",
     "private": true,
     "version": "1.0.0",
@@ -8,8 +8,8 @@
         "build": "gatsby build",
         "develop": "gatsby develop",
         "start": "yarn develop",
-        "serve": "gatsby serve",
-        "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+        "serve": "yarn build && gatsby serve",
+        "resume:pull": "node bin/resume-download.js"
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^5.8.2",
@@ -28,6 +28,7 @@
         "gatsby-source-filesystem": "^2.0.37",
         "gatsby-transformer-sharp": "^2.1.19",
         "gatsby-transformer-yaml": "^2.1.12",
+        "googleapis": "^40.0.0",
         "normalize.css": "^8.0.1",
         "prop-types": "^15.7.2",
         "react": "^16.8.6",

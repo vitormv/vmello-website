@@ -1,0 +1,17 @@
+buttons:
+  -
+    title: Download CV/Resume
+    href: https://@todo
+    icon: download
+  -
+    title: Email
+    href: mailto:vitor@vmello.com
+    icon: envelope
+  -
+    title: Linkedin
+    href: https://www.linkedin.com/in/vitormv
+    icon: envelope
+  -
+    title: GitHub profile
+    href: https://www.github.com/vitormv
+    icon: github
