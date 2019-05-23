@@ -6,6 +6,7 @@ import { Footer } from 'src/components/Footer';
 import { SocialButtons } from 'src/components/SocialButtons';
 import { SkillsList } from 'src/components/SkillsList';
 import { getHomepageMetadataProvider } from 'src/providers';
+import { TypeWriter } from 'src/components/TypeWriter';
 
 const IndexPage = () => {
     const { intro, expertise } = getHomepageMetadataProvider();
@@ -27,18 +28,21 @@ const IndexPage = () => {
                                 </span>
                             </h1>
                             <h2 className="o-brand__subtitle o-headline__subtitle">
-                                Senior Full-Stack Developer &#x26;&nbsp;
-                                <span
-                                    className="o-tooltip"
-                                    aria-label="It is the most widely known partner dance from Brazil, with lots of arm figures, footwork and style."
+                                Senior Full-Stack Engineer &#x26;&nbsp;
+                                <TypeWriter
+                                    strings={['Forró', 'Snowboard']}
+                                    speed={200}
+                                    startDelay={500}
+                                    nextStringDelay={[1000, 750]}
+                                    breakLines={false}
                                 >
-                                    Forró
-                                </span>
+                                    React.js
+                                </TypeWriter>
                                 &nbsp;Lover
                             </h2>
                         </div>
 
-                        <SocialButtons email={false} />
+                        <SocialButtons />
                     </div>
 
                     <div className="o-contact-info o-homepage__contact-info">
