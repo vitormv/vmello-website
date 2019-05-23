@@ -10,7 +10,7 @@ const SocialButtons = ({ email }) => (
         <li className={styles.item}>
             <a
                 className={styles.button}
-                href="https://www.github.com/vitormv"
+                href="resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Download CV/Resume"

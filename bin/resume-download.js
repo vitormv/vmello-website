@@ -3,7 +3,11 @@ const path = require('path');
 const readline = require('readline');
 const { google } = require('googleapis');
 
-const targetFile = path.resolve(`${__dirname}/../src/static/resume.pdf`);
+const targetFile = path.resolve(`${__dirname}/../static/resume.pdf`);
+
+if (fs.existsSync(targetFile)) {
+    fs.writeFileSync(targetFile, '');
+}
 
 const SCOPES = ['https://www.googleapis.com/auth/drive.readonly'];
 const TOKEN_PATH = 'token.json'; // The file token.json stores the user's access and refresh tokens
@@ -70,8 +74,6 @@ const pullResume = async (auth) => {
     const fileId = '1FTbBwPx7QxKFh6w2It1H4xjxxhNmK7QPT8QzI2DVaw0';
     const dest = fs.createWriteStream(targetFile);
     const drive = google.drive({ version: 'v3', auth });
-
-    // listFiles(drive);
 
     const response = await drive.files.export(
         { fileId, mimeType: 'application/pdf' },
