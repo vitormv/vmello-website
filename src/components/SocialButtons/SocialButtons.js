@@ -30,7 +30,6 @@ const SocialButtons = ({ ...rest }) => (
                                 rel="noopener noreferrer"
                                 title={button.title}
                             >
-                                {console.log(button.icon.split(' '))}
                                 <FontAwesomeIcon size="lg" icon={button.icon.split(' ')} />
                             </a>
                         </li>

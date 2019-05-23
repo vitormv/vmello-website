@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import 'src/icons';
-import 'src/styles/main.scss';
 import 'normalize.css';
+import 'src/styles/main.scss';
 
 const Layout = ({ children }) => (
     <React.Fragment>
