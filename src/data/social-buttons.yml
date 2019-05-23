@@ -1,17 +1,22 @@
-buttons:
+slug: social-buttons
+items:
   -
+    key: resume
     title: Download CV/Resume
-    href: https://@todo
-    icon: download
+    href: https://vmello.com/resume.pdf
+    icon: fas download
   -
+    key: email
     title: Email
     href: mailto:vitor@vmello.com
-    icon: envelope
+    icon: fas envelope
   -
+    key: linkedin
     title: Linkedin
     href: https://www.linkedin.com/in/vitormv
-    icon: envelope
+    icon: fab linkedin
   -
+    key: github
     title: GitHub profile
     href: https://www.github.com/vitormv
-    icon: github
+    icon: fab github

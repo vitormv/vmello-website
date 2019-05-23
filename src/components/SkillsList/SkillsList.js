@@ -5,7 +5,7 @@ import styles from './SkillsList.module.scss';
 const SkillsList = ({ skills }) => (
     <ul className={styles.list}>
         {skills.map((item, index) => (
-            <li className={styles.item}>
+            <li key={item.name} className={styles.item}>
                 <span className={styles.count}>{String(index + 1).padStart(2, '0')}</span>
                 <div className={styles.content}>
                     <h3 className={styles.name}>{item.title}</h3>

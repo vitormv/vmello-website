@@ -48,7 +48,6 @@ module.exports = {
                 background_color: '#f7f0eb',
                 theme_color: '#a2466c',
                 display: 'standalone',
-                icon: 'static/favicons/favicon-32x32.png',
                 icons: [
                     {
                         src: '/favicons/android-chrome-192x192.png',
@@ -59,11 +58,6 @@ module.exports = {
                         src: '/favicons/android-chrome-512x512.png',
                         sizes: '512x512',
                         type: 'image/png',
-                    },
-                    {
-                        src: '/favicons/favicon.ico',
-                        sizes: '32x32',
-                        type: 'image/x-icon',
                     },
                     {
                         src: '/favicons/favicon-16x16.png',
