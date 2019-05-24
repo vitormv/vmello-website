@@ -19,7 +19,7 @@ items:
   -
     title: SASS and HTML
     description: >
-      I develop maintainable and reusable components that will make
+      I develop reusable and responsive components that will make
       sense for others who will use it, and organize them into CSS
       modules to make the scope contained and avoid side effects.
       No one should ever be afraid of touching CSS code.
