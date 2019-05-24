@@ -4,11 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { getSocialButtonsProvider } from 'src/providers';
 import styles from './SocialButtons.module.scss';
 
-const SocialButtons = ({ ...rest }) => {
+const SocialButtons = ({ extraClassName, ...rest }) => {
     const { items } = getSocialButtonsProvider();
 
     return (
-        <ul className={`o-headline__social-buttons ${styles.list}`}>
+        <ul className={`${styles.list} ${extraClassName}`}>
             {items.map(button => (
                 rest[button.key] && (
                     <li key={button.key} className={styles.item}>
@@ -29,6 +29,7 @@ const SocialButtons = ({ ...rest }) => {
 };
 
 SocialButtons.propTypes = {
+    extraClassName: PropTypes.string,
     resume: PropTypes.bool,
     email: PropTypes.bool,
     linkedin: PropTypes.bool,
@@ -36,6 +37,7 @@ SocialButtons.propTypes = {
 };
 
 SocialButtons.defaultProps = {
+    extraClassName: '',
     resume: true,
     email: true,
     linkedin: true,

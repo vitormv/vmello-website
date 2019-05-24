@@ -47,6 +47,13 @@
 
   .content {
     box-sizing: border-box;
+
+    .textBlock {
+      p {
+        font-size: 1.23rem;
+        line-height: 2.1rem;
+      }
+    }
   }
 
   .cell {
@@ -55,24 +62,6 @@
 
     @include breakpoint($from: sm) {
       padding: 3.15rem 3.5rem 3.15rem;
-    }
-  }
-}
-
-.textBlock {
-  p {
-    font-size: 1.23rem;
-    line-height: 2.1rem;
-  }
-}
-
-// @todo is this needed?
-.l-section {
-  &--full-size {
-    .l-section__content {
-      .l-section__container {
-        padding-top: 0;
-      }
     }
   }
 }

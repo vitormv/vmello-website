@@ -4,9 +4,9 @@
   Vitor Mello's Website
 </h1>
 
-This is the source code for my website. It is a statically generated using Gatsby, React.js and GraphQL.
+This is the source code for my website. It is a statically generated using Gatsby, React.js and GraphQL. I had never used a Static Website Generator before, and thought building my website using one was a nice way to learnt the technology. I must say I really like it, and it provides nice ways to keep the content separated from the Components themselves.
 
-## 🧐 What's inside?
+### 🧐 What's inside?
 
 A quick look at the structure for this project:
 
@@ -34,11 +34,11 @@ A quick look at the structure for this project:
 
 7.  **`static/`**: Place for all the static assets of the website, like favicons, my pdf resume and so on.
 
-## 💫 Deploy
+### 💫 Deploy
 
 Deploy is automated by using Travis CI + [Surge.sh](https://surge.sh/). It is automatically redeployed to whenever something is merged to master.
 
-## 💾 Update & download resume
+### 💾 Update & download resume
 
 My resume is served on my website as a PDF file, but the source is a Google Docs file in Google Drive. Whenever I need to update the pdf file with the newest changes, I just need to run the command:
 ```
