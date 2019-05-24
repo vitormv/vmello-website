@@ -1,0 +1,34 @@
+@import "config.scss";
+
+.container {
+  position: relative;
+
+  .brand {
+    margin-bottom: 1rem;
+    text-align: center;
+
+    @include breakpoint($from: md) {
+      text-align: left;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .socialButtons {
+    justify-content: center;
+  }
+
+  @include breakpoint($from: md) {
+    &.fullPage {
+      position: relative;
+      top: -8vh;
+    }
+
+    .socialButtons {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      justify-content: right;
+    }
+  }
+}

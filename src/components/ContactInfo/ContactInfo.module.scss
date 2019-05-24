@@ -1,0 +1,51 @@
+@import "config.scss";
+
+.contactInfo {
+  margin-top: 1.75rem;
+  width: 100%;
+  overflow: hidden;
+
+  hr {
+    margin-top: 0;
+  }
+
+  .items {
+    text-align: center;
+    display: block;
+    flex-wrap: wrap;
+
+    @include breakpoint($from: sm) {
+      display: flex;
+      margin-right: -8rem;
+    }
+
+    @include breakpoint($from: md) {
+      text-align: left;
+    }
+  }
+
+  .item {
+    flex: 1;
+    margin-bottom: 1.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include breakpoint($from: sm) {
+      margin-bottom: 0;
+      margin-right: 8rem;
+    }
+  }
+
+  .name {
+    font-weight: 400;
+    margin: 0 0 0.5rem;
+  }
+
+  .value {
+    font-style: normal;
+    font-weight: 300;
+    margin: 0;
+  }
+}
