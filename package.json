@@ -5,6 +5,7 @@
     "private": true,
     "version": "1.0.0",
     "scripts": {
+        "bootstrap": "yarn install && yarn start",
         "build": "gatsby build",
         "develop": "gatsby develop",
         "lint": "yarn lint:js",

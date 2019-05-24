@@ -4,9 +4,19 @@
   Vitor Mello's Website
 </h1>
 
-This is the source code for my website. It is a statically generated using Gatsby, React.js and GraphQL. I had never used a Static Website Generator before, and thought building my website using one was a nice way to learnt the technology. I must say I really like it, and it provides nice ways to keep the content separated from the Components themselves.
+This is the source code for my website. It is a statically generated using **Gatsby**, **React.js** and **GraphQL**. I had never used a Static Website Generator before, and thought that building my own website using one was a nice way to learn the technology. I must say I really like it, and it provides nice ways to keep the content separated from the Components themselves.
 
-### 🧐 What's inside?
+## 🚀 Get Up and Running
+Want to take a look at the code for yourself? Go ahead!
+
+```
+$ git clone git@github.com:vitormv/vmello-website.git vmello-website
+$ cd vmello-website
+$ yarn bootstrap
+```
+Then open the `http://0.0.0.0:8000` on your favorite browser.
+
+## 🧐 What's inside?
 
 A quick look at the structure for this project:
 
@@ -34,14 +44,23 @@ A quick look at the structure for this project:
 
 7.  **`static/`**: Place for all the static assets of the website, like favicons, my pdf resume and so on.
 
-### 💫 Deploy
+## 💫 Deploy
 
 Deploy is automated by using Travis CI + [Surge.sh](https://surge.sh/). It is automatically redeployed to whenever something is merged to master.
 
-### 💾 Update & download resume
+## 💾 Update & download resume
 
-My resume is served on my website as a PDF file, but the source is a Google Docs file in Google Drive. Whenever I need to update the pdf file with the newest changes, I just need to run the command:
+My resume is served on my website as a `.pdf` file, but the source is a Google Docs file in Google Drive. To fetch the newest copy, I can just run the command:
 ```
 yarn resume:pull
 ```
-This will automatically connect to Google Drive API (and request a token in case its not present),export my resume as a `.pdf` file and save it in the `/static` folder.
+This will automatically:
+* **Connect to Google Drive API** (and request a token in case its not present)
+* **Export** my resume as a `.pdf` file
+* Download it to the `/static` folder.
+
+I am sometimes lazy and love to automate things 😁
+
+## 📝 License
+
+Licensed under the [MIT License](./LICENSE).
