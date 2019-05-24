@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/vitormv/vmello-website.svg?branch=master)](https://travis-ci.org/vitormv/vmello-website)
+[![Build Status](https://travis-ci.org/vitormv/vmello-website.svg?branch=master)](https://travis-ci.org/vitormv/vmello-website) [![Build Status](https://travis-ci.org/vitormv/vmello-website.svg?branch=master)](https://travis-ci.org/vitormv/vmello-website) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/vitormv/vmello-website/pulls) 
 
 <h1 align="center">
   Vitor Mello's Website
@@ -37,3 +37,11 @@ A quick look at the structure for this project:
 ## 💫 Deploy
 
 Deploy is automated by using Travis CI + [Surge.sh](https://surge.sh/). It is automatically redeployed to whenever something is merged to master.
+
+## 💾 Update & download resume
+
+My resume is served on my website as a PDF file, but the source is a Google Docs file in Google Drive. Whenever I need to update the pdf file with the newest changes, I just need to run the command:
+```
+yarn resume:pull
+```
+This will automatically connect to Google Drive API (and request a token in case its not present),export my resume as a `.pdf` file and save it in the `/static` folder.
