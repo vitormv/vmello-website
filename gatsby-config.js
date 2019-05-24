@@ -32,6 +32,7 @@ module.exports = {
                             variants: ['100', '300', '400', '700'],
                             subsets: ['latin'],
                             strategy: 'cdn',
+                            usePreconnect: true,
                         },
                     ],
                 },
