@@ -10,7 +10,7 @@ build:
                     -
                         command: eslint-run
                         use_website_config: false
-        tests: true
+        tests: false
 
     environment:
         node:
