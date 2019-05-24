@@ -23,10 +23,17 @@ module.exports = {
             },
         },
         {
-            resolve: 'gatsby-plugin-web-font-loader',
+            resolve: 'gatsby-plugin-webfonts',
             options: {
-                google: {
-                    families: ['Lato:100,300,400,700:latin'],
+                fonts: {
+                    google: [
+                        {
+                            family: 'Lato',
+                            variants: ['100', '300', '400', '700'],
+                            subsets: ['latin'],
+                            strategy: 'cdn',
+                        },
+                    ],
                 },
             },
         },

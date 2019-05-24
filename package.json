@@ -7,6 +7,7 @@
     "scripts": {
         "bootstrap": "yarn install && yarn start",
         "build": "gatsby build",
+        "deploy": "yarn surge public/",
         "develop": "gatsby develop",
         "lint": "yarn lint:js",
         "lint:js": "eslint src/",
@@ -28,7 +29,7 @@
         "gatsby-plugin-offline": "^2.1.1",
         "gatsby-plugin-react-helmet": "^3.0.12",
         "gatsby-plugin-sharp": "^2.0.37",
-        "gatsby-plugin-web-font-loader": "^1.0.4",
+        "gatsby-plugin-webfonts": "^1.0.7",
         "gatsby-source-filesystem": "^2.0.37",
         "gatsby-transformer-sharp": "^2.1.19",
         "gatsby-transformer-yaml": "^2.1.12",
