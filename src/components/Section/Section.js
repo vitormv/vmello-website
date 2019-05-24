@@ -7,7 +7,7 @@ const Section = ({
     title,
     description,
     children,
-    isTextBlock,
+    textOnly,
     fullSize,
 }) => (
     <section
@@ -37,7 +37,7 @@ const Section = ({
             <div
                 className={cn({
                     [styles.cell]: true,
-                    [styles.textBlock]: isTextBlock,
+                    [styles.textOnly]: textOnly,
                 })}
             >
                 {children}
@@ -49,7 +49,7 @@ const Section = ({
 Section.propTypes = {
     title: PropTypes.string,
     description: PropTypes.string,
-    isTextBlock: PropTypes.bool,
+    textOnly: PropTypes.bool,
     fullSize: PropTypes.bool,
     children: PropTypes.node.isRequired,
 };
@@ -57,7 +57,7 @@ Section.propTypes = {
 Section.defaultProps = {
     title: '',
     description: '',
-    isTextBlock: false,
+    textOnly: false,
     fullSize: false,
 };
 

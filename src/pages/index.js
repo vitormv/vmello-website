@@ -27,28 +27,21 @@ const IndexPage = () => {
                 >
                     React.js
                 </TypeWriter>
-                &nbsp;Lover
+                &nbsp;addict.
             </FullPageHeadline>
 
             {/* BIOGRAPHY */}
-            <Section
-                title={intro.title}
-                description={intro.description}
-                isTextBlock
-            >
+            <Section textOnly title={intro.title} description={intro.description}>
                 {intro.biography.map((content, index) => (
-                    // Normally index should NEVER be used as key, but in this case, the order and
-                    // subset of items is fixed and never changes.
+                    // As a static website, the order and subset of items is fixed and
+                    // never changes. It's safe to disable eslint warining:
                     // eslint-disable-next-line react/no-array-index-key
                     <p key={index}>{content}</p>
                 ))}
             </Section>
 
             {/* EXPERTISE */}
-            <Section
-                title={expertise.title}
-                description={expertise.description}
-            >
+            <Section title={expertise.title} description={expertise.description}>
                 <SkillsList skills={expertise.items} />
             </Section>
 
