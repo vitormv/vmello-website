@@ -12,13 +12,6 @@ if (fs.existsSync(targetFile)) {
 const SCOPES = ['https://www.googleapis.com/auth/drive.readonly'];
 const TOKEN_PATH = 'token.json'; // The file token.json stores the user's access and refresh tokens
 
-// Load client secrets from a local file.
-fs.readFile('credentials.json', (err, content) => {
-    if (err) return console.log('Error loading client secret file:', err);
-    // Authorize a client with credentials, then call the Google Drive API.
-    authorize(JSON.parse(content), pullResume);
-});
-
 /**
  * Create an OAuth2 client with the given credentials, and then execute the
  * given callback function.
@@ -52,14 +45,23 @@ function getAccessToken(oAuth2Client, callback) {
         input: process.stdin,
         output: process.stdout,
     });
+
     prompt.question('Enter the code from that page here: ', (code) => {
         prompt.close();
         oAuth2Client.getToken(code, (err, token) => {
-            if (err) return console.error('Error retrieving access token', err);
+            if (err) {
+                console.error('Error retrieving access token', err);
+                return;
+            }
+
             oAuth2Client.setCredentials(token);
             // Store the token to disk for later program executions
-            fs.writeFile(TOKEN_PATH, JSON.stringify(token), (err) => {
-                if (err) return console.error(err);
+            fs.writeFile(TOKEN_PATH, JSON.stringify(token), (error) => {
+                if (error) {
+                    console.error(error);
+                    return;
+                }
+
                 console.log('Token stored to', TOKEN_PATH);
             });
             callback(oAuth2Client);
@@ -86,3 +88,10 @@ const pullResume = async (auth) => {
         })
         .pipe(dest);
 };
+
+// Load client secrets from a local file.
+fs.readFile('credentials.json', (err, content) => {
+    if (err) return console.log('Error loading client secret file:', err);
+    // Authorize a client with credentials, then call the Google Drive API.
+    authorize(JSON.parse(content), pullResume);
+});
