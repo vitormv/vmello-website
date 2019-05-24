@@ -7,9 +7,12 @@
     "scripts": {
         "build": "gatsby build",
         "develop": "gatsby develop",
+        "lint": "yarn lint:js",
+        "lint:js": "eslint src/",
+        "resume:pull": "node bin/resume-download.js",
         "start": "yarn develop",
         "serve": "yarn build && gatsby serve",
-        "resume:pull": "node bin/resume-download.js"
+        "test": "yarn lint"
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^5.8.2",
