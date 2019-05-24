@@ -1,21 +1,5 @@
 @import "config.scss";
 
-/* ------------ HOMEPAGE ------------ */
-.o-homepage {
-  @include breakpoint($from: md) {
-    position: relative;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    &__contact-info {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-    }
-  }
-}
 .section {
   @include breakpoint($from: md) {
     position: relative;
