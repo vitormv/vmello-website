@@ -13,4 +13,5 @@ before_deploy:
 deploy:
   provider: surge
   project: ./public/
+  domain: vmello.com
   skip_cleanup: true
