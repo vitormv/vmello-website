@@ -3,19 +3,19 @@ title: Intro
 description: What I am all about
 biography:
   -
-    Hi, my name is Vitor and I have been working as a Full-Stack
-    Software Engineer for more than 10 years. I am an expert in
-    Javascript (React.js) and PHP, and also a bit of infrastructure
+    md//Hi, my name is Vitor and I have been working as a **Full-Stack
+    Software Engineer for more than 10 years**. I am an expert in
+    **Javascript (React.js) and PHP**, and also a bit of infrastructure
     with Kubernetes/Docker and AWS systems. I love to break down
     complex scenarios, simplify processes and create simple
     solutions that help both the company, and my fellow colleagues.
   -
-    I believe coding is a team sport, thus learning to play along
+    md//I believe coding is a team sport, thus learning to play along
     with and write code that others find easy and pleasant to work
     with, is a requirement. Continous attention to the scalability
     and readability of the codebase ensures things stay future-proof.
   -
-    Oh, and I love learning new things too, and feel very
+    md//Oh, and I love learning new things too, and feel very
     confortable with adopting new technologies and tools (if it aligns
     with the business requirements of course). In fact, being a noob at
     something and then quickly learning and mastering about it is

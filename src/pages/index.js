@@ -32,12 +32,8 @@ const IndexPage = () => {
 
             {/* BIOGRAPHY */}
             <Section textOnly title={intro.title} description={intro.description}>
-                {intro.biography.map((content, index) => (
-                    // As a static website, the order and subset of items is fixed and
-                    // never changes. It's safe to disable eslint warining:
-                    // eslint-disable-next-line react/no-array-index-key
-                    <p key={index}>{content}</p>
-                ))}
+                {/* eslint-disable-next-line react/no-danger */}
+                <div dangerouslySetInnerHTML={{ __html: intro.biography.join('') }} />
             </Section>
 
             {/* EXPERTISE */}

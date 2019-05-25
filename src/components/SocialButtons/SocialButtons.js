@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { getSocialButtonsProvider } from 'src/providers';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import styles from './SocialButtons.module.scss';
 
 const SocialButtons = ({ extraClassName, ...rest }) => {
@@ -12,7 +13,7 @@ const SocialButtons = ({ extraClassName, ...rest }) => {
             {items.map(button => (
                 rest[button.key] && (
                     <li key={button.key} className={styles.item}>
-                        <a
+                        <OutboundLink
                             className={styles.button}
                             href={button.href}
                             target="_blank"
@@ -20,7 +21,7 @@ const SocialButtons = ({ extraClassName, ...rest }) => {
                             title={button.title}
                         >
                             <FontAwesomeIcon size="lg" icon={button.icon.split(' ')} />
-                        </a>
+                        </OutboundLink>
                     </li>
                 )
             ))}

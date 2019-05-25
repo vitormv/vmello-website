@@ -3,21 +3,21 @@ title: Expertise
 description: Things I can do well
 items:
   -
-    title: React and Javascript
+    title: React / Javascript
     description: >
       Writing scalable and fast React apps is one of the things I like
       the most, together with Redux, Reselect. Also know my way around
       Webpack/Babel, optimizing bundles to their smallest size, smart
       polyfilling, testing with Jest, Puppeteer and BrowserStack.
   -
-    title: PHP + MySQL (& Symfony)
+    title: PHP / Symfony / MySQL
     description: >
       Over 10 years of experience developing server side code for
       E-commerce, food delivery platforms, integrating external
       payment APIs and travel websites have taught me how to make
       things fast and scalable, even under high traffic and load.
   -
-    title: SASS and HTML
+    title: SASS / HTML
     description: >
       I develop reusable and responsive components that will make
       sense for others who will use it, and organize them into CSS

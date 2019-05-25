@@ -13,8 +13,24 @@ module.exports = {
             },
         },
         'gatsby-plugin-root-import',
+        {
+            resolve: 'gatsby-plugin-google-analytics',
+            options: {
+                trackingId: 'UA-140852685-1',
+                head: false,
+                anonymize: true,
+                respectDNT: true,
+                cookieDomain: 'vmello.com',
+            },
+        },
         'gatsby-plugin-react-helmet',
-        'gatsby-transformer-yaml',
+        {
+            resolve: 'gatsby-transformer-yaml-plus',
+            options: {
+                enableRemark: true,
+                markdownPreface: 'md//',
+            },
+        },
         {
             resolve: 'gatsby-source-filesystem',
             options: {

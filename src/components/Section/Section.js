@@ -26,7 +26,7 @@ const Section = ({
                     )}
                     {(description.length > 0) && (
                         <div>
-                            {description}
+                            {`${description}.`}
                         </div>
                     )}
                 </div>
