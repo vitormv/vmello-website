@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { getSocialButtonsProvider } from 'src/providers';
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import { OutboundLink } from 'gatsby-plugin-gtag';
 import styles from './SocialButtons.module.scss';
 
 const SocialButtons = ({ extraClassName, ...rest }) => {
