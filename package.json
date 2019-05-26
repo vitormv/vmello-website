@@ -7,7 +7,6 @@
     "scripts": {
         "bootstrap": "yarn install && yarn start",
         "build": "gatsby build",
-        "deploy": "yarn surge public/",
         "develop": "gatsby develop",
         "lint": "yarn lint:js",
         "lint:js": "eslint src/",
@@ -56,8 +55,7 @@
         "gatsby-plugin-eslint": "^2.0.5",
         "gatsby-plugin-root-import": "^2.0.5",
         "gatsby-plugin-sass": "^2.0.11",
-        "node-sass": "^4.12.0",
-        "surge": "^0.20.5"
+        "node-sass": "^4.12.0"
     },
     "license": "MIT",
     "eslintIgnore": [
