@@ -1,6 +1,7 @@
 {
     "version": 2,
     "name": "vmello.com",
+    "alias": "vmello.com",
     "builds": [
         {
             "src": "package.json",
