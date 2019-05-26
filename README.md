@@ -56,7 +56,7 @@ yarn resume:pull
 This will automatically:
 * **Connect to Google Drive API** (and request a token in case its not present)
 * **Export** my resume as a `.pdf` file
-* Download it to the `/static` folder.
+* **Download** it to the `/static` folder.
 
 I am sometimes lazy and love to automate things 😁
 
