@@ -1,0 +1,177 @@
+@page {
+  margin: 0;
+  size: a4;
+}
+
+body.root {
+  margin: 0;
+}
+
+@media screen {
+  body.root {
+    background: #e0e0e0;
+  }
+}
+
+.sheet {
+  margin: 0;
+  position: relative;
+  box-sizing: border-box;
+  page-break-after: always;
+  padding: 10mm 12mm;
+
+  &.a4 {
+    width: 210mm;
+    height: 296mm;
+  }
+}
+
+/** For screen preview **/
+@media screen {
+  .sheet {
+    background: white;
+    box-shadow: 0 0.5mm 2mm rgba(0, 0, 0, 0.3);
+    margin: 5mm auto;
+  }
+}
+
+.sheet {
+  article {
+    color: #293241;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    font-family: "Lora", serif;
+
+    * {
+      line-height: 1.4em;
+    }
+
+    a {
+      text-decoration: none;
+      color: #0044cc;
+      display: inline-block;
+      position: relative;
+      //   transition: all 150ms;
+
+      &:hover {
+        color: #0044cc;
+        top: 1px;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .header {
+    flex-grow: 0;
+    align-items: flex-end;
+    margin-bottom: 8mm;
+  }
+
+  .row {
+    color: #293241;
+    display: flex;
+
+    .sidebar {
+      flex-basis: 55.5mm;
+      margin-right: 7mm;
+    }
+
+    .content {
+      flex: 1;
+    }
+  }
+
+  main {
+    flex: 1;
+  }
+
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 30pt;
+    font-family: Lato, sans-serif;
+    line-height: 1em;
+  }
+  h2 {
+    margin: 0;
+    padding: 0;
+    font-family: Lora, serif;
+    font-size: 12pt;
+  }
+  h3 {
+    color: #c35940;
+    font-family: Lora, serif;
+    font-size: 18pt;
+    font-weight: normal;
+    margin: 0 0 3mm 0;
+  }
+
+  section {
+    margin-bottom: 7mm;
+    font-size: 9pt;
+  }
+
+  .contact {
+    text-align: right;
+    list-style-type: none;
+    margin: 0;
+  }
+
+  table.companyInfo {
+    width: 100%;
+    font-family: Lato, sans-serif;
+    border-spacing: 0;
+    margin-bottom: 2mm;
+
+    th:first-child,
+    td:first-child {
+      text-align: left;
+      padding: 0;
+    }
+    th:last-child,
+    td:last-child {
+      text-align: right;
+      padding: 0;
+      color: #666666;
+      font-weight: 400;
+    }
+
+    td.date {
+      font-weight: 300;
+    }
+
+    .location {
+      font-weight: 300;
+      color: #666666;
+
+      &:before {
+        padding-left: 4pt;
+        content: " — ";
+      }
+    }
+  }
+
+  .experience {
+    margin-bottom: 7mm;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    p {
+      font-family: Lora, serif;
+      margin: 0 0 1mm;
+      font-size: 9pt;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .techStack {
+      font-weight: bold;
+      font-family: Lato, sans-serif;
+    }
+  }
+}

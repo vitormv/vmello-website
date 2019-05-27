@@ -1,0 +1,145 @@
+slug: resume
+title: Vitor Mello
+subtitle: Senior Full Stack Engineer
+links:
+  -
+    name: vitor@vmello.com
+    href: ~
+  -
+    name: https://vmello.com
+    href: https://vmello.com
+  -
+    name: https://www.linkedin.com/in/vitormv
+    href: https://www.linkedin.com/in/vitormv
+  -
+    name: https://github.com/vitormv
+    href: https://github.com/vitormv
+
+intro: >
+  Hi, my name is Vitor and I have 10+ years of experience as a
+  Full Stack Engineer. I have very strong skills in javascript,
+  ReactJs + Redux and responsive layouts. On the backend side
+  I'm also highly proficient in PHP, Symfony and have some
+  knowledge of infrastructure with Kubernetes, Docker and AWS.
+  I love to break down complex scenarios, simplify processes
+  and create simple solutions that help both the company and
+  my fellow colleagues.
+
+education:
+  -
+    name: Centro de Estudos Superiores de Maceió, CESMAC
+    title: Bachelor, Computer Systems Analysis
+    year: 2005 - 2009
+
+experience:
+  -
+    company: Flixbus GmbH
+    location: Berlin, Germany
+    duration: 3+ years
+    roles:
+      -
+        title: Senior Full Stack Engineer
+        date: Feb 2016 - Present
+    description: >
+      Developed responsive components in React.js and Redux, React SSR, with highly performant
+      javascript. Improved frontend team productivity by creating easy ways to mockup, fixture
+      and test complex edge cases in the applications. Created an unified payment framework in
+      php to speedup integration of 3rd-party payment APIs.
+    tags: >
+      javascript, reactjs, redux, jest, puppeteer, webpack, es6, babel, sass, node.js, php7,
+      symfony, phpunit, mysql, redis, elasticsearch, amazon aws, kubernetes, docker, ab tests
+  -
+    company: Foodpanda GmbH
+    location: Berlin, Germany
+    duration: 2 years 7 months
+    roles:
+      -
+        title: Senior Full Stack Engineer
+        date: Jun 2013 - Dec 2015
+    description: Global food delivery company with shops  in over 30 countries.
+    tags: >
+      javascript, php, mysql, html, sass, css, bootstrap, jquery, grunt, amazon sqs,
+      elasticsearch, redis, git
+  -
+    company: Mobly (Rocket Internet GmbH)
+    location: São Paulo, Brazil
+    duration: 1 year 4 months
+    roles:
+      -
+        title: Lead Software Engineer
+        date: Nov 2012 - May 2013
+      -
+        title: Senior Full Stack Engineer
+        date: Feb 2012 - Oct 2012
+    description: Mobly is currently the largest furniture e-commerce in Brazil.
+    tags: >
+      javascript, php, mysql, html, sass, css, bootstrap, jquery, zend framework, yii, solr,
+      memcache, git
+  -
+    company: Plus! Agência Digital
+    location: Maceió, Brazil
+    duration: 3 years 4 months
+    roles:
+      -
+        title: Lead Full Stack Engineer
+        date: Jul 2010 - Dec 2011
+      -
+        title: Software Engineer
+        date: Sep 2008 - Jun 2010
+    description: >
+      It's an award winning digital agency, creating a digital presence on the Web, Social Media,
+      and also develops Intranet portals for clients.
+    tags: >
+      javascript, php, mysql, html, sass, css, bootstrap, jquery, zend framework, yii, solr,
+      memcache, gits, elasticsearch, redis, git
+  -
+    company: Carango
+    location: Maceió, Brazil
+    duration: 1 year 3 months
+    roles:
+      -
+        title: Software Engineer
+        date: Jul 2007 - Sep 2008
+    description: ~
+    tags: ~
+  -
+    company: SEMARHP
+    location: Maceió, Brazil
+    duration: 1 year 6 months
+    roles:
+      -
+        title: Web Developer Intern
+        date: Mar 2007 - Aug 2008
+    description: ~
+    tags: ~
+
+skills:
+  -
+    name: Javascript / ES6
+    level: expert
+  -
+    name: React / Redux / SSR
+    level: expert
+  -
+    name: php / symfony
+    level: expert
+  -
+    name: html / css / sass
+    level: expert
+  -
+    name: Infrastructure
+    level: intermediate
+  -
+    name: UX
+    level: intermediate
+
+languages:
+  -
+    name: English
+    level: fluent
+  -
+    name: German
+    level: intermediate
+  -
+    name: Portuguese
+    level: native
