@@ -14,21 +14,6 @@ module.exports = {
         },
       },
     },
-    'gatsby-plugin-react-helmet',
-    {
-      resolve: 'gatsby-transformer-yaml-plus',
-      options: {
-        enableRemark: true,
-        markdownPreface: 'md//',
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'data',
-        path: `${__dirname}/src/data`,
-      },
-    },
     {
       resolve: 'gatsby-plugin-webfonts',
       options: {
@@ -43,6 +28,7 @@ module.exports = {
             },
             {
               family: 'Lora',
+              variants: ['400', '700'],
               subsets: ['latin'],
               strategy: 'cdn',
               usePreconnect: true,
@@ -50,6 +36,7 @@ module.exports = {
           ],
         },
       },
+
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',

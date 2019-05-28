@@ -1,6 +1,16 @@
 slug: resume
 title: Vitor Mello
 subtitle: Senior Full Stack Engineer
+summary: >
+  Hi, my name is Vitor and I have 10+ years of experience as a
+  Full Stack Engineer. I have very strong skills in javascript,
+  ReactJs + Redux and responsive layouts. On the backend side
+  I'm also highly proficient in PHP, Symfony and have some
+  knowledge of infrastructure with Kubernetes, Docker and AWS.
+  I love to break down complex scenarios, simplify processes
+  and create simple solutions that help both the company and
+  my fellow colleagues.
+
 links:
   -
     name: vitor@vmello.com
@@ -15,32 +25,23 @@ links:
     name: https://github.com/vitormv
     href: https://github.com/vitormv
 
-intro: >
-  Hi, my name is Vitor and I have 10+ years of experience as a
-  Full Stack Engineer. I have very strong skills in javascript,
-  ReactJs + Redux and responsive layouts. On the backend side
-  I'm also highly proficient in PHP, Symfony and have some
-  knowledge of infrastructure with Kubernetes, Docker and AWS.
-  I love to break down complex scenarios, simplify processes
-  and create simple solutions that help both the company and
-  my fellow colleagues.
-
 education:
   -
-    name: Centro de Estudos Superiores de Maceió, CESMAC
-    title: Bachelor, Computer Systems Analysis
-    year: 2005 - 2009
+    institution: Centro de Estudos Superiores de Maceió, CESMAC
+    studyType: Bachelor
+    area: Computer Systems Analysis
+    years: 2005 - 2009
 
-experience:
+work:
   -
     company: Flixbus GmbH
     location: Berlin, Germany
     duration: 3+ years
-    roles:
+    positions:
       -
-        title: Senior Full Stack Engineer
+        position: Senior Full Stack Engineer
         date: Feb 2016 - Present
-    description: >
+    summary: >
       Developed responsive components in React.js and Redux, React SSR, with highly performant
       javascript. Improved frontend team productivity by creating easy ways to mockup, fixture
       and test complex edge cases in the applications. Created an unified payment framework in
@@ -52,26 +53,28 @@ experience:
     company: Foodpanda GmbH
     location: Berlin, Germany
     duration: 2 years 7 months
-    roles:
+    positions:
       -
-        title: Senior Full Stack Engineer
+        position: Senior Full Stack Engineer
         date: Jun 2013 - Dec 2015
-    description: Global food delivery company with shops  in over 30 countries.
+    summary: Global food delivery company with shops  in over 30 countries.
     tags: >
       javascript, php, mysql, html, sass, css, bootstrap, jquery, grunt, amazon sqs,
       elasticsearch, redis, git
   -
-    company: Mobly (Rocket Internet GmbH)
+    company: Mobly
     location: São Paulo, Brazil
     duration: 1 year 4 months
-    roles:
+    positions:
       -
-        title: Lead Software Engineer
+        position: Lead Software Engineer
         date: Nov 2012 - May 2013
       -
-        title: Senior Full Stack Engineer
+        position: Senior Full Stack Engineer
         date: Feb 2012 - Oct 2012
-    description: Mobly is currently the largest furniture e-commerce in Brazil.
+    summary: >
+      Mobly is an e-commerce platform selling home furniture. This is the Brazilian branch of the
+      european Home24, a venture started by Rocket Internet GmbH. 
     tags: >
       javascript, php, mysql, html, sass, css, bootstrap, jquery, zend framework, yii, solr,
       memcache, git
@@ -79,14 +82,14 @@ experience:
     company: Plus! Agência Digital
     location: Maceió, Brazil
     duration: 3 years 4 months
-    roles:
+    positions:
       -
-        title: Lead Full Stack Engineer
+        position: Lead Full Stack Engineer
         date: Jul 2010 - Dec 2011
       -
-        title: Software Engineer
+        position: Software Engineer
         date: Sep 2008 - Jun 2010
-    description: >
+    summary: >
       It's an award winning digital agency, creating a digital presence on the Web, Social Media,
       and also develops Intranet portals for clients.
     tags: >
@@ -96,21 +99,21 @@ experience:
     company: Carango
     location: Maceió, Brazil
     duration: 1 year 3 months
-    roles:
+    positions:
       -
-        title: Software Engineer
+        position: Software Engineer
         date: Jul 2007 - Sep 2008
-    description: ~
+    summary: ~
     tags: ~
   -
     company: SEMARHP
     location: Maceió, Brazil
     duration: 1 year 6 months
-    roles:
+    positions:
       -
-        title: Web Developer Intern
+        position: Web Developer Intern
         date: Mar 2007 - Aug 2008
-    description: ~
+    summary: ~
     tags: ~
 
 skills:
@@ -135,11 +138,11 @@ skills:
 
 languages:
   -
-    name: English
-    level: fluent
+    language: English
+    fluency: fluent
   -
-    name: German
-    level: intermediate
+    language: German
+    fluency: intermediate
   -
-    name: Portuguese
-    level: native
+    language: Portuguese
+    fluency: native

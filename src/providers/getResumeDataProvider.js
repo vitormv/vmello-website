@@ -6,26 +6,35 @@ export const getResumeDataProvider = () => {
         resume: dataYaml(slug: {eq: "resume"}) {
             title
             subtitle
+            summary
             links {
                 name
                 href
             }
-            intro
             education {
-                name
-                title
-                year
+                institution
+                area
+                studyType
+                years
             }
-            experience {
+            work {
                 company
                 location
                 duration
-                roles {
-                    title
+                positions {
+                    position
                     date
                 }
-                description
+                summary
                 tags
+            }
+            skills {
+                name
+                level
+            }
+            languages {
+                language
+                fluency
             }
         }
     }
