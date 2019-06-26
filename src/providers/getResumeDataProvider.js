@@ -1,7 +1,7 @@
 import { useStaticQuery, graphql } from 'gatsby';
 
 export const getResumeDataProvider = () => {
-    const { resume } = useStaticQuery(graphql`
+  const { resume } = useStaticQuery(graphql`
     {
         resume: dataYaml(slug: {eq: "resume"}) {
             title
@@ -40,5 +40,5 @@ export const getResumeDataProvider = () => {
     }
 `);
 
-    return resume;
+  return resume;
 };

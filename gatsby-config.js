@@ -5,6 +5,7 @@ module.exports = {
     author: 'Vitor Mello',
   },
   plugins: [
+    'gatsby-plugin-resolve-src',
     'gatsby-plugin-eslint',
     {
       resolve: 'gatsby-plugin-sass',
@@ -12,6 +13,32 @@ module.exports = {
         sassOptions: {
           includePaths: ['src/styles'],
         },
+      },
+    },
+    'gatsby-plugin-root-import',
+    {
+      resolve: 'gatsby-plugin-gtag',
+      options: {
+        trackingId: 'UA-140852685-1',
+        head: false,
+        anonymize: true,
+        respectDNT: true,
+        cookieDomain: 'vmello.com',
+      },
+    },
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-transformer-yaml-plus',
+      options: {
+        enableRemark: true,
+        markdownPreface: 'md//',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'data',
+        path: `${__dirname}/src/data`,
       },
     },
     {
@@ -36,7 +63,6 @@ module.exports = {
           ],
         },
       },
-
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',

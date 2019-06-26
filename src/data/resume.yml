@@ -127,6 +127,9 @@ skills:
     name: php / symfony
     level: expert
   -
+    name: node.js
+    level: intermediate
+  -
     name: html / css / sass
     level: expert
   -
