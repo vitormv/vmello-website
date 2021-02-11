@@ -1,0 +1,25 @@
+name: vmello-website-ci 
+
+on: [push]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest 
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Cache node modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Install depdendencies
+        run: npm install
+
+      - name: Run tests
+        run: npm run test

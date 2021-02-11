@@ -27,7 +27,7 @@ const IndexPage = () => {
         >
           React.js
         </TypeWriter>
-        &nbsp;addict.
+        addict.
       </FullPageHeadline>
 
       {/* BIOGRAPHY */}
