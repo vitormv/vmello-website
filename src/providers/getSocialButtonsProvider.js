@@ -1,7 +1,7 @@
 import { useStaticQuery, graphql } from 'gatsby';
 
 export const getSocialButtonsProvider = () => {
-    const { buttons } = useStaticQuery(graphql`
+  const { buttons } = useStaticQuery(graphql`
     {
         buttons: dataYaml(slug: {eq: "social-buttons"}) {
             items {
@@ -13,5 +13,5 @@ export const getSocialButtonsProvider = () => {
         }
     }`);
 
-    return buttons;
+  return buttons;
 };

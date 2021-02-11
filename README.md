@@ -11,7 +11,7 @@ Want to take a look at the code for yourself? Go ahead!
 ```
 $ git clone git@github.com:vitormv/vmello-website.git vmello-website
 $ cd vmello-website
-$ yarn bootstrap
+$ npm run bootstrap
 ```
 Then open the `http://0.0.0.0:8000` on your favorite browser.
 
@@ -51,7 +51,7 @@ Deploy is automated by using Travis CI + [Surge.sh](https://surge.sh/). It is au
 
 My resume is served on my website as a `.pdf` file, but the source is a Google Docs file in Google Drive. To fetch the newest copy, I can just run the command:
 ```
-yarn resume:pull
+npm run resume:pull
 ```
 This will automatically:
 * **Connect to Google Drive API** (and request a token in case its not present)

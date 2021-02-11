@@ -1,71 +1,70 @@
 {
-    "name": "vmello-website",
-    "description": "Source code for Vitor Mello's personal website, built with Gatsby, React and GraphQL",
-    "author": "Vitor Mello",
-    "private": true,
-    "version": "1.0.0",
-    "scripts": {
-        "bootstrap": "yarn install && yarn start",
-        "build": "gatsby build",
-        "develop": "gatsby develop",
-        "lint": "yarn lint:js",
-        "lint:js": "eslint src/",
-        "now-dev": "gatsby develop -p $PORT",
-        "now-build": "npm run build",
-        "resume:pull": "node bin/resume-download.js",
-        "start": "yarn develop",
-        "serve": "yarn build && gatsby serve",
-        "test": "yarn lint"
-    },
-    "dependencies": {
-        "@fortawesome/fontawesome-free": "^5.8.2",
-        "@fortawesome/fontawesome-svg-core": "^1.2.18",
-        "@fortawesome/free-brands-svg-icons": "^5.8.2",
-        "@fortawesome/free-solid-svg-icons": "^5.8.2",
-        "@fortawesome/react-fontawesome": "^0.1.4",
-        "classnames": "^2.2.6",
-        "gatsby": "^2.5.5",
-        "gatsby-image": "^2.1.0",
-        "gatsby-plugin-gtag": "^1.0.10",
-        "gatsby-plugin-manifest": "^2.1.1",
-        "gatsby-plugin-offline": "^2.1.1",
-        "gatsby-plugin-react-helmet": "^3.0.12",
-        "gatsby-plugin-sharp": "^2.0.37",
-        "gatsby-plugin-webfonts": "^1.0.7",
-        "gatsby-source-filesystem": "^2.0.37",
-        "gatsby-transformer-sharp": "^2.1.19",
-        "gatsby-transformer-yaml-plus": "^0.1.0",
-        "googleapis": "^40.0.0",
-        "normalize.css": "^8.0.1",
-        "prop-types": "^15.7.2",
-        "react": "^16.8.6",
-        "react-dom": "^16.8.6",
-        "react-helmet": "^5.2.1",
-        "remark-html": "^9.0.0",
-        "typeit": "^6.0.3"
-    },
-    "devDependencies": {
-        "eslint": "^5.16.0",
-        "eslint-config-airbnb": "^17.1.0",
-        "eslint-import-resolver-webpack": "^0.11.1",
-        "eslint-loader": "^2.1.2",
-        "eslint-plugin-import": "^2.17.2",
-        "eslint-plugin-jsx-a11y": "^6.2.1",
-        "eslint-plugin-react": "^7.13.0",
-        "gatsby-plugin-eslint": "^2.0.5",
-        "gatsby-plugin-root-import": "^2.0.5",
-        "gatsby-plugin-sass": "^2.0.11",
-        "node-sass": "^4.12.0"
-    },
-    "license": "MIT",
-    "eslintIgnore": [
-        "bin/*.js"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/vitormv/vmello-website"
-    },
-    "bugs": {
-        "url": "https://github.com/vitormv/vmello-website/issues"
-    }
+  "name": "vmello-website",
+  "description": "Source code for Vitor Mello's personal website, built with Gatsby, React and GraphQL",
+  "author": "Vitor Mello",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "bootstrap": "npm install && npm start",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "lint": "npm run lint:js",
+    "lint:js": "eslint src/",
+    "now-dev": "gatsby develop -p $PORT",
+    "now-build": "npm run build",
+    "resume:pull": "node bin/resume-download.js",
+    "start": "npm run develop",
+    "serve": "npm run build build && gatsby serve",
+    "test": "npm run lint"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.8.2",
+    "@fortawesome/fontawesome-svg-core": "^1.2.18",
+    "@fortawesome/free-brands-svg-icons": "^5.8.2",
+    "@fortawesome/free-solid-svg-icons": "^5.8.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "classnames": "^2.2.6",
+    "gatsby": "^2.5.5",
+    "gatsby-image": "^2.1.0",
+    "gatsby-plugin-gtag": "^1.0.10",
+    "gatsby-plugin-manifest": "^2.1.1",
+    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-sharp": "^2.0.37",
+    "gatsby-plugin-webfonts": "^1.0.7",
+    "gatsby-source-filesystem": "^2.0.37",
+    "gatsby-transformer-sharp": "^2.1.19",
+    "gatsby-transformer-yaml-plus": "^0.2.2",
+    "googleapis": "^67.0.0",
+    "normalize.css": "^8.0.1",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "remark-html": "^13.0.1",
+    "typeit": "^7.0.4"
+  },
+  "devDependencies": {
+    "eslint": "^7.19.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-import-resolver-webpack": "^0.13.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0",
+    "eslint-webpack-plugin": "^2.5.0",
+    "gatsby-plugin-eslint": "^3.0.0",
+    "gatsby-plugin-root-import": "^2.0.5",
+    "gatsby-plugin-sass": "^3.2.0",
+    "node-sass": "^5.0.0"
+  },
+  "license": "MIT",
+  "eslintIgnore": [
+    "bin/*.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vitormv/vmello-website"
+  },
+  "bugs": {
+    "url": "https://github.com/vitormv/vmello-website/issues"
+  }
 }
