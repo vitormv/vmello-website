@@ -3,7 +3,7 @@ items:
   -
     key: resume
     title: Download CV/Resume
-    href: https://vmello.com/resume.pdf
+    href: /resume.pdf
     icon: fas download
   -
     key: email

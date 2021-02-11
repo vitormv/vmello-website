@@ -1,37 +1,42 @@
 {
-    "extends": "airbnb",
-    "rules": {
-        "indent": [
-            2,
-            4,
-            {
-                "SwitchCase": 1
-            }
-        ],
-        "react/jsx-indent": [
-            2,
-            4
-        ],
-        "react/jsx-filename-extension": [
-            0
-        ],
-        "react/jsx-indent-props": [
-            2,
-            4
-        ],
-        "import/prefer-default-export": [
-            0
-        ]
-    },
-    "env": {
-        "browser": true,
-        "jest": true
-    },
-    "settings": {
-        "import/resolver": {
+  "extends": ["airbnb"],
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "plugins": ["react"],
+  "rules": {
+    "import/no-cycle": "warn",
+    "react/jsx-filename-extension": ["off"],
+    "prefer-destructuring": "warn",
+    "react/destructuring-assignment": "warn",
+    "react/jsx-props-no-spreading": "off",
+    "import/prefer-default-export": "off",
+    "jsx-a11y/control-has-associated-label": "off",
+    "quote-props": ["error", "consistent-as-needed"],
+    "array-bracket-newline": ["error", "consistent"],
+    "object-curly-newline": [
+      "error",
+      {
+        "ImportDeclaration": { "consistent": true },
+        "ObjectPattern": { "minProperties": 5 }
+      }
+    ],
+    "max-len": ["warn", { "code": 120, "ignoreComments": true, "ignoreUrls": true }]
+  },
+  "ignorePatterns": ["/.cache/", "/public/", "/node_modules/"],
+  "settings": {
+    "import/resolver": {
             "webpack": {
                 "config": "webpack.config.js"
             }
         }
-    }
+  }
 }

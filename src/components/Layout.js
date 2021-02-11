@@ -5,13 +5,13 @@ import 'normalize.css';
 import 'src/styles/main.scss';
 
 const Layout = ({ children }) => (
-    <React.Fragment>
-        {children}
-    </React.Fragment>
+  <>
+    {children}
+  </>
 );
 
 Layout.propTypes = {
-    children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export { Layout };
