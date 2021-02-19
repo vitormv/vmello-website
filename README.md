@@ -24,7 +24,7 @@ A quick look at the structure for this project:
 ```plain
     .
     ├── cli/
-    ├── src /
+    ├── src/
     ├──── components/
     ├──── data/
     ├──── pages/
