@@ -12,29 +12,26 @@ summary: >
   my fellow colleagues.
 
 links:
-  -
-    name: vitor@vmello.com
+  - name: vitor@vmello.com
     href: ~
-  -
-    name: https://vmello.com
+  
+  - name: https://vmello.com
     href: https://vmello.com
-  -
-    name: https://www.linkedin.com/in/vitormv
+  
+  - name: https://www.linkedin.com/in/vitormv
     href: https://www.linkedin.com/in/vitormv
-  -
-    name: https://github.com/vitormv
+  
+  - name: https://github.com/vitormv
     href: https://github.com/vitormv
 
 education:
-  -
-    institution: Centro de Estudos Superiores de Maceió, CESMAC
+  - institution: Centro de Estudos Superiores de Maceió, CESMAC
     studyType: Bachelor
     area: Computer Systems Analysis
     years: 2005 - 2009
 
 work:
-  -
-    company: Flixbus GmbH
+  - company: Flixbus GmbH
     location: Berlin, Germany
     duration: 3+ years
     positions:
@@ -49,8 +46,8 @@ work:
     tags: >
       javascript, reactjs, redux, jest, puppeteer, webpack, es6, babel, sass, node.js, php7,
       symfony, phpunit, mysql, redis, elasticsearch, amazon aws, kubernetes, docker, ab tests
-  -
-    company: Foodpanda GmbH
+
+  - company: Foodpanda GmbH
     location: Berlin, Germany
     duration: 2 years 7 months
     positions:
@@ -61,8 +58,8 @@ work:
     tags: >
       javascript, php, mysql, html, sass, css, bootstrap, jquery, grunt, amazon sqs,
       elasticsearch, redis, git
-  -
-    company: Mobly
+
+  - company: Mobly
     location: São Paulo, Brazil
     duration: 1 year 4 months
     positions:
@@ -78,8 +75,8 @@ work:
     tags: >
       javascript, php, mysql, html, sass, css, bootstrap, jquery, zend framework, yii, solr,
       memcache, git
-  -
-    company: Plus! Agência Digital
+
+  - company: Plus! Agência Digital
     location: Maceió, Brazil
     duration: 3 years 4 months
     positions:
@@ -95,8 +92,8 @@ work:
     tags: >
       javascript, php, mysql, html, sass, css, bootstrap, jquery, zend framework, yii, solr,
       memcache, gits, elasticsearch, redis, git
-  -
-    company: Carango
+
+  - company: Carango
     location: Maceió, Brazil
     duration: 1 year 3 months
     positions:
@@ -105,8 +102,8 @@ work:
         date: Jul 2007 - Sep 2008
     summary: ~
     tags: ~
-  -
-    company: SEMARHP
+
+  - company: SEMARHP
     location: Maceió, Brazil
     duration: 1 year 6 months
     positions:
@@ -117,35 +114,33 @@ work:
     tags: ~
 
 skills:
-  -
-    name: Javascript / ES6
+  - name: Javascript / ES6
     level: expert
-  -
-    name: React / Redux / SSR
+  
+  - name: React / Redux / SSR
     level: expert
-  -
-    name: php / symfony
+  
+  - name: php / symfony
     level: expert
-  -
-    name: node.js
+  
+  - name: node.js
     level: intermediate
-  -
-    name: html / css / sass
+  
+  - name: html / css / sass
     level: expert
-  -
-    name: Infrastructure
+  
+  - name: DevOps
     level: intermediate
-  -
-    name: UX
+  
+  - name: UX
     level: intermediate
 
 languages:
-  -
-    language: English
+  - language: English
     fluency: fluent
-  -
-    language: German
+  
+  - language: German
     fluency: intermediate
-  -
-    language: Portuguese
+
+  - language: Portuguese
     fluency: native

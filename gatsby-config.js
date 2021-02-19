@@ -60,6 +60,13 @@ module.exports = {
               strategy: 'cdn',
               usePreconnect: true,
             },
+            {
+              family: 'Raleway',
+              variants: ['700'],
+              subsets: ['latin'],
+              strategy: 'cdn',
+              usePreconnect: true,
+            },
           ],
         },
       },

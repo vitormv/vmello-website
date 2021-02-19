@@ -1,5 +1,5 @@
-import React from 'react';
 import { OutboundLink } from 'gatsby-plugin-gtag';
+import React from 'react';
 import Helmet from 'react-helmet';
 import { getResumeDataProvider } from 'src/providers/getResumeDataProvider';
 import styles from './PaperPage.module.scss';
@@ -12,12 +12,14 @@ const PaperPage = () => {
       <Helmet>
         <body className={styles.root} />
       </Helmet>
+
       <article>
         <header className={`${styles.row} ${styles.header}`}>
           <aside className={styles.sidebar}>
             <h1>{resume.title}</h1>
             <h2>{resume.subtitle}</h2>
           </aside>
+
           <div className={styles.content}>
             <ul className={styles.contact}>
               {resume.links.map((link) => (
@@ -37,6 +39,7 @@ const PaperPage = () => {
             </ul>
           </div>
         </header>
+
         <main className={styles.row}>
           <aside className={styles.sidebar}>
             <section>
@@ -45,6 +48,7 @@ const PaperPage = () => {
                 {resume.summary}
               </p>
             </section>
+
             <section>
               <h3>Education</h3>
               <div className={styles.education}>
@@ -63,6 +67,7 @@ const PaperPage = () => {
                 ))}
               </div>
             </section>
+
             <section>
               <h3>Skills</h3>
               <ul className={styles.skills}>
@@ -78,6 +83,7 @@ const PaperPage = () => {
                 ))}
               </ul>
             </section>
+
             <section>
               <h3>Languages</h3>
               <ul className={styles.languages}>
@@ -94,6 +100,7 @@ const PaperPage = () => {
               </ul>
             </section>
           </aside>
+
           <div className={styles.content}>
             <section>
               <h3>Experience</h3>
