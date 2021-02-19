@@ -20,7 +20,7 @@ Then open the `http://0.0.0.0:8000` on your favorite browser.
 A quick look at the structure for this project:
 
     .
-    ├── bin
+    ├── cli
     ├── src 
     ├──── components
     ├──── data
