@@ -1,0 +1,268 @@
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  .sheet {
+    padding: 12mm;
+  }
+}
+
+body.root {
+  margin: 0;
+}
+
+.sheet {
+  position: relative;
+  box-sizing: border-box;
+  page-break-after: always;
+  margin: 0 auto;
+
+  &.a4 {
+    width: 210mm;
+    min-height: 296mm;
+  }
+}
+
+@media screen {
+  body.root {
+    background: #e0e0e0;
+  }
+
+  .sheet {
+    background: white;
+    box-shadow: 0 0.5mm 2.5mm rgba(0, 0, 0, 0.5);
+    padding: 15mm;
+    margin: 8mm auto;
+  }
+}
+
+.sheet {
+  font-size: 10pt;
+
+  article {
+    color: #293241;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    font-family: "Lora", serif;
+
+    * {
+      line-height: 1.4em;
+    }
+
+    a {
+      text-decoration: none;
+      color: #0044cc;
+      display: inline-block;
+      position: relative;
+
+      &:hover {
+        color: #0044cc;
+        top: 1px;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .header {
+    flex-grow: 0;
+    align-items: flex-end;
+    margin-bottom: 8mm;
+  }
+
+  .row {
+    color: #293241;
+    display: flex;
+
+    .sidebar {
+      flex-basis: 55.5mm;
+      margin-right: 7mm;
+    }
+
+    .content {
+      flex: 1;
+    }
+  }
+
+  main {
+    flex: 1;
+  }
+
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 30pt;
+    font-family: Raleway, Lato, sans-serif;
+    line-height: 1em;
+  }
+  h2 {
+    margin: 0;
+    padding: 0;
+    font-family: Raleway, Lora, serif;
+    font-size: 12pt;
+  }
+  h3 {
+    color: #c35940;
+    font-family: Lora, serif;
+    font-size: 18pt;
+    font-weight: normal;
+    margin: 0 0 3mm 0;
+  }
+  h4 {
+    font-family: Lato, sans-serif;
+    font-size: 9pt;
+    font-weight: 700;
+    margin: 0 0 1mm 0;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 1mm;
+    font-size: 9pt;
+  }
+
+  section {
+    margin-bottom: 7mm;
+    font-size: 9pt;
+  }
+
+  .contact {
+    text-align: right;
+    list-style-type: none;
+    margin: 0;
+  }
+
+  table.companyInfo {
+    width: 100%;
+    font-family: Lato, sans-serif;
+    border-spacing: 0;
+    margin-bottom: 3mm;
+
+    th:first-child,
+    td:first-child {
+      text-align: left;
+      padding: 0;
+    }
+    th:last-child,
+    td:last-child {
+      text-align: right;
+      padding: 0;
+      color: #666666;
+      font-weight: 400;
+    }
+
+    td.date {
+      font-weight: 300;
+    }
+
+    .location {
+      font-weight: 300;
+      color: #666666;
+
+      &:before {
+        content: " — ";
+      }
+    }
+  }
+
+  .experience {
+    margin-bottom: 7mm;
+    page-break-inside: avoid;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    p {
+      font-family: Lora, serif;
+      margin: 0 0 2mm;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .techStack {
+      font-weight: bold;
+      font-family: Lato, sans-serif;
+    }
+  }
+}
+
+@media print {
+  table.companyInfo {
+    page-break-inside: avoid;
+  }
+}
+
+.education {
+  em {
+    font-style: normal;
+    color: #666666;
+    font-family: Lato, sans-serif;
+  }
+}
+
+.skills {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-family: Lato, sans-serif;
+
+  > li {
+    position: relative;
+    margin-bottom: 1mm;
+    display: flex;
+    color: #ffffff;
+    padding: 1mm 2mm;
+    font-size: 10pt;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    &:before {
+      // usually browsers wont print background colors by default,
+      // by using an svg image we enforce the colors will be replicated on print
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='50'%3E%3Crect x='0' y='0' width='300' height='50' fill='%23293241' /%3E%3C/svg%3E");
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    .skillName {
+      flex: 1;
+      font-weight: 300;
+      z-index: 1;
+      position: relative;
+    }
+    .skillLevel {
+      font-weight: 300;
+      text-align: right;
+      display: inline-block;
+      z-index: 1;
+      position: relative;
+      opacity: 0.5;
+    }
+  }
+}
+
+.languages {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-family: Lato, sans-serif;
+
+  > li {
+    margin-bottom: 0.5mm;
+
+    .languageName {
+      font-weight: 700;
+    }
+    .languageLevel {
+      color: #666666;
+    }
+  }
+}

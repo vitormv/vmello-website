@@ -1,0 +1,63 @@
+@import "config.scss";
+
+.main {
+  color: $textColor;
+  background-color: $shade2;
+  font-family: Lato, "Helvetica Neue", "Helvetica Arial", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.75;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  dl,
+  address,
+  hr,
+  table {
+    margin-bottom: 0.55rem;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  a,
+  button {
+    transition: all 0.15s linear;
+  }
+
+  a {
+    color: $textColorHighlight;
+    text-decoration: none;
+
+    &:hover {
+      color: $textColorHover;
+    }
+  }
+
+  p {
+    font-size: 0.91rem;
+    font-weight: 300;
+    margin: 0 0 1.375rem;
+    line-height: 1.7rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  hr {
+    background-color: #404242;
+    height: 2px;
+    font-size: 0;
+    border: 0 solid #404242;
+    margin: 1.75rem 0;
+  }
+}

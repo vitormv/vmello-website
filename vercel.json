@@ -2,16 +2,8 @@
   "version": 2,
   "name": "vmello.com",
   "alias": "vmello.com",
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@now/static-build",
-      "config": {
-        "distDir": "public"
-      }
-    }
-  ],
   "routes": [
+    { "handle": "filesystem" },
     {
       "src": "^/public/static/(.*)",
       "headers": {
@@ -29,6 +21,7 @@
       "headers": {
         "cache-control": "public,max-age=0,must-revalidate"
       }
-    }
+    },
+    { "src": "/(.*)", "status": 404, "dest": "/404/index.html" }
   ]
 }

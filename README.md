@@ -29,36 +29,33 @@ A quick look at the structure for this project:
     ├──── styles
     ├── static
 
-1. **`/bin/`**: This directory contains some useful scripts, like for example export my resume as pdf directly and saving a local copy. This is done by using Google Drive APIs for node.js.
+1. **`/cli/`**: This directory contains some useful scripts, like for example export my resume as pdf directly and saving a local copy.
 
-2. **`src/components/`**: Home of all the React components used in the website, useful reusable pieces of code.
+2. **`/src/components/`**: Home of all the React components used in the website, useful reusable pieces of code.
 
-3. **`src/data/`**: Here likes all the content of the website, as yml files. This is useful to keep the content layer separated from the components themselves. These files will be read by graphql at build time.
+3. **`/src/data/`**: Here likes all the content of the website, as yml files. This is useful to keep the content layer separated from the components themselves. These files will be read by graphql at build time.
 
-4.  **`src/pages/`**: This folder is where Gatsby expects to find all the website pages.
+4. **`/src/pages/`**: This folder is where Gatsby expects to find all the website pages.
 
-5.  **`src/providers/`**: Here all the static graphql queries used in the website are used. This allow for great reuse of common functionality, in case they are needed in more than one place. They use React `Hooks` to define the queries.
+5. **`/src/providers/`**: Here all the static graphql queries used in the website are used. This allow for great reuse of common functionality, in case they are needed in more than one place. They use React `Hooks` to define the queries.
 
-6.  **`src/styles/`**: Place for all the global stylesheets used in the website.
+6. **`/src/styles/`**: Place for all the global stylesheets used in the website.
 
-7.  **`static/`**: Place for all the static assets of the website, like favicons, my pdf resume and so on.
+7. **`/static/`**: Place for all the static assets of the website, like favicons, my pdf resume and so on.
 
 ## 💫 Deploy
 
-Deploy is automated by using Travis CI + [Surge.sh](https://surge.sh/). It is automatically redeployed to whenever something is merged to master.
+Deploy is automated by using Github Actions + [Surge.sh](https://surge.sh/). It is automatically redeployed to whenever something is merged to master.
 
 ## 💾 Update & download resume
 
-My resume is served on my website as a `.pdf` file, but the source is a Google Docs file in Google Drive. To fetch the newest copy, I can just run the command:
-```
-npm run resume:pull
-```
-This will automatically:
-* **Connect to Google Drive API** (and request a token in case its not present)
-* **Export** my resume as a `.pdf` file
-* **Download** it to the `/static` folder.
+After spending countless hours trying to create a greatly aligned resume in Google Docs, I finally decided to recreate it in html format (https://vmello.com/resume), and export it as pdf automatically. It heavily uses CSS media @print queries. The `.pdf` file is exported using Puppeteer.
 
-I am sometimes lazy and love to automate things 😁
+```
+npm run resume:export
+```
+
+I love to automate things! 😁
 
 ## 📝 License
 

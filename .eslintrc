@@ -34,9 +34,10 @@
   "ignorePatterns": ["/.cache/", "/public/", "/node_modules/"],
   "settings": {
     "import/resolver": {
-            "webpack": {
-                "config": "webpack.config.js"
-            }
-        }
+      "node": {},
+      "webpack": {
+          "config": "webpack.config.js"
+      }
+    }
   }
 }

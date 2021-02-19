@@ -5,6 +5,7 @@ module.exports = {
     author: 'Vitor Mello',
   },
   plugins: [
+    'gatsby-plugin-resolve-src',
     'gatsby-plugin-eslint',
     {
       resolve: 'gatsby-plugin-sass',
@@ -48,6 +49,20 @@ module.exports = {
             {
               family: 'Lato',
               variants: ['100', '300', '400', '700'],
+              subsets: ['latin'],
+              strategy: 'cdn',
+              usePreconnect: true,
+            },
+            {
+              family: 'Lora',
+              variants: ['400', '700'],
+              subsets: ['latin'],
+              strategy: 'cdn',
+              usePreconnect: true,
+            },
+            {
+              family: 'Raleway',
+              variants: ['700'],
               subsets: ['latin'],
               strategy: 'cdn',
               usePreconnect: true,
