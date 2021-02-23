@@ -6,44 +6,51 @@ import { Section } from 'src/components/Section/Section';
 import { SEO } from 'src/components/SEO';
 import { SkillsList } from 'src/components/SkillsList/SkillsList';
 import { TypeWriter } from 'src/components/TypeWriter/TypeWriter';
-import { getHomepageMetadataProvider } from 'src/providers/getHomepageMetadataProvider';
+import introYml from 'src/data/homepage/1-intro.yml';
+import expertiseYml from 'src/data/homepage/2-expertise.yml';
+import contactInfoYml from 'src/data/contact-info.yml';
 
-const IndexPage = () => {
-  const { intro, expertise } = getHomepageMetadataProvider();
+const IndexPage = ({ intro, expertise, contactInfo }) => (
+  <Layout>
+    <SEO title="Home" />
 
-  return (
-    <Layout>
-      <SEO title="Home" />
+    {/* BRAND */}
+    <FullPageHeadline contactInfo={contactInfo}>
+      Senior Full-Stack Engineer &#x26;&nbsp;
+      <TypeWriter
+        strings={['Forró', 'Snowboard']}
+        speed={200}
+        startDelay={500}
+        nextStringDelay={[1000, 750]}
+        breakLines={false}
+      >
+        React.js
+      </TypeWriter>
+      addict.
+    </FullPageHeadline>
 
-      {/* BRAND */}
-      <FullPageHeadline>
-        Senior Full-Stack Engineer &#x26;&nbsp;
-        <TypeWriter
-          strings={['Forró', 'Snowboard']}
-          speed={200}
-          startDelay={500}
-          nextStringDelay={[1000, 750]}
-          breakLines={false}
-        >
-          React.js
-        </TypeWriter>
-        addict.
-      </FullPageHeadline>
+    {/* BIOGRAPHY */}
+    <Section textOnly title={intro.title} description={intro.description}>
+      {/* eslint-disable-next-line react/no-danger */}
+      <div dangerouslySetInnerHTML={{ __html: intro.biography.join('') }} />
+    </Section>
 
-      {/* BIOGRAPHY */}
-      <Section textOnly title={intro.title} description={intro.description}>
-        {/* eslint-disable-next-line react/no-danger */}
-        <div dangerouslySetInnerHTML={{ __html: intro.biography.join('') }} />
-      </Section>
+    {/* EXPERTISE */}
+    <Section title={expertise.title} description={expertise.description}>
+      <SkillsList skills={expertise.items} />
+    </Section>
 
-      {/* EXPERTISE */}
-      <Section title={expertise.title} description={expertise.description}>
-        <SkillsList skills={expertise.items} />
-      </Section>
+    <Footer />
+  </Layout>
+);
 
-      <Footer />
-    </Layout>
-  );
-};
+const getStaticProps = async () => ({
+  props: {
+    intro: introYml,
+    expertise: expertiseYml,
+    contactInfo: contactInfoYml.items,
+  },
+});
 
+export { getStaticProps };
 export default IndexPage;

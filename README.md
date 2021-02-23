@@ -3,7 +3,7 @@
   Vitor Mello's Website
 </h1>
 
-This is the source code for my website. It is a statically generated using **Gatsby**, **React.js** and **GraphQL**. I had never used a Static Website Generator before, and thought that building my own website using one was a nice way to learn the technology. I must say I really like it, and it provides nice ways to keep the content separated from the Components themselves.
+This is the source code for my website. It is a statically generated using **Next.js** and **React.js**.
 
 ## 🚀 Get Up and Running
 

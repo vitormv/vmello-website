@@ -25,9 +25,9 @@ const Brand = ({
     </h1>
 
     {children && (
-    <h2 className={styles.subtitle}>
-      {children}
-    </h2>
+      <h2 className={styles.subtitle}>
+        {children}
+      </h2>
     )}
   </div>
 );

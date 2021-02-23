@@ -1,5 +1,3 @@
-@import "config.scss";
-
 .section {
   @include breakpoint($from: md) {
     position: relative;

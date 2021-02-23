@@ -20,14 +20,14 @@ const Section = ({
       {(title.length > 0 || description.length > 0) && (
         <div className={styles.cell}>
           {(title.length > 0) && (
-          <h2 className={styles.title}>
-            {title}
-          </h2>
+            <h2 className={styles.title}>
+              {title}
+            </h2>
           )}
           {(description.length > 0) && (
-          <div>
-            {`${description}.`}
-          </div>
+            <div>
+              {`${description}.`}
+            </div>
           )}
         </div>
       )}

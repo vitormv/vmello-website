@@ -5,7 +5,7 @@ import { Headline } from 'src/components/Headline/Headline';
 import { ContactInfo } from 'src/components/ContactInfo/ContactInfo';
 import styles from './FullPageHeadline.module.scss';
 
-const FullPageHeadline = ({ children, withContactInfo, ...rest }) => (
+const FullPageHeadline = ({ children, withContactInfo, contactInfo, ...rest }) => (
   <Section fullSize>
     <div className={styles.section}>
       <Headline {...rest}>
@@ -13,7 +13,7 @@ const FullPageHeadline = ({ children, withContactInfo, ...rest }) => (
       </Headline>
 
       {withContactInfo && (
-        <ContactInfo extraClassName={styles.contactInfo} />
+        <ContactInfo contactInfo={contactInfo} extraClassName={styles.contactInfo} />
       )}
     </div>
   </Section>

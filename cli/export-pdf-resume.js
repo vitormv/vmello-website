@@ -1,10 +1,9 @@
-/* eslint-disable no-console */
-import puppeteer from 'puppeteer';
 import path from 'path';
+import puppeteer from 'puppeteer';
 
 const rootDir = process.cwd();
-const sourceHtmlFile = path.join('public', 'resume', 'index.html');
-const targetPdf = path.join('static', 'vitor-mello-resume.pdf');
+const sourceHtmlFile = path.join('out', 'resume.html');
+const targetPdf = path.join('public', 'vitor-mello-resume.pdf');
 
 async function exportResumeAsPdf() {
   console.log('Starting PDF export.', '\n');
