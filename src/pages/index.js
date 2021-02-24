@@ -6,9 +6,9 @@ import { Section } from 'src/components/Section/Section';
 import { SEO } from 'src/components/SEO';
 import { SkillsList } from 'src/components/SkillsList/SkillsList';
 import { TypeWriter } from 'src/components/TypeWriter/TypeWriter';
-import introYml from 'src/data/homepage/1-intro.yml';
 import expertiseYml from 'src/data/homepage/2-expertise.yml';
 import contactInfoYml from 'src/data/contact-info.yml';
+import { getHomepageIntro } from 'src/providers/getHomepageIntro';
 
 const IndexPage = ({ intro, expertise, contactInfo }) => (
   <Layout>
@@ -46,7 +46,7 @@ const IndexPage = ({ intro, expertise, contactInfo }) => (
 
 const getStaticProps = async () => ({
   props: {
-    intro: introYml,
+    intro: getHomepageIntro(),
     expertise: expertiseYml,
     contactInfo: contactInfoYml.items,
   },

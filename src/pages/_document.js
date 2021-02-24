@@ -9,7 +9,8 @@ class MyDocument extends Document {
           <meta charSet="UTF-8" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-          <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Lato:wght@100;300;400;700&display=swap" media="all" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" media="all" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" media="all" rel="stylesheet" />
 
           <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140852685-1" />
           <script

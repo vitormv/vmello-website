@@ -1,8 +1,7 @@
 import React from 'react';
-import App from 'next/app';
 import Head from 'next/head';
 
-const MyApp = ({ Component, pageProps }) => (
+const CustomApp = ({ Component, pageProps }) => (
   <>
     <Head>
       <meta name="viewport" content="viewport-fit=cover" />
@@ -11,11 +10,4 @@ const MyApp = ({ Component, pageProps }) => (
   </>
 );
 
-MyApp.getInitialProps = async (appContext) => {
-  // calls page's `getInitialProps` and fills `appProps.pageProps`
-  const appProps = await App.getInitialProps(appContext);
-
-  return { ...appProps };
-};
-
-export default MyApp;
+export default CustomApp;

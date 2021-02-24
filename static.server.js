@@ -6,11 +6,11 @@ import express from 'express';
 const PORT = 9000;
 
 // This is the server that runs on "npm run serve".
-// It works by serving the statically generated .html files on /dist.
+// It works by serving the statically generated .html files on /out.
 // Of course, before starting this server you should export the project with "npm run export"
 const mainApp = express();
 
-const rootPath = path.resolve(path.join(__dirname, '../dist'));
+const rootPath = path.resolve(path.join(__dirname, 'out'));
 
 const staticConfig = {
   extensions: ['html'], // when requesting "/aaa/bbb", also look for "/aaa/bbb.html"

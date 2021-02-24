@@ -56,7 +56,7 @@ Deploy is automated by using Github Actions + [Surge.sh](https://surge.sh/). It 
 After spending countless hours trying to create a greatly aligned resume in Google Docs, I finally decided to recreate it in html format (https://vmello.com/resume), and export it as pdf automatically. It heavily uses CSS media @print queries. The `.pdf` file is exported using Puppeteer.
 
 ```plain
-npm run resume:export
+npm run resume
 ```
 
 I love to automate things! 😁
