@@ -59,6 +59,7 @@ module.exports = {
       },
     ],
     'react/prop-types': 'warn',
+    'react/react-in-jsx-scope': 'off',
   },
   ignorePatterns: ['/node_modules/', '/.next', '/out'],
   settings: {

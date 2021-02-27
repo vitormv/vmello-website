@@ -11,8 +11,10 @@
   "scripts": {
     "bootstrap": "npm install && npm start",
     "build": "next build",
-    "lint": "npm run lint:js",
+    "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint --cache --cache-location node_modules/.cache/eslint/ .",
+    "lint:css": "stylelint \"src/**/*.scss\"",
+    "lint:css:fix": "stylelint --fix \"src/**/*.scss\"",
     "export": "npm run build && next export",
     "resume": "npm run export && concurrently --kill-others --success first npm:serve npm:resume:export",
     "resume:export": "node -r esm cli/export-pdf-resume.js",
@@ -28,13 +30,12 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "classnames": "^2.2.6",
     "compression": "^1.7.4",
-    "concurrently": "^6.0.0",
     "express": "^4.17.1",
     "lodash": "^4.17.21",
     "next": "^10.0.7",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
-    "puppeteer": "^7.1.0",
+    "puppeteer": "^8.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
@@ -43,6 +44,7 @@
     "typeit": "^7.0.4"
   },
   "devDependencies": {
+    "concurrently": "^6.0.0",
     "eslint": "^7.19.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.17.2",
@@ -50,7 +52,10 @@
     "eslint-plugin-react": "^7.13.0",
     "esm": "^3.2.25",
     "js-yaml-loader": "^1.2.2",
-    "sass": "^1.32.8"
+    "prettier": "^2.2.1",
+    "sass": "^1.32.8",
+    "stylelint": "^13.11.0",
+    "stylelint-config-sass-guidelines": "^8.0.0"
   },
   "license": "MIT",
   "repository": {

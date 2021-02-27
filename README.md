@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/vitormv/vmello-website.svg?branch=master)](https://travis-ci.org/vitormv/vmello-website) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/vitormv/vmello-website/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/vitormv/vmello-website/?branch=master) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 <h1 align="center">
   Vitor Mello's Website
 </h1>
@@ -39,7 +40,7 @@ A quick look at the structure for this project:
 
 3. **`/src/data/`**: Here likes all the content of the website, as yml files. This is useful to keep the content layer separated from the components themselves. These files will be read by graphql at build time.
 
-4. **`/src/pages/`**: This folder is where Gatsby expects to find all the website pages.
+4. **`/src/pages/`**: This folder is where Next.js expects to find all the website pages.
 
 5. **`/src/providers/`**: Here all the static graphql queries used in the website are used. This allow for great reuse of common functionality, in case they are needed in more than one place. They use React `Hooks` to define the queries.
 

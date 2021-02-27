@@ -11,6 +11,7 @@ const recursiveMarkdownRender = (obj) => {
   for (const property in obj) {
     if (Object.prototype.hasOwnProperty.call(obj, property)) {
       const value = obj[property];
+
       if (isObject(value)) {
         obj[property] = recursiveMarkdownRender(value);
       } else if (isString(value) && value.startsWith(markdownPreface)) {

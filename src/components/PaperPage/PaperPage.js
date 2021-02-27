@@ -48,7 +48,7 @@ const PaperPage = ({ resume }) => (
             <h3>Education</h3>
             <div className={styles.education}>
               {resume.education.map((place) => (
-                <React.Fragment key={place.name}>
+                <React.Fragment key={`${place.institution}.${place.studyType}`}>
                   <h4>
                     {place.studyType}
                     {', '}

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Footer } from 'src/components/Footer/Footer';
 import { FullPageHeadline } from 'src/components/FullPageHeadline/FullPageHeadline';
 import { Layout } from 'src/components/Layout';

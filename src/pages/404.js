@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { Layout } from 'src/components/Layout';
 import { SEO } from 'src/components/SEO';

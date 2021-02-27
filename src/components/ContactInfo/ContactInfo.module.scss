@@ -26,13 +26,13 @@
     flex: 1;
     margin-bottom: 1.5rem;
 
-    &:last-child {
-      margin-bottom: 0;
-    }
-
     @include breakpoint($from: sm) {
       margin-bottom: 0;
       margin-right: 8rem;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 

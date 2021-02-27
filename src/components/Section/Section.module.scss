@@ -1,6 +1,6 @@
 @include breakpoint($from: sm) {
   .cell {
-    padding: 3.15rem 3.5rem 3.15rem;
+    padding: 3.15rem 3.5rem;
   }
 }
 
@@ -27,7 +27,7 @@
     font-weight: 300;
 
     &--borderless {
-      border: none;
+      border: 0;
     }
 
     .title {
@@ -59,7 +59,7 @@
     box-sizing: border-box;
 
     @include breakpoint($from: sm) {
-      padding: 3.15rem 3.5rem 3.15rem;
+      padding: 3.15rem 3.5rem;
     }
   }
 }
