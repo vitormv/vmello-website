@@ -1,29 +1,21 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import { useEffect, useRef } from 'react';
 import TypeIt from 'typeit';
 import styles from './TypeWriter.module.scss';
 
-class TypeWriter extends React.Component {
-  constructor(props) {
-    super(props);
+const TypeWriter = ({ children, ...rest }) => {
+  const spanRef = useRef(null);
 
-    this.spanRef = React.createRef();
-  }
+  useEffect(() => {
+    new TypeIt(spanRef.current, rest).go();
+  });
 
-  componentDidMount() {
-    this.typeInstance = new TypeIt(this.spanRef.current, this.props).go();
-  }
-
-  render() {
-    const { children } = this.props;
-
-    return (
-      <span className={styles.typeWriter} ref={this.spanRef}>
-        {children}
-      </span>
-    );
-  }
-}
+  return (
+    <span className={styles.typeWriter} ref={spanRef}>
+      {children}
+    </span>
+  );
+};
 
 TypeWriter.propTypes = {
   children: PropTypes.node.isRequired,
