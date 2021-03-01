@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 import styles from './Brand.module.scss';
@@ -25,9 +24,9 @@ const Brand = ({
     </h1>
 
     {children && (
-    <h2 className={styles.subtitle}>
-      {children}
-    </h2>
+      <h2 className={styles.subtitle}>
+        {children}
+      </h2>
     )}
   </div>
 );

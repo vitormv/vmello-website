@@ -1,11 +1,10 @@
 slug: contact-info
 items:
-  - 
-    name: Location
+  - name: Location
     value: Berlin, Germany
-  - 
-    name: Web
+
+  - name: Web
     value: https://vmello.com
-  - 
-    name: Email
+
+  - name: Email
     value: vitor@vmello.com

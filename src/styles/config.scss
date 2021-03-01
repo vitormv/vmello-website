@@ -1,7 +1,7 @@
-$textColor: #c5c5c6;
-$textColorHover: white;
-$textColorLight: #bcbdbe;
-$textColorHighlight: #e0a80d;
+$text-color: #c5c5c6;
+$text-color-hover: #ffffff;
+$text-color-light: #bcbdbe;
+$text-color-highlight: #e0a80d;
 
 $shade1: #2b2c2c;
 $shade2: #2d2e2e;
@@ -27,7 +27,7 @@ $breakpoint-lg: 1200px;
   } @else if $size == lg {
     @return $breakpoint-lg;
   } @else {
-    @warn "Breakpoint mixin supports: xs, sm, md, lg";
+    @warn 'Breakpoint mixin supports: xs, sm, md, lg';
   }
 }
 
@@ -42,16 +42,16 @@ $breakpoint-lg: 1200px;
   }
 
   // the $until is always the actual breakpoint value minus 1
-  $untilBreakpoint: ($until - 1);
+  $until-breakpoint: ($until - 1);
 
-  $query: "all" !default;
+  $query: 'all' !default;
 
   @if $from != 0 and $until != 0 {
-    $query: "(min-width: #{$from}) and (max-width: #{$untilBreakpoint})";
+    $query: '(min-width: #{$from}) and (max-width: #{$until-breakpoint})';
   } @else if $from != 0 and $until == 0 {
-    $query: "(min-width: #{$from})";
+    $query: '(min-width: #{$from})';
   } @else if $from == 0 and $until != 0 {
-    $query: "(max-width: #{$untilBreakpoint})";
+    $query: '(max-width: #{$until-breakpoint})';
   }
 
   @media #{$query} {

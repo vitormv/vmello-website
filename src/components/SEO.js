@@ -1,10 +1,12 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import { getSiteMetadataProvider } from 'src/providers/getSiteMetadataProvider';
 
 const SEO = ({ description, lang, meta, title }) => {
-  const siteMetadata = getSiteMetadataProvider();
+  const siteMetadata = {
+    title: 'Vitor Mello',
+    description: 'Vitor Mello is a fullstack software engineer who loves programming in React.js.',
+    author: 'Vitor Mello',
+  };
 
   const metaDescription = description || siteMetadata.description;
 

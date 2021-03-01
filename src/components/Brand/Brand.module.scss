@@ -1,18 +1,32 @@
-@import "config.scss";
-
 .wrapper {
   font-size: 3.1rem;
   line-height: 0.91;
 
+  @include breakpoint($from: md) {
+    .name:not(.small) {
+      font-size: 6rem;
+      text-align: left;
+      margin: 0;
+      padding: 0;
+    }
+
+    .subtitle {
+      font-size: 1.5rem;
+      text-align: left;
+      line-height: normal;
+      padding-top: 1.5rem;
+    }
+  }
+
   .word {
     margin-top: 0;
-    font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 300;
     display: inline-block;
     text-transform: lowercase;
 
     &.highlight {
-      color: $textColorHighlight;
+      color: $text-color-highlight;
       font-weight: 700;
       text-transform: lowercase;
     }
@@ -20,7 +34,7 @@
 
   .subtitle {
     font-weight: 300;
-    color: $textColorLight;
+    color: $text-color-light;
     font-size: 0.95rem;
     margin: 0;
     line-height: 3.5;
@@ -37,22 +51,6 @@
       font-size: 3.1rem;
       line-height: 0.91;
       margin: 0;
-    }
-  }
-
-  @include breakpoint($from: md) {
-    .name:not(.small) {
-      font-size: 6rem;
-      text-align: left;
-      margin: 0;
-      padding: 0;
-    }
-
-    .subtitle {
-      font-size: 1.5rem;
-      text-align: left;
-      line-height: normal;
-      padding-top: 1.5rem;
     }
   }
 }

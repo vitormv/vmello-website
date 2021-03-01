@@ -1,5 +1,3 @@
-@import "config.scss";
-
 .list {
   display: flex;
   flex-wrap: wrap;
@@ -24,7 +22,7 @@
 
   .count {
     width: 2.8rem;
-    color: $textColorHighlight;
+    color: $text-color-highlight;
     font-weight: 400;
     font-size: 1.2rem;
     flex: 0 0 2.8rem;

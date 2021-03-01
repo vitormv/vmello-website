@@ -1,4 +1,3 @@
-import React from 'react';
 import { Headline } from 'src/components/Headline/Headline';
 import { Section } from 'src/components/Section/Section';
 

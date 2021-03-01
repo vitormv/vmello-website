@@ -54,24 +54,14 @@ typings/
 # dotenv environment variables file
 .env
 
-# gatsby files
+# Next.js files
 .cache/
-public
+.next/
+out/
 
 # Mac files
 .DS_Store
 
-# Yarn
-yarn-error.log
-.pnp/
-.pnp.js
-# Yarn Integrity file
-.yarn-integrity
-
 # IDEs
 .idea
 .history
-
-# Google Drive APIs
-credentials.json
-token.json

@@ -1,27 +1,5 @@
 {
   "version": 2,
   "name": "vmello.com",
-  "alias": "vmello.com",
-  "routes": [
-    { "handle": "filesystem" },
-    {
-      "src": "^/public/static/(.*)",
-      "headers": {
-        "cache-control": "public,max-age=31536000,immutable"
-      }
-    },
-    {
-      "src": "^/(.*).(css|js)",
-      "headers": {
-        "cache-control": "public,max-age=31536000,immutable"
-      }
-    },
-    {
-      "src": "^/(.*).(html|pdf)",
-      "headers": {
-        "cache-control": "public,max-age=0,must-revalidate"
-      }
-    },
-    { "src": "/(.*)", "status": 404, "dest": "/404/index.html" }
-  ]
+  "alias": "vmello.com"
 }

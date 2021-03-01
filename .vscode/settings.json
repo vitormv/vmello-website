@@ -1,0 +1,8 @@
+{
+  "editor.tabSize": 2,
+  "editor.rulers": [120],
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+}

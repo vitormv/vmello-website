@@ -2,44 +2,43 @@ slug: expertise
 title: Expertise
 description: Things I can do well
 items:
-  -
-    title: React / Javascript
+  - title: React / Javascript
     description: >
       Writing scalable and fast React apps is one of the things I like
       the most, together with Redux, Reselect. Also know my way around
       Webpack/Babel, optimizing bundles to their smallest size, smart
       polyfilling, testing with Jest, Puppeteer and BrowserStack.
-  -
-    title: PHP / Symfony / MySQL
+
+  - title: PHP / Symfony / MySQL
     description: >
       Over 10 years of experience developing server side code for
       E-commerce, food delivery platforms, integrating external
       payment APIs and travel websites have taught me how to make
       things fast and scalable, even under high traffic and load.
-  -
-    title: SASS / HTML
+
+  - title: SASS / HTML
     description: >
       I develop reusable and responsive components that will make
       sense for others who will use it, and organize them into CSS
       modules to make the scope contained and avoid side effects.
       No one should ever be afraid of touching CSS code.
-  -
-    title: Test Driven Development
+
+  - title: Test Driven Development
     description: >
       This helps me keep the architecture clean, avoid spaghetti
       code, prevent regression bugs and increase developer confidence.
       I believe tests should be an crucial part in any development
       cycle, and I find it fun to write both unit and UI (integration)
       tests.
-  -
-    title: User Experience
+
+  - title: User Experience
     description: >
       When developing frontend code, I always like to put myself into
       the end-user's shoes, and ask "But does this make sense?". The UI
       and UX should be easy to understand, remove any friction and make
       people actually enjoy them.
-  -
-    title: Forró
+
+  - title: Forró
     description: >
       Forró is the most famous Brazilian partner dance, with lots of
       arm figures, foot work and style. I started dancing over 8 years

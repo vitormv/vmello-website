@@ -14,4 +14,4 @@ build:
 
   environment:
     node:
-      version: v10.15.2
+      version: v14.16.0
