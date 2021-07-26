@@ -1,7 +1,7 @@
 import path from 'path';
 import puppeteer from 'puppeteer';
 
-const sourceUrl = 'http://localhost:9000/resume';
+const sourceUrl = 'http://localhost:8092/resume';
 const targetPdf = path.join('public', 'vitor-mello-resume.pdf');
 
 async function exportResumeAsPdf() {

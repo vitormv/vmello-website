@@ -1,6 +1,9 @@
 module.exports = {
   extends: ['airbnb'],
   plugins: ['react'],
+  globals: {
+    ga: 'readonly',
+  },
   env: {
     node: true,
     browser: true,

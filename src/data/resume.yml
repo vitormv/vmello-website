@@ -2,10 +2,10 @@ slug: resume
 title: Vitor Mello
 subtitle: Senior Full Stack Engineer
 summary: >
-  Hi, my name is Vitor and I have 10+ years of experience as a
+  Hi, my name is Vitor and I have 12+ years of experience as a
   Full Stack Engineer. I have very strong skills in javascript,
-  ReactJs + Redux and responsive layouts. On the backend side
-  I'm also highly proficient in PHP, Symfony and have some
+  ReactJs + Redux, Node.js and responsive layouts. On the backend
+  side I'm also highly proficient in PHP, Symfony and have some
   knowledge of infrastructure with Kubernetes, Docker and AWS.
   I love to break down complex scenarios, simplify processes
   and create simple solutions that help both the company and
@@ -14,13 +14,13 @@ summary: >
 links:
   - name: vitor@vmello.com
     href: ~
-  
+
   - name: https://vmello.com
     href: https://vmello.com
-  
+
   - name: https://www.linkedin.com/in/vitormv
     href: https://www.linkedin.com/in/vitormv
-  
+
   - name: https://github.com/vitormv
     href: https://github.com/vitormv
 
@@ -31,13 +31,31 @@ education:
     years: 2005 - 2009
 
 work:
+  - company: Coffee Circle
+    location: Berlin, Germany
+    duration: 1 year 9+ months
+    positions:
+      -
+        position: Head of Engineering
+        date: Feb 2021 - Present
+      -
+        position: Senior Frontend Engineer
+        date: Nov 2019 - Jan 2021
+    summary: >
+      Implement a CMS service  in Next.js, reducing static site generation time from 10 to 1 minutes.
+      Modernize some of the tech stack, and prepare the groundwork for more ambitious projects.
+      Make developers life easier and reduce manual/repetitive tasks, and adding more automation.
+    tags: >
+      javascript, reactjs, redux, next.js, nest.js, node, jest, cypress, webpack, es6, babel, sass,
+      mysql, redis, google cloud, docker
+
   - company: Flixbus GmbH
     location: Berlin, Germany
-    duration: 3+ years
+    duration: 3 years 9 months
     positions:
       -
         position: Senior Full Stack Engineer
-        date: Feb 2016 - Present
+        date: Feb 2016 - October 2019
     summary: >
       Developed responsive components in React.js and Redux, React SSR, with highly performant
       javascript. Improved frontend team productivity by creating easy ways to mockup, fixture
@@ -56,8 +74,8 @@ work:
         date: Jun 2013 - Dec 2015
     summary: Global food delivery company with shops  in over 30 countries.
     tags: >
-      javascript, php, mysql, html, sass, css, bootstrap, jquery, grunt, amazon sqs,
-      elasticsearch, redis, git
+      javascript, php, mysql, html, sass, bootstrap, jquery, grunt, amazon sqs,
+      elasticsearch, redis
 
   - company: Mobly
     location: São Paulo, Brazil
@@ -71,10 +89,10 @@ work:
         date: Feb 2012 - Oct 2012
     summary: >
       Mobly is an e-commerce platform selling home furniture. This is the Brazilian branch of the
-      european Home24, a venture started by Rocket Internet GmbH. 
+      european Home24, a venture started by Rocket Internet GmbH.
     tags: >
-      javascript, php, mysql, html, sass, css, bootstrap, jquery, zend framework, yii, solr,
-      memcache, git
+      javascript, php, mysql, html, sass, bootstrap, jquery, zend framework, yii, solr,
+      memcache
 
   - company: Plus! Agência Digital
     location: Maceió, Brazil
@@ -90,55 +108,54 @@ work:
       It's an award winning digital agency, creating a digital presence on the Web, Social Media,
       and also develops Intranet portals for clients.
     tags: >
-      javascript, php, mysql, html, sass, css, bootstrap, jquery, zend framework, yii, solr,
-      memcache, gits, elasticsearch, redis, git
+      javascript, php, mysql, html, jquery
 
-  - company: Carango
-    location: Maceió, Brazil
-    duration: 1 year 3 months
-    positions:
-      -
-        position: Software Engineer
-        date: Jul 2007 - Sep 2008
-    summary: ~
-    tags: ~
+  # - company: Carango
+  #   location: Maceió, Brazil
+  #   duration: 1 year 3 months
+  #   positions:
+  #     -
+  #       position: Software Engineer
+  #       date: Jul 2007 - Sep 2008
+  #   summary: ~
+  #   tags: ~
 
-  - company: SEMARHP
-    location: Maceió, Brazil
-    duration: 1 year 6 months
-    positions:
-      -
-        position: Web Developer Intern
-        date: Mar 2007 - Aug 2008
-    summary: ~
-    tags: ~
+  # - company: SEMARHP
+  #   location: Maceió, Brazil
+  #   duration: 1 year 6 months
+  #   positions:
+  #     -
+  #       position: Web Developer Intern
+  #       date: Mar 2007 - Aug 2008
+  #   summary: ~
+  #   tags: ~
 
 skills:
   - name: Javascript / ES6
     level: expert
-  
+
   - name: React / Redux / SSR
     level: expert
-  
+
   - name: php / symfony
     level: expert
-  
+
   - name: node.js
     level: intermediate
-  
+
   - name: html / css / sass
     level: expert
-  
+
   - name: DevOps
     level: intermediate
-  
+
   - name: UX
     level: intermediate
 
 languages:
   - language: English
     fluency: fluent
-  
+
   - language: German
     fluency: intermediate
 
