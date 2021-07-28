@@ -4,7 +4,7 @@
   Vitor Mello's Website
 </h1>
 
-This is the source code for my website. It is a statically generated using **Next.js** and **React.js**.
+This is the source code for my website. It is a statically generated using **Next.js** (React).
 
 ## 🚀 Get Up and Running
 
@@ -50,7 +50,7 @@ A quick look at the structure for this project:
 
 ## 💫 Deploy
 
-Deploy is automated by using Github Actions + [Surge.sh](https://surge.sh/). It is automatically redeployed to whenever something is merged to master.
+Deploy is automated by using Github Actions + [Vercel](https://vercel.com/). It is automatically redeployed to whenever something is merged to `main`.
 
 ## 💾 Update & download resume
 
