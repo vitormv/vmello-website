@@ -1,8 +1,8 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import styles from './PaperPage.module.scss';
+import styles from './PageA4.module.scss';
 
-const PaperPage = ({ resume }) => (
+const PageA4 = ({ resume }) => (
   <div className={`${styles.a4} ${styles.sheet} ${styles['padding-10mm']}`}>
     <Helmet>
       <body className={styles.root} />
@@ -146,4 +146,4 @@ const PaperPage = ({ resume }) => (
   </div>
 );
 
-export { PaperPage };
+export { PageA4 };

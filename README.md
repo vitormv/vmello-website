@@ -13,10 +13,10 @@ Want to take a look at the code for yourself? Go ahead!
 ```bash
 git clone git@github.com:vitormv/vmello-website.git vmello-website
 cd vmello-website
-npm run bootstrap
+npm install && npm run start
 ```
 
-Then open the `http://0.0.0.0:8000` on your favorite browser.
+Then open the `http://0.0.0.0:8091` on your favorite browser.
 
 ## 🧐 What's inside?
 
@@ -54,9 +54,9 @@ Deploy is automated by using Github Actions + [Surge.sh](https://surge.sh/). It 
 
 ## 💾 Update & download resume
 
-After spending countless hours trying to create a greatly aligned resume in Google Docs, I finally decided to recreate it in html format (https://vmello.com/resume), and export it as pdf automatically. It heavily uses CSS media @print queries. The `.pdf` file is exported using Puppeteer.
+After spending countless hours trying to create a greatly aligned resume in Google Docs, I finally decided to recreate it in html format (https://vmello.com/resume), and export it as `.pdf` using Puppeteer. It heavily uses CSS media @print queries.
 
-```plain
+```bash
 npm run resume
 ```
 

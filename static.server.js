@@ -3,7 +3,7 @@ import path from 'path';
 import compression from 'compression';
 import express from 'express';
 
-const PORT = 9000;
+const PORT = 8092;
 
 // This is the server that runs on "npm run serve".
 // It works by serving the statically generated .html files on /out.

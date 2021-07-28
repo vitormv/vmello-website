@@ -1,7 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
+import { reportWebVitals } from 'src/functions/reportWebVitals';
 
-const CustomApp = ({ Component, pageProps }) => (
+const MyApp = ({ Component, pageProps }) => (
   <>
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -10,4 +11,5 @@ const CustomApp = ({ Component, pageProps }) => (
   </>
 );
 
-export default CustomApp;
+export { reportWebVitals };
+export default MyApp;

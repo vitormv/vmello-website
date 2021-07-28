@@ -138,6 +138,10 @@ body.root {
       font-weight: 300;
     }
 
+    .title {
+      font-weight: bold;
+    }
+
     .location {
       font-weight: 300;
       color: #666666;
@@ -150,10 +154,14 @@ body.root {
 
   .experience {
     margin-bottom: 7mm;
-    page-break-inside: avoid;
+    break-inside: avoid;
 
     &:last-child {
       margin-bottom: 0;
+
+      .companyInfo {
+        margin-bottom: 0;
+      }
     }
 
     p {
@@ -250,11 +258,11 @@ body.root {
 @media print {
   @page {
     size: A4;
-    margin: 0;
+    margin: 12mm 0;
   }
 
   .sheet {
-    padding: 12mm;
+    padding: 0 12mm;
   }
 
   table.companyInfo {
