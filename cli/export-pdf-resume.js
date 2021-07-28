@@ -13,7 +13,21 @@ async function exportResumeAsPdf() {
 
   await page.goto(sourceUrl, { waitUntil: 'networkidle0' });
 
-  await page.pdf({ format: 'A4', path: targetPdf, margin: { top: 0, right: 0, bottom: 0, left: 0 } });
+  // generate .pdf file
+  await page.pdf({
+    format: 'A4',
+    path: targetPdf,
+    displayHeaderFooter: true,
+    margin: { top: '12mm', right: 0, bottom: '12mm', left: 0 },
+    headerTemplate: ' ', // <--- empty spaces are needed XD
+    footerTemplate: `
+      <div style="width: 100%; font-style: italic; font-size: 9px; padding: 0; color: #bbb; font-family: 'Lora', serif; position: relative;">
+        <div style="position: absolute; right: 9mm; bottom: 5px;">
+          Vitor Mello; page <span class="pageNumber"></span> of <span class="totalPages"></span>.
+        </div>
+      </div>
+    `,
+  });
 
   await page.close();
   await browser.close();

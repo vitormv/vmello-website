@@ -2,14 +2,12 @@ slug: resume
 title: Vitor Mello
 subtitle: Senior Full Stack Engineer
 summary: >
-  Hi, my name is Vitor and I have 12+ years of experience as a
-  Full Stack Engineer. I have very strong skills in javascript,
-  ReactJs + Redux, Node.js and responsive layouts. On the backend
-  side I'm also highly proficient in PHP, Symfony and have some
-  knowledge of infrastructure with Kubernetes, Docker and AWS.
-  I love to break down complex scenarios, simplify processes
-  and create simple solutions that help both the company and
-  my fellow colleagues.
+  I have 12+ years of experience as a Full Stack Engineer, with strong skills in typescript,
+  React (Redux and Sagas), Node.js (Nest.js, Next.js and express) and responsive layouts.
+  I've also done a lot of PHP and Symfony3 in the past, and have some knowledge of
+  DevOps with Docker, AWS, Google Cloud and CI pipelines. I love to break down complex scenarios,
+  simplify processes and create simple solutions that help both the company and my fellow
+  colleagues.
 
 links:
   - name: vitor@vmello.com
@@ -42,14 +40,18 @@ work:
         position: Senior Frontend Engineer
         date: Nov 2019 - Jan 2021
     summary: >
-      Implement a CMS service  in Next.js, reducing static site generation time from 10 to 1 minutes.
-      Modernize some of the tech stack, and prepare the groundwork for more ambitious projects.
-      Make developers life easier and reduce manual/repetitive tasks, and adding more automation.
+      Reimplemented existing blog in Next.js, reducing static export time from 10min to 1min.
+      Migrate the ecommerce customer authentication to external Auth0 platform.
+      Simplified checkout screens by implementing a one-page checkout, improving UX and increasing conversion rate.
+      Reduced manual/repetitive tasks by adding more automation to dev workflows.
+      Technical interviews for Backend and Frontend roles.
+      Driving squad initiatives and technical roadmap planning.
+      Mentoring and guiding other developers on best practices and design patterns.
     tags: >
-      javascript, reactjs, redux, next.js, nest.js, node, jest, cypress, webpack, es6, babel, sass,
+      javascript, typescript, react, redux, next.js, nest.js, node, jest, cypress, webpack, es6, babel, sass,
       mysql, redis, google cloud, docker
 
-  - company: Flixbus GmbH
+  - company: Flixbus
     location: Berlin, Germany
     duration: 3 years 9 months
     positions:
@@ -57,22 +59,27 @@ work:
         position: Senior Full Stack Engineer
         date: Feb 2016 - October 2019
     summary: >
-      Developed responsive components in React.js and Redux, React SSR, with highly performant
-      javascript. Improved frontend team productivity by creating easy ways to mockup, fixture
-      and test complex edge cases in the applications. Created an unified payment framework in
-      php to speedup integration of 3rd-party payment APIs.
+      Reimplemented the search results page and search form with React, redux and sagas.
+      High performance optimization with Chrome profiling and flame-graphs, to avoid as much repaint as possible in the components,
+      and implement things like reselect, memoize, chunk splitting and suspense to remove slowdown and improve first paint.
+      Improved frontend team productivity by creating easy ways to mockup, fixture and test complex search results edge cases.
+      Created an unified payment framework in php to speedup integration of 3rd-party payment APIs.
     tags: >
-      javascript, reactjs, redux, jest, puppeteer, webpack, es6, babel, sass, node.js, php7,
-      symfony, phpunit, mysql, redis, elasticsearch, amazon aws, kubernetes, docker, ab tests
+      javascript, react, redux, jest, puppeteer, webpack, es6, sass, node.js, php,
+      symfony, phpunit, mysql, redis, amazon aws, kubernetes, docker, ab tests
 
-  - company: Foodpanda GmbH
+  - company: Foodpanda
     location: Berlin, Germany
     duration: 2 years 7 months
     positions:
       -
         position: Senior Full Stack Engineer
         date: Jun 2013 - Dec 2015
-    summary: Global food delivery company with shops  in over 30 countries.
+    summary: >
+      Development of new features for the frontend and backend with focus on scalability and performance.
+      Running loadtests with jMeter and finding bottlenecks and points of improvement in the application.
+      Integration with external payment gateways around the world.
+      Integration with external restaurant systems and APIs for seamless order dispatching.
     tags: >
       javascript, php, mysql, html, sass, bootstrap, jquery, grunt, amazon sqs,
       elasticsearch, redis
@@ -110,25 +117,25 @@ work:
     tags: >
       javascript, php, mysql, html, jquery
 
-  # - company: Carango
-  #   location: Maceió, Brazil
-  #   duration: 1 year 3 months
-  #   positions:
-  #     -
-  #       position: Software Engineer
-  #       date: Jul 2007 - Sep 2008
-  #   summary: ~
-  #   tags: ~
+  - company: Carango
+    location: Maceió, Brazil
+    duration: 1 year 3 months
+    positions:
+      -
+        position: Software Engineer
+        date: Jul 2007 - Sep 2008
+    summary: ~
+    tags: ~
 
-  # - company: SEMARHP
-  #   location: Maceió, Brazil
-  #   duration: 1 year 6 months
-  #   positions:
-  #     -
-  #       position: Web Developer Intern
-  #       date: Mar 2007 - Aug 2008
-  #   summary: ~
-  #   tags: ~
+  - company: SEMARHP
+    location: Maceió, Brazil
+    duration: 1 year 6 months
+    positions:
+      -
+        position: Web Developer Intern
+        date: Mar 2007 - Aug 2008
+    summary: ~
+    tags: ~
 
 skills:
   - name: Javascript / ES6
