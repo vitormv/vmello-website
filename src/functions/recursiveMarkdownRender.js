@@ -1,5 +1,5 @@
 /* eslint-disable no-param-reassign */
-import remark from 'remark';
+import { remark } from 'remark';
 import remarkHTML from 'remark-html';
 import isString from 'lodash/isString';
 import isObject from 'lodash/isObject';
