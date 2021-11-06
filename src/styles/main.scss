@@ -1,0 +1,58 @@
+@import './fonts.scss';
+
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smooth: always;
+}
+
+body {
+  // background: url(/assets/images/rectangle.svg) no-repeat;
+  // background-position: right -290px top -260px;
+  // background-size: min(80%, 1150px);
+  background: url(/assets/images/rectangle.svg) no-repeat;
+  background-position: left -70px top 80px;
+  background-size: 400px;
+}
+
+@include breakpoint(sm) {
+  body {
+    background: url(/assets/images/rectangle.svg) no-repeat;
+    background-position: right -360px top -230px;
+    background-size: min(80%, 1150px);
+  }
+}
+
+.link {
+  cursor: pointer;
+  text-decoration: none;
+  transition: none;
+  position: relative;
+  display: inline-block;
+
+  > span {
+    position: relative;
+    z-index: 10;
+  }
+
+  &::before {
+    z-index: 5;
+    content: '';
+    width: 100%;
+    position: absolute;
+    bottom: -2px;
+    height: 6px;
+    left: 0;
+    display: block;
+    background: $color-primary;
+    transform: rotate(-2deg);
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  &:hover,
+  .is-active {
+    &::before {
+      transform: scale3d(1.2, 1.2, 1.2);
+    }
+  }
+}

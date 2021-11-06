@@ -1,7 +1,7 @@
 .main {
   color: $text-color;
-  background-color: $shade2;
-  font-family: Lato, 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  background-color: $background-color;
+  font-family: Biotif, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.75;
@@ -91,10 +91,6 @@
     &:hover {
       color: $text-color-hover;
     }
-  }
-
-  html {
-    font-size: 14px;
   }
 
   body {

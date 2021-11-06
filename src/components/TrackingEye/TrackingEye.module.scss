@@ -1,0 +1,73 @@
+.link:hover .eye:before {
+  opacity: 1;
+  transform: translate3d(-50%, -80%, 0);
+}
+.link:hover .pupil {
+  transform: scale(1.4);
+}
+
+.eye {
+  -ms-flex-align: center;
+  align-items: center;
+  background: url(/assets/images/eye.svg) 50% no-repeat;
+  display: -ms-flexbox;
+  display: flex;
+  height: 20px;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  width: 28px;
+  z-index: 10;
+}
+.eye,
+.eye:before {
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.eye:before {
+  background: url(/assets/images/lash.svg) 50% no-repeat;
+  content: '';
+  display: block;
+  height: 22px;
+  left: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transform: translate3d(-50%, -50%, 0);
+  width: 23px;
+  z-index: 1;
+}
+.iris {
+  -ms-flex-align: center;
+  align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  height: 16px;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  width: 16px;
+}
+.pupil {
+  background: #fefaf6;
+  border-radius: 50%;
+  bottom: 3px;
+  height: 10px;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  width: 10px;
+}
+
+.link:hover .eye:before {
+  opacity: 1;
+  transform: translate3d(-50%, -80%, 0);
+}
+.link:hover .pupil {
+  transform: scale(1.4);
+}
+.link.active .eye:before {
+  opacity: 1;
+  transform: translate3d(-50%, -80%, 0);
+}
+.link.active .pupil {
+  transform: scale(1.4);
+}

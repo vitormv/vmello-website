@@ -1,0 +1,87 @@
+{
+  "extends": ["plugin:react/jsx-runtime", "plugin:@next/next/recommended"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "globals": {
+    "ga": "readonly"
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": "latest",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "no-continue": "off",
+    "no-multi-spaces": "error"
+  },
+  "ignorePatterns": ["/out/", "/node_modules/", "/.next/"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["./"]
+        // "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "overrides": [
+    {
+      "extends": ["airbnb", "airbnb-typescript", "plugin:react/jsx-runtime"],
+      "plugins": ["react", "@typescript-eslint", "import", "jsx-a11y"],
+      "parser": "@typescript-eslint/parser",
+      "files": ["*.ts", "*.tsx"],
+      "parserOptions": {
+        "project": "tsconfig.json",
+        "sourceType": "module"
+      },
+      "rules": {
+        "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".ts"] }],
+        "import/extensions": "off",
+        "no-continue": "off",
+        "react/prop-types": "off",
+        "no-unused-vars": "off",
+        "max-len": [
+          "error",
+          { "code": 120, "ignoreTrailingComments": true, "ignoreTemplateLiterals": true, "ignoreUrls": true }
+        ],
+        "@typescript-eslint/no-unused-vars": "error",
+        "no-shadow": "off",
+        "@typescript-eslint/no-shadow": ["error"],
+        "react/jsx-indent": ["error", 2, { "checkAttributes": true, "indentLogicalExpressions": true }],
+        "react/jsx-wrap-multilines": [
+          "error",
+          {
+            "declaration": "parens-new-line",
+            "assignment": "parens-new-line",
+            "return": "parens-new-line",
+            "arrow": "parens-new-line",
+            "condition": "ignore",
+            "logical": "parens-new-line",
+            "prop": "parens-new-line"
+          }
+        ],
+        "import/prefer-default-export": "off"
+      },
+      "settings": {
+        "import/resolver": {
+          "node": {
+            "paths": ["./"],
+            "extensions": [".ts", ".tsx"]
+          }
+        }
+      }
+    },
+    {
+      "files": ["./cli/**/*.js"],
+      "rules": {
+        "import/no-extraneous-dependencies": "off",
+        "no-console": "off"
+      }
+    }
+  ]
+}

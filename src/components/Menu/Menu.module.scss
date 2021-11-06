@@ -1,0 +1,29 @@
+.link {
+  cursor: pointer;
+  text-decoration: none;
+  transition: none;
+  position: relative;
+  display: inline-block;
+
+  &::before {
+    z-index: 5;
+    content: '';
+    width: 100%;
+    transition: all 150ms ease-out;
+    position: absolute;
+    bottom: -5px;
+    height: 6px;
+    left: 0;
+    display: block;
+    background-color: transparent;
+    transform: rotate(2deg) scaleX(0);
+    background: $color-primary;
+  }
+
+  .active,
+  &:hover {
+    &::before {
+      transform: rotate(-2deg);
+    }
+  }
+}

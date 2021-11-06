@@ -208,7 +208,7 @@ body.root {
     &::before {
       // usually browsers wont print background colors by default,
       // by using an svg image we enforce the colors will be replicated on print
-      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='50'%3E%3Crect x='0' y='0' width='300' height='50' fill='%23293241' /%3E%3C/svg%3E");
+      content: url('/assets/images/skill-bg.svg');
       position: absolute;
       top: 0;
       left: 0;
