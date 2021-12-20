@@ -9,21 +9,24 @@
     z-index: 5;
     content: '';
     width: 100%;
-    transition: all 150ms ease-out;
+    box-sizing: content-box;
+    padding: 0 2rem;
+    transition: transform 150ms ease-out;
     position: absolute;
     bottom: -5px;
     height: 6px;
     left: 0;
     display: block;
     background-color: transparent;
-    transform: rotate(2deg) scaleX(0);
+    transform: rotate(0deg) scaleX(0);
     background: $color-primary;
+    transform-origin: 0% 0%;
   }
 
   .active,
   &:hover {
     &::before {
-      transform: rotate(-2deg);
+      transform: rotate(-2deg) scaleX(100%);
     }
   }
 }

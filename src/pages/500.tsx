@@ -4,12 +4,9 @@ import { SEO } from 'src/components/SEO';
 
 const NotFoundPage: FC = () => (
   <Layout>
-    <SEO title="404: Not found" />
+    <SEO title="500: Internal Server Error" />
     <p>
-      <br />
-      Feel like trying the&nbsp;
-      <a href="/">homepage</a>
-      &nbsp;instead?
+      Woops, error.
     </p>
   </Layout>
 );

@@ -1,7 +1,7 @@
 const nextConfig = {
   experimental: {
-    serverComponents: true,
-    concurrentFeatures: true,
+    // serverComponents: true,
+    // concurrentFeatures: true,
   },
   swcMinify: true,
   optimizeLibraries: true,
