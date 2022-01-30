@@ -4,14 +4,14 @@ import styles from './Menu.module.scss';
 
 const Menu = () => (
   <div className="relative mx-auto container px-10 h-16 flex justify-around items-center text-lg lg:max-w-screen-xl lg:px-24">
-    <div className="flex-grow flex">
+    <div className="grow-0 flex">
       <TrackingEye />
       <a className={styles.logo} href="/" aria-label="back to homepage">
         <img alt="logo" src="/assets/images/logo.svg" />
       </a>
     </div>
-    <div className="flex-grow-0" />
-    <div className="flex-grow flex justify-end items-center gap-4">
+    <div className="grow-0" />
+    <div className="grow flex justify-end items-center gap-4">
       <a className={`${styles.link} ${styles.active}`} href="/#"><span>Home</span></a>
       <a className={styles.link} href="/#"><span>About</span></a>
       <a className={styles.link} href="vitor-mello-resume.pdf" target="_blank"><span>Resume</span></a>
