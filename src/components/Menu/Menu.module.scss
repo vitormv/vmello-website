@@ -4,17 +4,16 @@
   transition: none;
   position: relative;
   display: inline-block;
+  padding: 0.5rem 1rem;
 
   &::before {
     z-index: 5;
     content: '';
     width: 100%;
-    box-sizing: content-box;
-    padding: 0 2rem;
     transition: transform 150ms ease-out;
     position: absolute;
-    bottom: -5px;
-    height: 6px;
+    bottom: -6px;
+    height: 4px;
     left: 0;
     display: block;
     background-color: transparent;
@@ -23,7 +22,7 @@
     transform-origin: 0% 0%;
   }
 
-  .active,
+  &.active,
   &:hover {
     &::before {
       transform: rotate(-2deg) scaleX(100%);

@@ -40,7 +40,7 @@ const TrackingEye: FC = () => {
   }, []);
 
   return (
-    <div className="flex w-full justify-center">
+    <div className="flex w-10">
       <a className={styles.link} href="/" ref={linkRef}>
         <div className={styles.eye}>
           <div className={styles.iris} ref={eyeRef}>
@@ -49,7 +49,6 @@ const TrackingEye: FC = () => {
         </div>
       </a>
     </div>
-
   );
 };
 

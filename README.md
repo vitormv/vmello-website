@@ -13,7 +13,7 @@ Want to take a look at the code for yourself? Go ahead!
 ```bash
 git clone git@github.com:vitormv/vmello-website.git vmello-website
 cd vmello-website
-npm install && npm run start
+yarn install && yarn start
 ```
 
 Then open the `http://0.0.0.0:8091` on your favorite browser.

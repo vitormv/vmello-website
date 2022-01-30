@@ -5,9 +5,9 @@ import express from 'express';
 
 const PORT = 8092;
 
-// This is the server that runs on "npm run serve".
+// This is the server that runs on "yarn serve".
 // It works by serving the statically generated .html files on /out.
-// Of course, before starting this server you should export the project with "npm run export"
+// Of course, before starting this server you should export the project with "yarn export"
 const mainApp = express();
 
 const rootPath = path.resolve(path.join(__dirname, 'out'));

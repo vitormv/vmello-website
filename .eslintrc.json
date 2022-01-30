@@ -19,7 +19,8 @@
     "react/react-in-jsx-scope": "off",
     "react/function-component-definition": [2, { "namedComponents": "arrow-function" }],
     "no-continue": "off",
-    "no-multi-spaces": "error"
+    "no-multi-spaces": "error",
+    "@next/next/no-html-link-for-pages": "off"
   },
   "ignorePatterns": ["/out/", "/node_modules/", "/.next/"],
   "settings": {
