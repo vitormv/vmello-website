@@ -1,12 +1,12 @@
 import styles from './Hero.module.scss';
 
 const Hero = () => (
-  <div className="relative flex-col mx-auto container lg:max-w-screen-xl px-10 lg:px-24">
+  <div className="container relative flex-col px-10 mx-auto lg:px-24 lg:max-w-screen-xl">
     <div className={`max-w-2xl py-28 flex flex-col justify-center ${styles.inner}`}>
       <p className="pb-2 text-xl text-black">Hi, my name is</p>
-      <h1 className="py-2 text-5xl md:text-7xl leading-tight font-semibold text-black font-display">Vitor Mello.</h1>
-      <h2 className="py-2 text-3xl md:text-5xl leading-tight text-gray font-display">I build things for the web.</h2>
-      <p className="pt-4 leading-normal text-xl text-gray">
+      <h1 className="py-2 font-display text-5xl font-semibold leading-tight text-black md:text-7xl">Vitor Mello.</h1>
+      <h2 className="py-2 font-display text-3xl leading-tight text-gray md:text-5xl">I build things for the web.</h2>
+      <p className="pt-4 text-xl leading-normal text-gray">
         I’m a full stack software engineer specializing in building digital
         experiences. Currently, I&apos;m focused on building a global, connected and sustainable food system at
         {' '}

@@ -29,3 +29,43 @@
     }
   }
 }
+
+.expanded {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.circle {
+  background: #aadcda;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: 500ms, 200ms;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1) linear;
+  transition-delay: 0ms, 300ms;
+}
+
+.expanded {
+  .circle {
+    transform: scale(75);
+    opacity: 1;
+    transition-duration: 500ms, 10ms;
+    transition-delay: 0ms, 0ms;
+    transition-timing-function: ease-out;
+  }
+}
+
+.nav {
+  font-size: 2rem;
+  font-family: Bogart;
+  gap: 2rem;
+}
