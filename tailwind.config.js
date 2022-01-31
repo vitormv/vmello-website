@@ -20,6 +20,7 @@ module.exports = {
       current: 'currentColor',
       black: '#232320',
       snow: '#FEFAF6',
+      acqua: '#AADCDA',
       gray: '#656270',
       primary: {
         DEFAULT: '#FFC4FF',

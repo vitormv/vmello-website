@@ -1,5 +1,5 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faDownload, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faDownload, faEnvelope, faBars } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 library.add(
@@ -7,4 +7,5 @@ library.add(
   faDownload,
   faLinkedin,
   faGithub,
+  faBars,
 );

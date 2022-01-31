@@ -2038,6 +2038,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint-plugin-tailwindcss@npm:^3.3.6":
+  version: 3.3.6
+  resolution: "eslint-plugin-tailwindcss@npm:3.3.6"
+  dependencies:
+    fast-glob: ^3.2.5
+    postcss: ^8.4.4
+    tailwindcss: ^3.0.7
+  checksum: 3b8b09d84fb4344f4b212f09e9818cc2660aef6ba42ec87b00ba1825ab473cefd694efc5e20b9ad6b1a48453688adcd4ce262d41aada12e5e7003260599dbc12
+  languageName: node
+  linkType: hard
+
 "eslint-scope@npm:^5.1.1":
   version: 5.1.1
   resolution: "eslint-scope@npm:5.1.1"
@@ -2280,7 +2291,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.2.11, fast-glob@npm:^3.2.9":
+"fast-glob@npm:^3.2.11, fast-glob@npm:^3.2.5, fast-glob@npm:^3.2.9":
   version: 3.2.11
   resolution: "fast-glob@npm:3.2.11"
   dependencies:
@@ -4754,7 +4765,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.4.5, postcss@npm:^8.3.0, postcss@npm:^8.3.11, postcss@npm:^8.4.5":
+"postcss@npm:8.4.5, postcss@npm:^8.3.0, postcss@npm:^8.3.11, postcss@npm:^8.4.4, postcss@npm:^8.4.5":
   version: 8.4.5
   resolution: "postcss@npm:8.4.5"
   dependencies:
@@ -5884,7 +5895,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:^3.0.18":
+"tailwindcss@npm:^3.0.18, tailwindcss@npm:^3.0.7":
   version: 3.0.18
   resolution: "tailwindcss@npm:3.0.18"
   dependencies:
@@ -6448,6 +6459,7 @@ __metadata:
     eslint-plugin-jsx-a11y: ^6.5.1
     eslint-plugin-react: ^7.28.0
     eslint-plugin-react-hooks: ^4.3.0
+    eslint-plugin-tailwindcss: ^3.3.6
     esm: ^3.2.25
     express: ^4.17.2
     js-yaml-loader: ^1.2.2
