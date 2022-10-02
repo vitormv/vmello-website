@@ -29,5 +29,5 @@ module.exports = {
       yellow: colors.amber,
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-hamburgers')],
 };

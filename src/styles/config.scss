@@ -15,13 +15,15 @@ $shade3: #292a2a;
 $shade4: #282929;
 
 $break-small: 640px;
-$break-medium: 760px;
+$break-medium: 768px;
 $break-large: 1024px;
 
-$breakpoint-xs: 600px;
-$breakpoint-sm: 760px;
-$breakpoint-md: 1024px;
-$breakpoint-lg: 1200px;
+$breakpoint-xs: 350px;
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-2xl: 1536px;
 
 @function get-breakpoint-value($size) {
   @if $size == xs {

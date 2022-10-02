@@ -35,7 +35,7 @@ const MyDocument: FC = () => {
         <link rel="apple-touch-icon" sizes="32x32" href="/favicons/favicon-32x32.png" />
       </Head>
 
-      <body className="bg-snow text-black font-sans">
+      <body className="bg-snow text-black font-sans overflow-x-hidden">
         <Main />
         <NextScript />
       </body>

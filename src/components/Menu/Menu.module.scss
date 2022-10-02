@@ -39,33 +39,88 @@
   z-index: 10;
 }
 
-.circle {
-  background: #aadcda;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  opacity: 0;
-  transition-property: transform, opacity;
-  transition-duration: 500ms, 200ms;
-  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1) linear;
-  transition-delay: 0ms, 300ms;
-}
+$duration: 700ms;
+$easingOnEnter: cubic-bezier(0.57, 1.28, 0.59, 1);
+$easingOnClose: cubic-bezier(0.3, 0, 0.73, -0.27);
+$circleSize: 80px;
 
-.expanded {
-  .circle {
-    transform: scale(75);
-    opacity: 1;
-    transition-duration: 500ms, 10ms;
-    transition-delay: 0ms, 0ms;
-    transition-timing-function: ease-out;
+@include breakpoint(0, md) {
+  .navWrapper {
+    &:not(.isMedium) {
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        right: ($circleSize * -1);
+        top: ($circleSize * -1);
+        width: $circleSize;
+        height: $circleSize;
+        border-radius: 50%;
+        opacity: 1;
+        transition-property: transform;
+      }
+
+      &::before {
+        background: #aadcda;
+        transition-duration: $duration;
+        transition-timing-function: $easingOnClose;
+        transition-delay: 0ms;
+        transform-origin: 50% 40%;
+        z-index: 20;
+      }
+
+      &.expanded {
+        &::before {
+          transform: scale(13);
+          opacity: 1;
+          transition-duration: ($duration + 100ms);
+          transition-delay: 50ms;
+          transition-timing-function: $easingOnEnter;
+        }
+      }
+
+      &::after {
+        background: darken(#aadcda, 10%);
+        z-index: 10;
+        transition-duration: ($duration - 50ms);
+        transition-timing-function: $easingOnClose;
+        transition-delay: 100ms;
+        transform-origin: 50% 68.5%;
+      }
+
+      &.expanded {
+        &::after {
+          transform: scale(24);
+          opacity: 1;
+          transition-duration: $duration;
+          transition-delay: 0ms;
+          transition-timing-function: $easingOnEnter;
+        }
+      }
+    }
   }
 }
 
-.nav {
-  font-size: 2rem;
-  font-family: Bogart;
-  gap: 2rem;
+@include breakpoint(0, md) {
+  .nav {
+    position: absolute;
+    right: 0;
+    font-size: 1.5rem;
+    gap: 2rem;
+    transition: opacity 200ms ease-out, transform 200ms ease-out;
+    transition-delay: 0, 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    text-align: center;
+    width: 100%;
+    top: 100px;
+
+    &.navVisible {
+      transition-delay: 450ms;
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
+    }
+  }
 }

@@ -10,7 +10,7 @@ type LayoutProps = {
 };
 
 const Layout: FC<LayoutProps> = ({ children }) => (
-  <main>
+  <main className="overflow-x-hidden">
     <Menu />
     {children}
   </main>

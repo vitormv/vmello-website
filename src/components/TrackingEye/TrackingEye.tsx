@@ -1,12 +1,13 @@
-import { FC, useEffect, useRef } from 'react';
+import { FC, useRef } from 'react';
 import { addMultipleEventListeners, removeMultipleEventListeners } from 'src/functions/multipleEventListenersHelper';
+import { useOnMount } from 'src/hooks/useOnMoun';
 import styles from './TrackingEye.module.scss';
 
 const TrackingEye: FC = () => {
   const linkRef = useRef<HTMLAnchorElement>(null);
   const eyeRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  useOnMount(() => {
     const eye = eyeRef.current;
 
     const onLinkMouseEnter = () => { linkRef.current?.classList.add(styles.active); };
@@ -37,7 +38,7 @@ const TrackingEye: FC = () => {
       removeMultipleEventListeners('a', 'mouseenter', onLinkMouseEnter);
       removeMultipleEventListeners('a', 'mouseleave', onLinkMouseLeave);
     };
-  }, []);
+  });
 
   return (
     <div className="flex w-10">
