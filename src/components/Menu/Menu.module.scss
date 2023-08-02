@@ -24,7 +24,9 @@
 
   &.active,
   &:hover {
+    top: 1px;
     &::before {
+      bottom: -5px;
       transform: rotate(-2deg) scaleX(100%);
     }
   }

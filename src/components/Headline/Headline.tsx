@@ -3,8 +3,15 @@ import clsx from 'clsx';
 import { SocialButtons } from 'src/components/SocialButtons/SocialButtons';
 import { Brand } from 'src/components/Brand/Brand';
 import styles from './Headline.module.scss';
+import { ReactNode } from 'react';
 
-const Headline = ({ children, small, extraClassName, ...rest }) => (
+type HeadlineProps = {
+  children: ReactNode,
+  extraClassName: string,
+  small: boolean,
+}
+
+const Headline = ({ children, small = false, extraClassName = '', ...rest }: HeadlineProps) => (
   <div
     className={clsx({
       [styles.container]: true,
@@ -19,17 +26,5 @@ const Headline = ({ children, small, extraClassName, ...rest }) => (
     <SocialButtons extraClassName={styles.socialButtons} />
   </div>
 );
-
-Headline.propTypes = {
-  children: PropTypes.node,
-  small: PropTypes.bool,
-  extraClassName: PropTypes.string,
-};
-
-Headline.defaultProps = {
-  children: null,
-  extraClassName: '',
-  small: false,
-};
 
 export { Headline };

@@ -1,18 +1,18 @@
 {
   "editor.tabSize": 2,
-  "editor.rulers": [120],
+  "editor.rulers": [100],
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "typescript.tsdk": "node_modules/typescript/lib",
   "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }

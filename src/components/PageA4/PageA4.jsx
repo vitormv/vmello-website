@@ -21,11 +21,7 @@ const PageA4 = ({ resume }) => (
               <li key={link.name}>
                 {!link.href && link.name}
                 {link.href && (
-                  <a
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <a href={link.href} target="_blank" rel="noopener noreferrer">
                     {link.name}
                   </a>
                 )}
@@ -39,9 +35,7 @@ const PageA4 = ({ resume }) => (
         <aside className={styles.sidebar}>
           <section>
             <h3>Hello</h3>
-            <p align="justify">
-              {resume.summary}
-            </p>
+            <p align="justify">{resume.summary}</p>
           </section>
 
           <section>
@@ -54,9 +48,7 @@ const PageA4 = ({ resume }) => (
                     {', '}
                     {place.area}
                   </h4>
-                  <p>
-                    {place.institution}
-                  </p>
+                  <p>{place.institution}</p>
                   <em>{place.years}</em>
                 </Fragment>
               ))}
@@ -68,12 +60,8 @@ const PageA4 = ({ resume }) => (
             <ul className={styles.skills}>
               {resume.skills.map((skill) => (
                 <li key={skill.name}>
-                  <span className={styles.skillName}>
-                    {skill.name}
-                  </span>
-                  <span className={styles.skillLevel}>
-                    {` (${skill.level})`}
-                  </span>
+                  <span className={styles.skillName}>{skill.name}</span>
+                  <span className={styles.skillLevel}>{` (${skill.level})`}</span>
                 </li>
               ))}
             </ul>
@@ -84,12 +72,8 @@ const PageA4 = ({ resume }) => (
             <ul className={styles.languages}>
               {resume.languages.map((item) => (
                 <li key={item.language}>
-                  <span className={styles.languageName}>
-                    {item.language}
-                  </span>
-                  <span className={styles.languageLevel}>
-                    {` (${item.fluency})`}
-                  </span>
+                  <span className={styles.languageName}>{item.language}</span>
+                  <span className={styles.languageLevel}>{` (${item.fluency})`}</span>
                 </li>
               ))}
             </ul>
@@ -106,9 +90,7 @@ const PageA4 = ({ resume }) => (
                     <tr>
                       <th>
                         {job.company}
-                        <span className={styles.location}>
-                          {job.location}
-                        </span>
+                        <span className={styles.location}>{job.location}</span>
                       </th>
                       <th>{job.duration}</th>
                     </tr>
@@ -116,24 +98,18 @@ const PageA4 = ({ resume }) => (
                   <tbody>
                     {job.positions.map((role) => (
                       <tr key={role.position}>
-                        <td className={styles.title}>
-                          {role.position}
-                        </td>
+                        <td className={styles.title}>{role.position}</td>
                         <td className={styles.date}>{role.date}</td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
 
-                {job.summary && (
-                  <p>{job.summary}</p>
-                )}
+                {job.summary && <p>{job.summary}</p>}
 
                 {job.tags && (
                   <p>
-                    <span className={styles.techStack}>
-                      Tech Stack:&nbsp;
-                    </span>
+                    <span className={styles.techStack}>Tech Stack:&nbsp;</span>
                     {job.tags}
                   </p>
                 )}

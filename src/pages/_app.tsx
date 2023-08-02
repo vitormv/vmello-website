@@ -2,8 +2,12 @@ import { FC } from 'react';
 import Head from 'next/head';
 import { AppProps } from 'next/app';
 import { reportWebVitals } from 'src/functions/reportWebVitals';
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
 import 'src/styles/main.scss';
 import 'tailwindcss/tailwind.css';
+
+config.autoAddCss = false
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => (
   <>

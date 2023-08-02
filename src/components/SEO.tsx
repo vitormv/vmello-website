@@ -8,8 +8,8 @@ type SEOProps = {
   meta?: HelmetProps['meta'],
 };
 const siteMetadata = {
-  title: 'Vitor Mello',
-  description: 'Vitor Mello is a fullstack software engineer who loves programming in React.js.',
+  title: 'Vitor Mello | Senior Frontend Engineer',
+  description: 'Vitor Mello is a senior fullstack software engineer who loves programming in React.js.',
   author: 'Vitor Mello',
 };
 
@@ -43,7 +43,7 @@ const SEO: FC<SEOProps> = ({
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${siteMetadata.title}`}
+      titleTemplate={siteMetadata.title}
       meta={[...defaultMeta, ...meta]}
     />
   );

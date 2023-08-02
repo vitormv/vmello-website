@@ -5,7 +5,11 @@ import resumeYml from 'src/data/resume.yml';
 const ResumePage = ({ resume }) => (
   <>
     <Head>
-      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" media="all" rel="stylesheet" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap"
+        media="all"
+        rel="stylesheet"
+      />
     </Head>
     <PageA4 resume={resume} />
   </>

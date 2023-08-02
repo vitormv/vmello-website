@@ -2,10 +2,9 @@ import { FC } from 'react';
 import { GetStaticPropsResult } from 'next';
 import { Layout } from 'src/components/Layout';
 import { SEO } from 'src/components/SEO';
-import expertiseYml from 'src/data/homepage/2-expertise.yml';
-import contactInfoYml from 'src/data/contact-info.yml';
-import { getHomepageIntro } from 'src/providers/getHomepageIntro';
-import { Hero } from 'src/components/Hero/Hero';
+import { Hero } from 'src/components/sections/Hero';
+import { Footer } from 'src/components/Footer/Footer';
+import { Intro } from 'src/components/sections/Intro';
 
 // type IndexPageProps = {
 //   intro: IntroType;
@@ -13,11 +12,17 @@ import { Hero } from 'src/components/Hero/Hero';
 //   contactInfo: ContactInfoItemType[];
 // };
 
+// @todo eslint import order, ts Types, ensure double quotes in JSX, single quotes elsewhere
+
 const IndexPage: FC = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Vitor Mello" />
 
     <Hero />
+
+    <Intro />
+
+    <Footer />
 
     {/* <Section textOnly title={intro.title} description={intro.description}>
       <div dangerouslySetInnerHTML={{ __html: intro.biography.join('') }} />

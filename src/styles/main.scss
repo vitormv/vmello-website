@@ -6,22 +6,33 @@ html {
   font-smooth: always;
 }
 
+:root {
+  --rectangle-size: 1006px;
+}
+
 body {
   // background: url(/assets/images/rectangle.svg) no-repeat;
   // background-position: right -290px top -260px;
   // background-size: min(80%, 1150px);
+  // background: url(/assets/images/rectangle.svg) no-repeat;
+  // background-position: left -70px top 80px;
+  // background-size: 400px;
   background: url(/assets/images/rectangle.svg) no-repeat;
-  background-position: left -70px top 80px;
-  background-size: 400px;
+  // background-position-x: max(400px, calc(100vw - calc(var(--rectangle-size) / 1.7)));
+  background-position-x: clamp(400px, calc(100vw - calc(var(--rectangle-size) / 1.7)), 1280px);
+  background-position-y: -280px;
+  background-size: 1150px;
+  // background-size: min(calc(100vh), 1150px);
 }
 
-@include breakpoint(sm) {
-  body {
-    background: url(/assets/images/rectangle.svg) no-repeat;
-    background-position: right -360px top -230px;
-    background-size: min(80%, 1150px);
-  }
-}
+// @include breakpoint(sm) {
+//   body {
+//     background: url(/assets/images/rectangle.svg) no-repeat;
+//     background-position: right -360px top -230px;
+//     background-size: 1150px;
+//     background-size: min(90%, 1150px);
+//   }
+// }
 
 .link {
   cursor: pointer;
