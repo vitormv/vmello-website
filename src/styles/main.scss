@@ -1,8 +1,9 @@
-@import './fonts.scss';
+@import './fonts';
 
 html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  /* stylelint-disable-next-line property-no-unknown */
   font-smooth: always;
 }
 
@@ -11,7 +12,7 @@ html {
 }
 
 body {
-  background: url(/assets/images/rectangle.svg) no-repeat;
+  background: url('/assets/images/rectangle.svg') no-repeat;
   background-position-x: clamp(
     520px,
     calc(100vw - calc(var(--rectangle-size) / 1.8)),

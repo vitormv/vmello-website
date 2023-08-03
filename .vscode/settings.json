@@ -11,5 +11,7 @@
   },
   "search.exclude": {
     "**/.yarn": true
-  }
+  },
+  "stylelint.enable": true,
+  "stylelint.validate": ["css", "scss"]
 }

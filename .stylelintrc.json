@@ -1,17 +1,12 @@
 {
   "extends": "stylelint-config-sass-guidelines",
-  "ignoreFiles": [
-    "node_modules/**/*",
-    "**/*.js",
-    "**/*.jsx"
-  ],
+  "ignoreFiles": ["node_modules/**/*", "**/*.js", "**/*.jsx"],
   "rules": {
     "max-nesting-depth": 5,
     "selector-max-compound-selectors": 5,
     "selector-class-pattern": null,
     "selector-max-id": 1,
     "color-hex-length": "long",
-    "order/properties-alphabetical-order": null,
     "selector-no-qualifying-type": [true, { "severity": "warning" }],
     "scss/at-extend-no-missing-placeholder": [true, { "severity": "warning" }],
     "declaration-block-no-duplicate-properties": [
