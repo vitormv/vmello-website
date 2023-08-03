@@ -1,10 +1,9 @@
 import { FC } from 'react';
 import { Layout } from 'src/components/Layout';
-import { SEO } from 'src/components/SEO';
 
+/** @todo proper 404 page */
 const NotFoundPage: FC = () => (
   <Layout>
-    <SEO title="404: Not found" />
     <p>
       <br />
       Feel like trying the&nbsp;

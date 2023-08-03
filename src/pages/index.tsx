@@ -1,7 +1,5 @@
 import { FC } from 'react';
-import { GetStaticPropsResult } from 'next';
 import { Layout } from 'src/components/Layout';
-import { SEO } from 'src/components/SEO';
 import { Hero } from 'src/components/sections/Hero';
 import { Footer } from 'src/components/Footer/Footer';
 import { Intro } from 'src/components/sections/Intro';
@@ -16,8 +14,6 @@ import { Intro } from 'src/components/sections/Intro';
 
 const IndexPage: FC = () => (
   <Layout>
-    <SEO title="Vitor Mello" />
-
     <Hero />
 
     <Intro />
@@ -36,9 +32,4 @@ const IndexPage: FC = () => (
   </Layout>
 );
 
-const getStaticProps = async (): Promise<GetStaticPropsResult<{}>> => ({
-  props: {},
-});
-
-export { getStaticProps };
 export default IndexPage;

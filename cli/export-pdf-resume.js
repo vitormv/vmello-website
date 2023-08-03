@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import path from 'path';
 import puppeteer from 'puppeteer';
-import task from 'tasuku';
+import tasuku from 'tasuku';
 
 const sourceUrl = 'http://localhost:8092/resume';
 const targetPdfPath = path.join('public', 'vitor-mello-resume.pdf');
@@ -44,11 +44,11 @@ async function exportResumeAsPdf(task) {
 }
 
 const mainFn = async () => {
-  await task('Exporting resume as PDF.', async ({ task }) => {
+  await tasuku('Exporting resume as PDF.', async ({ task }) => {
     await exportResumeAsPdf(task);
   });
 
-  task(`All done! PDF exported to "/${targetPdfPath}"`, () => {});
+  tasuku(`All done! PDF exported to "/${targetPdfPath}"`, () => {});
 };
 
 mainFn();

@@ -2,9 +2,7 @@ import type { NextWebVitalsMetric } from 'next/app';
 import { isDevelopment } from './isDevelopment';
 
 const reportWebVitals = (metric: NextWebVitalsMetric) => {
-  const {
-    name, label, value, id,
-  } = metric;
+  const { name, label, value, id } = metric;
 
   if (isDevelopment()) {
     // eslint-disable-next-line no-console

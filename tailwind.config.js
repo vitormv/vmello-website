@@ -4,16 +4,16 @@ module.exports = {
   content: ['./src/pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     minHeight: {
-      '0': '0',
+      0: '0',
       '1/4': '25%',
       '1/2': '50%',
       '3/4': '75%',
-      'full': '100%',
+      full: '100%',
     },
     fontFamily: {
-      'sans': ['Biotif', 'system-ui'],
-      'serif': ['Bogart', 'Georgia',],
-      'display': ['Bogart', 'serif'],
+      sans: ['Biotif', 'system-ui'],
+      serif: ['Bogart', 'Georgia'],
+      display: ['Bogart', 'serif'],
     },
     colors: {
       transparent: 'transparent',

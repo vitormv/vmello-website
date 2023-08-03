@@ -1,10 +1,5 @@
 const nextConfig = {
-  experimental: {
-    serverComponents: true,
-    concurrentFeatures: true,
-  },
   swcMinify: true,
-  optimizeLibraries: true,
   trailingSlash: false,
   eslint: {
     // Warning: This allows production builds to successfully complete even if

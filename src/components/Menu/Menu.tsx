@@ -1,21 +1,16 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useRouter } from 'next/router';
 import { TrackingEye } from 'src/components/TrackingEye/TrackingEye';
+
+import { smoothScroll } from 'src/functions/smoothScroll';
 import styles from './Menu.module.scss';
-import { MouseEvent } from 'react';
 
 // @todo use SVG icons directly and remove font-awesome from deps
 const Menu = () => {
-  const smoothScroll = (e: MouseEvent) => {
-    e.preventDefault(); // Stop Page Reloading
-    const el = document.getElementById('about');
-    if (!el) return;
-
-    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
-
+  const { route } = useRouter();
   return (
     <div
-      className="relative mx-auto h-24 flex justify-start md:justify-around items-center text-lg lg:max-w-screen-xl px-10 md:px-24"
+      className="relative mx-auto flex h-24 items-center justify-start px-10 text-lg md:justify-around md:px-24 lg:max-w-screen-xl"
       id="menu"
     >
       <div className="flex shrink-0 grow-0">
@@ -25,8 +20,8 @@ const Menu = () => {
         </a>
       </div>
       <div className="grow-0" />
-      <div className="hidden md:flex grow justify-end items-center gap-4">
-        <a className={`${styles.link} ${styles.active}`} href="/#">
+      <div className="hidden grow items-center justify-end gap-4 md:flex">
+        <a className={`${styles.link} ${route === '/' && styles.active}`} href="/#">
           <span>Home</span>
         </a>
         <a className={styles.link} href="#about" onClick={smoothScroll}>
@@ -41,7 +36,7 @@ const Menu = () => {
           target="blank"
           aria-label="LinkedIn profile"
           rel="noopener noreferrer"
-          className="text-gray transition-colors hover:text-black px-4"
+          className="px-4 text-gray transition-colors hover:text-black"
         >
           <FontAwesomeIcon size="lg" icon={['fab', 'linkedin']} />
         </a>
@@ -50,7 +45,7 @@ const Menu = () => {
           target="blank"
           aria-label="Github profile"
           rel="noopener noreferrer"
-          className="text-gray transition-colors hover:text-black px-4"
+          className="px-4 text-gray transition-colors hover:text-black"
         >
           <FontAwesomeIcon size="lg" icon={['fab', 'github']} />
         </a>

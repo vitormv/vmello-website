@@ -1,13 +1,10 @@
 import { FC } from 'react';
 import { Layout } from 'src/components/Layout';
-import { SEO } from 'src/components/SEO';
 
+// @todo proper error page
 const NotFoundPage: FC = () => (
   <Layout>
-    <SEO title="500: Internal Server Error" />
-    <p>
-      Woops, error.
-    </p>
+    <p>Woops, error.</p>
   </Layout>
 );
 
