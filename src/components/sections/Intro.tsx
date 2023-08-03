@@ -35,9 +35,11 @@ const Intro = () => {
 
       <div className="mx-auto mt-20 px-10 md:px-24 lg:max-w-screen-xl">
         <div className="md:flex md:gap-20">
-          <h3 className="mb-2 grow-0 basis-1/3 font-display text-2xl md:text-right">Skills</h3>
+          <h3 className="mb-2 shrink-0 grow-0 basis-1/3 font-display text-2xl md:text-right">
+            Skills
+          </h3>
 
-          <div className="grid shrink-0 grid-cols-1 gap-4 text-left text-lg sm:grid-cols-4">
+          <div className="grid shrink-0 grow grid-cols-2 gap-4 text-left text-lg lg:grid-cols-4">
             <ul className="list-none text-sm">
               <li className="text-base">
                 <strong>Languages</strong>

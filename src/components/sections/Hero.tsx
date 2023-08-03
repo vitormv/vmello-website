@@ -2,10 +2,10 @@ const Hero = () => (
   <div className="mx-auto px-10 md:px-24 lg:max-w-screen-xl">
     <div className="flex min-h-[calc(100vh-6rem)] max-w-2xl flex-col justify-center py-28">
       <p className="pb-2 text-xl text-black">Hi, my name is</p>
-      <h1 className="py-2 font-display text-5xl font-semibold leading-tight text-black lg:text-7xl">
+      <h1 className="py-2 font-display text-[clamp(3rem,8vw,4.5rem)] font-semibold leading-tight text-black">
         Vitor Mello,
       </h1>
-      <h2 className="py-2 font-display text-3xl leading-tight text-gray lg:text-5xl">
+      <h2 className="py-2 font-display text-[clamp(1.75rem,5vw,3rem)] leading-tight text-gray">
         I build things for the web.
       </h2>
       <p className="pt-4 text-xl leading-normal text-gray">
