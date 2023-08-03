@@ -1,8 +1,12 @@
 import Head from 'next/head';
 import { PageA4 } from 'src/components/PageA4/PageA4';
-import resumeYml from 'src/data/resume.yml';
+import resumeYml, { ResumeType } from 'src/data/resume.yml';
 
-const ResumePage = ({ resume }) => (
+type ResumePageProps = {
+  resume: ResumeType;
+};
+
+const ResumePage = ({ resume }: ResumePageProps) => (
   <>
     <Head>
       <link
