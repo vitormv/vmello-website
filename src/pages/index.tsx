@@ -4,6 +4,7 @@ import { Intro } from 'src/components/sections/Intro';
 import { Footer } from 'src/components/Footer/Footer';
 
 // @todo eslint import order, ts Types, ensure double quotes in JSX, single quotes elsewhere
+// @todo use website data from YML
 const Homepage = () => (
   <Layout>
     <Hero />
