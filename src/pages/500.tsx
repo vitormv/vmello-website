@@ -1,8 +1,7 @@
-import { FC } from 'react';
 import { Layout } from 'src/components/Layout';
 
 // @todo proper error page
-const NotFoundPage: FC = () => (
+const NotFoundPage = () => (
   <Layout>
     <p>Woops, error.</p>
   </Layout>

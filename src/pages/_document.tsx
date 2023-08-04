@@ -1,7 +1,6 @@
 import { Head, Html, Main, NextScript } from 'next/document';
-import { FC } from 'react';
 
-const MyDocument: FC = () => {
+const MyDocument = () => {
   const gaTrackingId = process.env.GA_TRACKING_ID;
 
   return (

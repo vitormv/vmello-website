@@ -16,6 +16,7 @@ const Menu = () => {
       <div className="flex shrink-0 grow-0">
         <TrackingEye />
         <a className={styles.logo} href="/" aria-label="back to homepage">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img alt="logo" src="/assets/images/logo.svg" />
         </a>
       </div>

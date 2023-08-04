@@ -1,11 +1,11 @@
-import { FC, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import {
   addMultipleEventListeners,
   removeMultipleEventListeners,
 } from 'src/functions/multipleEventListenersHelper';
 import styles from './TrackingEye.module.scss';
 
-const TrackingEye: FC = () => {
+const TrackingEye = () => {
   const linkRef = useRef<HTMLAnchorElement>(null);
   const eyeRef = useRef<HTMLDivElement>(null);
 
@@ -31,7 +31,7 @@ const TrackingEye: FC = () => {
       eyeRef.current.style.transform = `rotate(${degrees}deg)`;
     };
 
-    // open/close the eye whenever the cursor hovers over an "<a>" element
+    // open/close the eye whenever the cursor hovers over any "<a>" element in the page
     addMultipleEventListeners('a', 'mouseenter', onLinkMouseEnter);
     addMultipleEventListeners('a', 'mouseleave', onLinkMouseLeave);
 

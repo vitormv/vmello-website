@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import Head from 'next/head';
 import { AppProps } from 'next/app';
 import { config } from '@fortawesome/fontawesome-svg-core';
@@ -16,7 +15,7 @@ const metadata = {
   author: 'Vitor Mello',
 };
 
-const MyApp: FC<AppProps> = ({ Component, pageProps }) => (
+const MyApp = ({ Component, pageProps }: AppProps) => (
   <>
     <Head>
       <title>{metadata.title}</title>
