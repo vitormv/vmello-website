@@ -18,8 +18,7 @@
     "resume:export": "node --trace-warnings -r esm cli/export-pdf-resume.js",
     "start": "next dev -p 8091",
     "start:prod": "next start -p 8091",
-    "serve": "node -r esm static.server.js",
-    "test": "yarn lint"
+    "serve": "node -r esm static.server.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",

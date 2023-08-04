@@ -3,7 +3,8 @@ name: vmello-website-ci
 on: [push]
 
 jobs:
-  build-and-test:
+  lint-build-test:
+    name: Lint / Build / Test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -19,7 +20,13 @@ jobs:
             ${{ runner.os }}-
 
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --immutable
 
-      - name: Run tests
-        run: yarn test
+      - name: Lint
+        run: yarn lint
+
+      - name: Test Resume Export
+        run: yarn resume
+
+      - name: Ensure it can be built without errors
+        run: yarn build
