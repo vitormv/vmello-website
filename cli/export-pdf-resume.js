@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import path from 'path';
 import puppeteer from 'puppeteer';
 import tasuku from 'tasuku';
@@ -26,7 +25,7 @@ async function exportResumeAsPdf(task) {
       path: targetPdfPath,
       displayHeaderFooter: true,
       margin: { top: '12mm', right: 0, bottom: '12mm', left: 0 },
-      headerTemplate: ' ', // <--- empty spaces are needed! XD
+      headerTemplate: ' ', // <--- empty spaces are needed! ¯\_(ツ)_/¯
       footerTemplate: `
         <div style="width: 100%; font-style: italic; font-size: 9px; padding: 0; color: #bbb; font-family: 'Lora', serif; position: relative;">
           <div style="position: absolute; right: 9mm; bottom: 5px;">
@@ -48,7 +47,7 @@ const mainFn = async () => {
     await exportResumeAsPdf(task);
   });
 
-  tasuku(`All done! PDF exported to "/${targetPdfPath}"`, () => {});
+  tasuku(`All done! PDF exported to "${targetPdfPath}"`, () => {});
 };
 
 mainFn();
