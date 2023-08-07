@@ -5,6 +5,7 @@ import { reportWebVitals } from 'src/functions/reportWebVitals';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import 'src/styles/main.scss';
 import 'tailwindcss/tailwind.css';
+import 'src/icons';
 
 config.autoAddCss = false;
 

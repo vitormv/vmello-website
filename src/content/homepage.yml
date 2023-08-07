@@ -1,0 +1,31 @@
+slug: homepage
+sections:
+  about:
+    title: About
+    biography:
+      - md//Back in 2005, I've pieced together my first website about my favorite anime
+        at the time. Fast forward to today, I've worked in a digital agency,
+        a [food delivery app](https://www.foodpanda.com/),
+        [a scale-up who wants to paint the world green](https://www.flix.com/),
+        and a [start-up building a sustainable food system](https://choco.com).
+
+      - md//Although I've been working as a **Full-Stack
+        Software Engineer** for most of my career, lately the focus was more on
+        the Frontend side of things, with Typescript and React.js. Sounds cliché,
+        but something about "seeing" the results of my work still brings me joy
+        after all this time.
+
+  skills:
+    title: Skills
+    blocks:
+      - name: Languages
+        items: [Typescript, Javascript, HTML, CSS/Sass, PHP, Bash]
+
+      - name: Frameworks
+        items: [React, Next.js, Express/Node, NestJS, Symfony]
+
+      - name: Tools
+        items: [Webpack, CSS-in-JS, Jest, testing-library, Cypress]
+
+      - name: Cloud
+        items: [AWS, GCloud, MySQL/Postgres, SQS, Redis, Docker]

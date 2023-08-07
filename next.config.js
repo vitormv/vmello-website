@@ -25,6 +25,11 @@ const nextConfig = {
       use: 'js-yaml-loader',
     });
 
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    });
+
     return config;
   },
 };

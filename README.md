@@ -38,7 +38,7 @@ A quick look at the structure for this project:
 
 2. **`/src/components/`**: Home of all the React components used in the website, useful reusable pieces of code.
 
-3. **`/src/data/`**: Here likes all the content of the website, as yml files. This is useful to keep the content layer separated from the components themselves. These files will be read by graphql at build time.
+3. **`/src/content/`**: Here likes all the content of the website, as yml files. This is useful to keep the content layer separated from the components themselves. These files will be read by graphql at build time.
 
 4. **`/src/pages/`**: This folder is where Next.js expects to find all the website pages.
 

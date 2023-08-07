@@ -2,10 +2,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useRouter } from 'next/router';
 import { TrackingEye } from 'src/components/TrackingEye/TrackingEye';
 
-import { smoothScroll } from 'src/functions/smoothScroll';
+import { goToAnchorSmoothly } from 'src/functions/goToAnchorSmoothly';
 import styles from './Menu.module.scss';
 
-// @todo use SVG icons directly and remove font-awesome from deps
 const Menu = () => {
   const { route } = useRouter();
   return (
@@ -25,7 +24,7 @@ const Menu = () => {
         <a className={`${styles.link} ${route === '/' && styles.active}`} href="/#">
           <span>Home</span>
         </a>
-        <a className={styles.link} href="#about" onClick={smoothScroll}>
+        <a className={styles.link} href="#about" onClick={goToAnchorSmoothly}>
           <span>About</span>
         </a>
         <a className={styles.link} href="vitor-mello-resume.pdf" target="_blank">

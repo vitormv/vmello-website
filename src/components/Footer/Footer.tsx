@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { smoothScroll } from 'src/functions/smoothScroll';
+import { goToAnchorSmoothly } from 'src/functions/goToAnchorSmoothly';
 
 const Footer = () => (
   <div className="mx-auto mb-16 mt-32 flex justify-between px-10 text-gray md:px-24 lg:max-w-screen-xl">
@@ -29,7 +29,11 @@ const Footer = () => (
       </a>
     </div>
     <div className="flex shrink-0 grow-0 items-center gap-4">
-      <a href="/#menu" onClick={smoothScroll}>
+      <a
+        href="/#menu"
+        onClick={goToAnchorSmoothly}
+        className="text-gray transition-colors hover:text-black"
+      >
         Top &uarr;
       </a>
     </div>

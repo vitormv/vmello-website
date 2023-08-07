@@ -9,8 +9,8 @@ const Hero = () => (
         I build things for the web.
       </h2>
       <p className="pt-4 text-xl leading-normal text-gray">
-        I&apos;m a full stack software engineer specializing in building digital experiences.
-        Currently, I&apos;m focused on building a global, connected and sustainable food system at{' '}
+        I&apos;m a full-stack software engineer specializing in building digital experiences.
+        Previously, I was focused on building a global, connected and sustainable food system at{' '}
         <a className="link" target="_blank" href="https://www.choco.com" rel="noreferrer">
           <span>Choco</span>
         </a>

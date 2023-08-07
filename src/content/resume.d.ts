@@ -1,4 +1,4 @@
-declare module 'src/data/resume.yml' {
+declare module 'src/content/resume.yml' {
   export type ResumeType = {
     slug: string;
     title: string;

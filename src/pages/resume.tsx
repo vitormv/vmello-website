@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { PageA4 } from 'src/components/PageA4/PageA4';
-import resumeYml, { ResumeType } from 'src/data/resume.yml';
+import resumeYml, { ResumeType } from 'src/content/resume.yml';
 
 type ResumePageProps = {
   resume: ResumeType;

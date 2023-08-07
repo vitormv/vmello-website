@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-import 'src/icons';
 import { Menu } from 'src/components/Menu/Menu';
 
 type LayoutProps = {

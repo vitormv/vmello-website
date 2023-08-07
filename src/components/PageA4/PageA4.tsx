@@ -1,5 +1,5 @@
 import { useEffect, Fragment } from 'react';
-import { ResumeType } from 'src/data/resume.yml';
+import { ResumeType } from 'src/content/resume.yml';
 import styles from './PageA4.module.scss';
 
 type PageA4Props = {
