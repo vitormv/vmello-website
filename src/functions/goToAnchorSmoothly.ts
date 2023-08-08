@@ -1,8 +1,6 @@
-import { MouseEvent } from 'react';
-
-const goToAnchorSmoothly = (e: MouseEvent<HTMLAnchorElement>) => {
+function goToAnchorSmoothly(this: HTMLElement, e: Event) {
   e.preventDefault(); // Stop Page Reloading
-  const href = e.currentTarget.getAttribute('href');
+  const href = (e.currentTarget as HTMLAnchorElement).getAttribute('href');
   const targetId = href?.replace(/^\/+/, '').replace(/^#+/, '');
 
   if (!targetId) return;
@@ -11,6 +9,6 @@ const goToAnchorSmoothly = (e: MouseEvent<HTMLAnchorElement>) => {
   if (!el) return;
 
   el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-};
+}
 
 export { goToAnchorSmoothly };

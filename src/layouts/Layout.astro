@@ -1,0 +1,161 @@
+---
+import { Sprite } from 'astro-icon';
+import Footer from 'src/components/Footer.astro';
+import Menu from 'src/components/Menu.astro';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+
+  <body class="text-black">
+    <Sprite.Provider>
+      <Menu />
+      <main>
+        <slot />
+      </main>
+      <Footer />
+    </Sprite.Provider>
+
+    <script>
+      import { goToAnchorSmoothly } from 'src/functions/goToAnchorSmoothly';
+
+      document.querySelectorAll('a[data-smooth-scroll]').forEach((element) => {
+        element.addEventListener('click', goToAnchorSmoothly);
+      });
+    </script>
+  </body>
+</html>
+
+<style is:global lang="scss">
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+
+    /* Colors */
+    --background-color: #fefaf6;
+    --text-color: #656270;
+    --text-dark-color: #232320;
+    --text-color-hover: #ffffff;
+    --text-color-light: #bcbdbe;
+    --text-color-highlight: #e0a80d;
+    --color-primary: #ffc4ff;
+    --color-secondary: #aadcda;
+
+    /* Breakpoints */
+    --break-small: 640px;
+    --break-medium: 768px;
+    --break-large: 1024px;
+    --breakpoint-xs: 350px;
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+    --breakpoint-2xl: 1536px;
+  }
+
+  @font-face {
+    font-family: Biotif;
+    src:
+      url('/assets/fonts/biotif.woff2') format('woff2'),
+      url('/assets/fonts/biotif.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: Bogart;
+    font-weight: bold;
+    src:
+      url('/assets/fonts/bogart-semi.woff2') format('woff2'),
+      url('/assets/fonts/bogart-semi.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: Bogart;
+    font-weight: normal;
+    src:
+      url('/assets/fonts/bogart.woff2') format('woff2'),
+      url('/assets/fonts/bogart.woff') format('woff');
+  }
+
+  html {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    /* stylelint-disable-next-line property-no-unknown */
+    font-smooth: always;
+  }
+
+  :root {
+    --rectangle-size: 1006px;
+  }
+
+  body {
+    background: url('/assets/images/rectangle.svg') no-repeat var(--background-color);
+    background-position-x: clamp(
+      520px,
+      calc(100vw - calc(var(--rectangle-size) / 1.8)),
+      calc(50vw + 200px)
+    );
+    background-position-y: -280px;
+    background-size: 1150px;
+    color: var(--text-color);
+  }
+
+  [astro-icon] {
+    width: 30px;
+    height: 30px;
+  }
+
+  main .link {
+    cursor: pointer;
+    text-decoration: none;
+    transition: none;
+    position: relative;
+    display: inline-block;
+
+    > span {
+      position: relative;
+      z-index: 10;
+    }
+
+    &::before {
+      z-index: 5;
+      content: '';
+      width: 100%;
+      position: absolute;
+      bottom: -2px;
+      height: 6px;
+      left: 0;
+      display: inline-block;
+      background: var(--color-primary);
+      transform: rotate(-2deg);
+      transition: transform 0.2s cubic-bezier(0.7, 2.97, 0.64, 1);
+    }
+
+    &:hover,
+    .is-active {
+      &::before {
+        transform: scale3d(1.2, 1.1, 1.2);
+      }
+    }
+  }
+</style>
