@@ -1,5 +1,14 @@
 module.exports = {
-  extends: ['airbnb-base', 'plugin:tailwindcss/recommended', 'plugin:prettier/recommended'],
+  extends: [
+    'plugin:astro/recommended',
+    'plugin:tailwindcss/recommended',
+    'plugin:prettier/recommended',
+  ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    project: './tsconfig.json',
+    extraFileExtensions: ['.astro'], // This is a required setting in `@typescript-eslint/parser` v5.
+  },
   plugins: ['@typescript-eslint', 'import', 'tailwindcss'],
   env: {
     browser: true,
@@ -27,12 +36,7 @@ module.exports = {
   overrides: [
     {
       files: ['./**/*.ts', './**/*.tsx'],
-      extends: [
-        'airbnb-base',
-        'airbnb-typescript/base',
-        'plugin:tailwindcss/recommended',
-        'plugin:prettier/recommended',
-      ],
+      extends: ['plugin:tailwindcss/recommended', 'plugin:prettier/recommended'],
       parser: '@typescript-eslint/parser',
       parserOptions: {
         project: 'tsconfig.json',
@@ -75,12 +79,24 @@ module.exports = {
         'astro/astro': true,
         es2020: true,
       },
+      settings: {
+        'import/parsers': {
+          '@typescript-eslint/parser': ['.ts', '.astro'],
+        },
+        'import/resolver': {
+          typescript: {
+            alwaysTryTypes: true,
+            project: './',
+          },
+        },
+      },
       // Allows Astro components to be parsed.
       parser: 'astro-eslint-parser',
       // Parse the script in `.astro` as TypeScript by adding the following configuration.
       // It's the setting you need when using TypeScript.
       parserOptions: {
         parser: '@typescript-eslint/parser',
+        project: 'tsconfig.json',
         extraFileExtensions: ['.astro'],
         // The script of Astro components uses ESM.
         sourceType: 'module',
@@ -89,29 +105,9 @@ module.exports = {
         // Enable recommended rules
         'astro/no-conflict-set-directives': 'error',
         'astro/no-unused-define-vars-in-style': 'error',
-
+        'import/no-unresolved': [2, { ignore: ['astro-icon'] }],
         // override/add rules settings here, such as:
         // "astro/no-set-html-directive": "error"
-      },
-    },
-    {
-      // Define the configuration for Astro's `<script>` tag.
-      // Script in `<script>` is assigned a virtual file name with the `.js` extension.
-      files: ['**/*.astro/*.js', '*.astro/*.js'],
-      env: {
-        browser: true,
-        es2020: true,
-      },
-      parserOptions: {
-        sourceType: 'module',
-      },
-      rules: {
-        // override/add rules settings here, such as:
-        // "no-unused-vars": "error"
-
-        // If you are using "prettier/prettier" rule,
-        // you don't need to format inside <script> as it will be formatted as a `.astro` file.
-        'prettier/prettier': 'off',
       },
     },
   ],
