@@ -3,7 +3,7 @@ import path from 'path';
 import puppeteer from 'puppeteer';
 import tasuku from 'tasuku';
 
-const sourceUrl = 'http://localhost:8092/resume';
+const sourceUrl = 'http://localhost:8081/resume';
 const targetPdfPath = path.join('public', 'vitor-mello-resume.pdf');
 
 async function exportResumeAsPdf(task) {
@@ -30,7 +30,7 @@ async function exportResumeAsPdf(task) {
       footerTemplate: `
         <div style="width: 100%; font-style: italic; font-size: 9px; padding: 0; color: #bbb; font-family: 'Lora', serif; position: relative;">
           <div style="position: absolute; right: 9mm; bottom: 5px;">
-            Vitor Mello; page <span class="pageNumber"></span> of <span class="totalPages"></span>.
+            Vitor Mello - Senior Full Stack Engineer - page <span class="pageNumber"></span> of <span class="totalPages"></span>.
           </div>
         </div>
       `,

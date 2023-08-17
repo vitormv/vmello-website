@@ -9,14 +9,13 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
+    "preview": "astro preview --port 8081",
     "lint": "yarn lint:js && yarn lint:css",
     "lint:js": "eslint --cache --cache-location node_modules/.cache/eslint/ .",
     "lint:css": "stylelint \"src/**/*.{css,scss,sass}\"",
     "lint:css:fix": "stylelint --fix \"src/**/*.{css,scss,sass}\"",
-    "export": "yarn build && next export",
-    "resume": "yarn export && concurrently --raw --kill-others --success first npm:serve npm:resume:export",
-    "resume:export": "node --trace-warnings -r esm cli/export-pdf-resume.js"
+    "resume": "yarn build && concurrently --raw --kill-others --success first npm:preview npm:resume:export",
+    "resume:export": "node --trace-warnings cli/export-pdf-resume.mjs"
   },
   "dependencies": {
     "@astrojs/tailwind": "^4.0.0",

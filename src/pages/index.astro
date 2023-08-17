@@ -1,7 +1,7 @@
 ---
 import { recursiveMarkdownRender } from 'src/functions/recursiveMarkdownRender';
 import Hero from 'src/components/Hero.astro';
-import Layout from 'src/layouts/Layout.astro';
+import LayoutWeb from 'src/layouts/LayoutWeb.astro';
 import data from 'src/content/homepage.yml';
 import AboutSection from 'src/components/AboutSection.astro';
 import SkillsSection from 'src/components/SkillsSection.astro';
@@ -9,8 +9,8 @@ import SkillsSection from 'src/components/SkillsSection.astro';
 const aboutSectionData = recursiveMarkdownRender(data.sections.about);
 ---
 
-<Layout title="Vitor Mello | Senior Full-Stack Engineer">
+<LayoutWeb title="Vitor Mello | Senior Full-Stack Engineer">
   <Hero />
   <AboutSection data={aboutSectionData} />
   <SkillsSection data={data.sections.skills} />
-</Layout>
+</LayoutWeb>
