@@ -1,0 +1,165 @@
+slug: resume
+title: Vitor Mello
+subtitle: Senior Full Stack Engineer
+summary: >
+  I have 12+ years of experience as a Full Stack Engineer, with strong skills in typescript,
+  React (Redux and Sagas), Node.js (NestJS, Next.js and express) and responsive layouts.
+  I've also done a lot of PHP and Symfony3 in the past, and have some knowledge of
+  DevOps with Docker, AWS, Google Cloud and CI pipelines.
+
+links:
+  - name: vitor@vmello.com
+    href: ~
+
+  - name: https://vmello.com
+    href: https://vmello.com
+
+  - name: https://www.linkedin.com/in/vitormv
+    href: https://www.linkedin.com/in/vitormv
+
+  - name: https://github.com/vitormv
+    href: https://github.com/vitormv
+
+education:
+  - institution: Centro de Estudos Superiores de Maceió, CESMAC
+    studyType: Bachelor
+    area: Computer Systems Analysis
+    years: 2005 - 2009
+
+work:
+  - company: Choco
+    location: Berlin, Germany
+    duration: 1 year 7 months
+    positions:
+      - position: Senior Frontend Engineer
+        date: Jan 2022 - Jul 2023
+    summary: >
+      Created tool for automatically generating apollo mocks, greatly reducing complexity
+        and making it easier to write tests
+      • Major refactorings in existing unit/integration tests, greatly improving maintainability
+      and readability of codebase
+      • Promoting best practices in FE development
+      • Create tool for easily overriding feature flags during development/testing
+      • Mentoring two junior FE developers
+      • Team captain of the StartUp League volleyball team, earning 1st place
+    tags: >
+      react, single-page-application, micro-frontends, graphql, apollo
+
+  - company: Coffee Circle
+    location: Berlin, Germany
+    duration: 2 years 1 month
+    positions:
+      - position: Head of Engineering
+        date: Feb 2021 - Nov 2021
+      - position: Senior Frontend Engineer
+        date: Nov 2019 - Jan 2021
+    summary: >
+      Reimplemented existing blog in Next.js, reducing static export time from 10min to 1min
+      • Migrate the ecommerce customer authentication to external Auth0 platform
+      • Increased conversion rate by implementing a one-page checkout, also improving UX
+      • Greatly increased dev worflows with automated pipelines
+      • Technical interviews for Backend and Frontend roles
+      • Driving squad initiatives and technical roadmap planning
+      • Mentoring and guiding on best practices and design patterns
+    tags: >
+      typescript, react, redux, next.js, nestjs, mysql, google cloud, docker
+
+  - company: Flixbus
+    location: Berlin, Germany
+    duration: 3 years 9 months
+    positions:
+      - position: Senior Full Stack Engineer
+        date: Feb 2016 - October 2019
+    summary: >
+      Reimplemented the search results page and search form with React, redux and sagas
+      • Greatly increase time to first paint, reducing repaints and rerenders, chunk splitting, suspense
+      • Greatly accelerate testing of edge cases by creating tool to create complex mocks easily
+      • Created an unified payment framework in php to speedup integration of 3rd-party payment APIs
+    tags: >
+      react, redux, jest, css modules, php, symfony, mysql, aws, ab-tests
+
+  - company: Foodpanda
+    location: Berlin, Germany
+    duration: 2 years 7 months
+    positions:
+      - position: Senior Full Stack Engineer
+        date: Jun 2013 - Dec 2015
+    summary: >
+      Development of new features for the frontend and backend with focus on scalability and performance
+      • Running loadtests with jMeter and finding bottlenecks and points of improvement in the application
+      • Integration with external payment gateways around the world
+      • Integration with external restaurant systems and APIs for seamless order dispatching
+    tags: >
+      javascript, php, mysql, sass, bootstrap, jquery, aws-sqs, elasticsearch
+
+  - company: Mobly
+    location: São Paulo, Brazil
+    duration: 1 year 4 months
+    positions:
+      - position: Lead Software Engineer
+        date: Nov 2012 - May 2013
+      - position: Senior Full Stack Engineer
+        date: Feb 2012 - Oct 2012
+    summary: ~
+    tags: ~
+
+  - company: Plus! Agência Digital
+    location: Maceió, Brazil
+    duration: 3 years 4 months
+    positions:
+      - position: Lead Full Stack Engineer
+        date: Jul 2010 - Dec 2011
+      - position: Software Engineer
+        date: Sep 2008 - Jun 2010
+    summary: ~
+    tags: ~
+
+  - company: Carango
+    location: Maceió, Brazil
+    duration: 1 year 3 months
+    positions:
+      - position: Software Engineer
+        date: Jul 2007 - Sep 2008
+    summary: ~
+    tags: ~
+
+  - company: SEMARHP
+    location: Maceió, Brazil
+    duration: 1 year 6 months
+    positions:
+      - position: Web Developer Intern
+        date: Mar 2007 - Aug 2008
+    summary: ~
+    tags: ~
+
+skills:
+  - name: Typescript
+    level: expert
+
+  - name: React / Redux / SSR
+    level: expert
+
+  - name: php / symfony
+    level: expert
+
+  - name: node.js
+    level: intermediate
+
+  - name: html / css / sass
+    level: expert
+
+  - name: DevOps
+    level: intermediate
+
+  - name: UX
+    level: intermediate
+
+languages:
+  - language: English
+    fluency: fluent
+
+  - language: German
+    fluency: intermediate
+
+  - language: Portuguese
+    fluency: native

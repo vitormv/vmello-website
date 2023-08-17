@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "astro-build.astro-vscode",
     "dbaeumer.vscode-eslint",
     "stylelint.vscode-stylelint",
     "zignd.html-css-class-completion",
@@ -7,5 +8,6 @@
     "redhat.vscode-yaml",
     "mrmlnc.vscode-scss",
     "tomoki1207.pdf"
-  ]
+  ],
+  "unwantedRecommendations": []
 }

@@ -1,0 +1,33 @@
+---
+import Section from 'src/components/Section.astro';
+import type { AboutSectionType } from 'src/content/homepage.yml';
+
+const yearToday = new Date().getFullYear();
+const firstJobYear = 2008;
+
+const yearsExperience = String(yearToday - firstJobYear);
+
+interface Props {
+  data: AboutSectionType;
+}
+
+const { data } = Astro.props;
+---
+
+<style lang="scss">
+  .about :global(a) {
+    border-bottom: 2px solid var(--color-primary);
+    transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      color: var(--text-color);
+    }
+  }
+</style>
+
+<Section id="about" title={data.title}>
+  <div
+    class="about mb-3 flex flex-col gap-4 text-lg"
+    set:html={data.biography.join('').replace('{{YEARS_EXPERIENCE}}', yearsExperience)}
+  />
+</Section>

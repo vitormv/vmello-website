@@ -1,0 +1,12 @@
+{
+  "extends": "astro/tsconfigs/strictest",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "verbatimModuleSyntax": true,
+    "paths": {
+      "src/*": ["src/*"]
+    }
+  },
+  "exclude": ["/node_modules"],
+  "include": ["**/*.d.ts", "**/*.ts", "**/*.tsx", "**/*.astro", "**/*.yml"]
+}

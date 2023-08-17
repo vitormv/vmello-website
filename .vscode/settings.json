@@ -1,8 +1,26 @@
 {
   "editor.tabSize": 2,
-  "editor.rulers": [120],
+  "editor.rulers": [100],
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "search.exclude": {
+    "**/.yarn": true
+  },
+  "stylelint.enable": true,
+  "stylelint.validate": ["css", "scss"],
+  "prettier.documentSelectors": ["**/*.astro", "**/*.ts"],
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "eslint.validate": [
+    "javascript",
+    "astro", // Enable .astro
+    "typescript" // Enable .ts
+  ]
 }

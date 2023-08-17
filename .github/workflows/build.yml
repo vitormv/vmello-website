@@ -3,7 +3,8 @@ name: vmello-website-ci
 on: [push]
 
 jobs:
-  build-and-test:
+  lint-build-test:
+    name: Lint / Build / Test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -12,14 +13,20 @@ jobs:
       - name: Cache node modules
         uses: actions/cache@v2
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ hashFiles('**/package-lock.json') }}
+          path: ~/.yarn
+          key: ${{ runner.os }}-build-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-build-
             ${{ runner.os }}-
 
       - name: Install dependencies
-        run: npm install
+        run: yarn install --immutable
 
-      - name: Run tests
-        run: npm run test
+      - name: Lint
+        run: yarn lint
+
+      - name: Build project
+        run: yarn build
+
+      - name: Test Resume Export
+        run: yarn resume:generate

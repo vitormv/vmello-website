@@ -1,62 +1,57 @@
 {
-  "name": "vmello-website",
-  "description": "Source code for Vitor Mello's personal website, built with Next.js and React",
-  "author": "Vitor Mello",
-  "private": true,
+  "name": "astro",
+  "type": "module",
   "version": "1.0.0",
   "engines": {
-    "node": ">=v14.0.0",
-    "npm": ">=6.0.0"
+    "node": "^18.0.0"
   },
   "scripts": {
-    "build": "next build",
-    "lint": "npm run lint:js && npm run lint:css",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview --port 8081",
+    "lint": "yarn lint:js && yarn lint:css",
     "lint:js": "eslint --cache --cache-location node_modules/.cache/eslint/ .",
-    "lint:css": "stylelint \"src/**/*.scss\"",
-    "lint:css:fix": "stylelint --fix \"src/**/*.scss\"",
-    "export": "npm run build && next export",
-    "resume": "npm run export && concurrently --kill-others --success first npm:serve npm:resume:export",
-    "resume:export": "node --trace-warnings -r esm cli/export-pdf-resume.js",
-    "start": "next dev -p 8091",
-    "serve": "node -r esm static.server.js",
-    "test": "npm run lint"
+    "lint:css": "stylelint \"src/**/*.{css,scss,sass}\"",
+    "lint:css:fix": "stylelint --fix \"src/**/*.{css,scss,sass}\"",
+    "resume": "yarn build && yarn resume:generate",
+    "resume:generate": "concurrently --raw --kill-others --success first npm:preview npm:resume:save-pdf",
+    "resume:save-pdf": "node --trace-warnings cli/export-pdf-resume.mjs"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.3",
-    "@fortawesome/fontawesome-svg-core": "^1.2.35",
-    "@fortawesome/free-brands-svg-icons": "^5.15.3",
-    "@fortawesome/free-solid-svg-icons": "^5.15.3",
-    "@fortawesome/react-fontawesome": "^0.1.4",
-    "classnames": "^2.3.1",
-    "compression": "^1.7.4",
-    "express": "^4.17.1",
+    "@astrojs/tailwind": "^4.0.0",
+    "astro": "^2.10.3",
+    "astro-icon": "^0.8.1",
     "lodash": "^4.17.21",
-    "next": "^11.0.1",
-    "normalize.css": "^8.0.1",
-    "prop-types": "^15.7.2",
-    "puppeteer": "^10.1.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-helmet": "^6.1.0",
-    "remark": "^13.0.0",
-    "remark-html": "^13.0.1",
-    "typeit": "^7.0.4",
-    "web-vitals": "^2.1.0"
+    "remark": "^14.0.3",
+    "remark-html": "^15.0.2",
+    "tailwindcss": "^3.0.24"
   },
   "devDependencies": {
-    "concurrently": "^6.2.0",
-    "eslint": "^7.31.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-next": "^11.0.1",
-    "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.24.0",
-    "esm": "^3.2.25",
-    "js-yaml-loader": "^1.2.2",
-    "prettier": "^2.3.2",
-    "sass": "^1.35.2",
-    "stylelint": "^13.13.1",
-    "stylelint-config-sass-guidelines": "^8.0.0"
+    "@rollup/plugin-yaml": "^4.1.1",
+    "@types/lodash": "^4.14.196",
+    "@types/node": "^20.4.8",
+    "@typescript-eslint/eslint-plugin": "^6.3.0",
+    "@typescript-eslint/parser": "^6.3.0",
+    "concurrently": "^8.2.0",
+    "eslint": "^8.46.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-astro": "^0.28.0",
+    "eslint-plugin-import": "^2.28.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-tailwindcss": "^3.13.0",
+    "prettier": "2.8.8",
+    "prettier-plugin-astro": "0.10.0",
+    "puppeteer": "^14.1.0",
+    "sass": "^1.64.2",
+    "stylelint": "^15.10.2",
+    "stylelint-config-sass-guidelines": "^10.0.0",
+    "tasuku": "^2.0.1",
+    "vite-remark-html": "^1.1.1"
+  },
+  "resolutions": {
+    "prettier": "2.8.8"
   },
   "license": "MIT",
   "repository": {
@@ -65,5 +60,6 @@
   },
   "bugs": {
     "url": "https://github.com/vitormv/vmello-website/issues"
-  }
+  },
+  "packageManager": "yarn@3.6.1"
 }
