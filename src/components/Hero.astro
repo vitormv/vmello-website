@@ -1,0 +1,56 @@
+---
+import { Sprite } from 'astro-icon';
+---
+
+<div class="mx-auto px-10 md:px-24 lg:max-w-screen-xl">
+  <div class="flex min-h-[calc(100vh-6rem)] max-w-2xl flex-col justify-center py-28">
+    <p class="pb-2 text-xl text-black">Hi, my name is</p>
+    <h1
+      class="py-2 font-display text-[clamp(3rem,8vw,4.5rem)] font-semibold leading-tight text-black"
+    >
+      Vitor Mello,
+    </h1>
+    <h2 class="py-2 font-display text-[clamp(1.75rem,5vw,3rem)] leading-tight text-gray">
+      I build things for the web.
+    </h2>
+    <p class="pt-4 text-xl leading-normal text-gray">
+      I&apos;m a full-stack software engineer specializing in building digital experiences.
+      Previously, I was focused on building a global, connected and sustainable food system at{' '}
+      <a class="link" target="_blank" href="https://www.choco.com" rel="noreferrer">
+        <span>Choco</span>
+      </a>
+      .
+    </p>
+
+    <div class="flex justify-center gap-4 pt-10 md:hidden">
+      <a
+        href="/vitor-mello-resume.pdf"
+        target="blank"
+        title="Download PDF Resume"
+        aria-label="Download PDF Resume"
+        rel="noopener noreferrer"
+        class="text-gray transition-colors hover:text-black"
+      >
+        <Sprite name="mdi:file-download-outline" width="26" />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/vitormv"
+        target="blank"
+        aria-label="LinkedIn profile"
+        rel="noopener noreferrer"
+        class="text-gray transition-colors hover:text-black"
+      >
+        <Sprite name="mdi:linkedin" width="26" />
+      </a>
+      <a
+        href="https://www.github.com/vitormv"
+        target="blank"
+        aria-label="Github profile"
+        rel="noopener noreferrer"
+        class="text-gray transition-colors hover:text-black"
+      >
+        <Sprite name="fe:github" width="26" />
+      </a>
+    </div>
+  </div>
+</div>

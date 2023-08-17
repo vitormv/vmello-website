@@ -25,8 +25,8 @@ jobs:
       - name: Lint
         run: yarn lint
 
-      - name: Test Resume Export
-        run: yarn resume
-
-      - name: Ensure it can be built without errors
+      - name: Build project
         run: yarn build
+
+      - name: Test Resume Export
+        run: yarn resume:generate

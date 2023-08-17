@@ -1,52 +1,21 @@
-[![Build Status](https://travis-ci.org/vitormv/vmello-website.svg?branch=master)](https://travis-ci.org/vitormv/vmello-website) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/vitormv/vmello-website/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/vitormv/vmello-website/?branch=master) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Vercel](https://vercelbadge.vercel.app/api/vitormv/vmello-website)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/vitormv/vmello-website/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/vitormv/vmello-website/?branch=master) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <h1 align="center">
   Vitor Mello's Website
 </h1>
 
-This is the source code for my website. It is a statically generated using **Next.js** (React).
+This is the source code for my website. It is a statically generated using **Astro**.
 
-## 🚀 Get Up and Running
+### Why Astro and not (\_\_YOUR_FAVORITE_FRAMEWORK\_\_)?
 
-Want to take a look at the code for yourself? Go ahead!
+Well, this is a very simple website that can be statically generated and barely need any client-side
+Javascript at all. While Next.js, Remix, etc can do static site generation, they still do
+ship, parse, rehydrate and process a metric ton of javascript after the page has been downloaded.
+They still rerender everything on the client side, just to realize that nothing changed.
 
-```bash
-git clone git@github.com:vitormv/vmello-website.git vmello-website
-cd vmello-website
-yarn install && yarn start
-```
-
-Then open the `http://0.0.0.0:8091` on your favorite browser.
-
-## 🧐 What's inside?
-
-A quick look at the structure for this project:
-
-```plain
-    .
-    ├── cli/
-    ├── src/
-    ├──── components/
-    ├──── data/
-    ├──── pages/
-    ├──── providers/
-    ├──── styles/
-    ├── static/
-```
-
-1. **`/cli/`**: This directory contains some useful scripts, like for example export my resume as pdf directly and saving a local copy.
-
-2. **`/src/components/`**: Home of all the React components used in the website, useful reusable pieces of code.
-
-3. **`/src/content/`**: Here likes all the content of the website, as yml files. This is useful to keep the content layer separated from the components themselves. These files will be read by graphql at build time.
-
-4. **`/src/pages/`**: This folder is where Next.js expects to find all the website pages.
-
-5. **`/src/providers/`**: Here all the static graphql queries used in the website are used. This allow for great reuse of common functionality, in case they are needed in more than one place. They use React `Hooks` to define the queries.
-
-6. **`/src/styles/`**: Place for all the global stylesheets used in the website.
-
-7. **`/static/`**: Place for all the static assets of the website, like favicons, my pdf resume and so on.
+For a simple static website like this, Astro does provite the best experience, since barely any JS
+is shipped to the client, which means less js, less code, less bandwidth, less complexity.
 
 ## 💫 Deploy
 
@@ -57,7 +26,7 @@ Deploy is automated by using Github Actions + [Vercel](https://vercel.com/). It 
 After spending countless hours trying to create a greatly aligned resume in Google Docs, I finally decided to recreate it in html format (https://vmello.com/resume), and export it as `.pdf` using Puppeteer. It heavily uses CSS media @print queries.
 
 ```bash
-npm run resume
+yarn resume
 ```
 
 I love to automate things! 😁

@@ -1,0 +1,28 @@
+---
+import Section from 'src/components/Section.astro';
+import type { SkillSectionType } from 'src/content/homepage.yml';
+
+interface Props {
+  data: SkillSectionType;
+}
+
+const { data } = Astro.props;
+---
+
+<Section id="skills" title={data.title}>
+  <div class="grid shrink-0 grow grid-cols-2 gap-4 text-left text-lg lg:grid-cols-4">
+    {
+      data.blocks.map((block) => (
+        <ul class="list-none text-sm">
+          <li class="text-base">
+            <strong>{block.name}</strong>
+          </li>
+
+          {block.items.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      ))
+    }
+  </div>
+</Section>

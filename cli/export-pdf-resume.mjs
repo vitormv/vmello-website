@@ -1,9 +1,24 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import path from 'path';
 import puppeteer from 'puppeteer';
 import tasuku from 'tasuku';
 
-const sourceUrl = 'http://localhost:8092/resume';
+const resumeUrl = 'http://localhost:8081/resume';
 const targetPdfPath = path.join('public', 'vitor-mello-resume.pdf');
+
+const retry = async (promiseFactory, retryCount, delayMs = 500) => {
+  try {
+    return await promiseFactory();
+  } catch (error) {
+    if (retryCount <= 0) {
+      throw error;
+    }
+    await delay(delayMs);
+    return await retry(promiseFactory, retryCount - 1);
+  }
+};
+
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 async function exportResumeAsPdf(task) {
   let browser;
@@ -14,9 +29,13 @@ async function exportResumeAsPdf(task) {
     page = await browser.newPage();
   });
 
-  await task(`Opening "${sourceUrl}"...`, async () => {
-    await page.goto(sourceUrl, { waitUntil: 'networkidle0' });
-  });
+  await retry(
+    () =>
+      task(`Opening "${resumeUrl}"...`, async () => {
+        await page.goto(resumeUrl, { waitUntil: 'networkidle0' });
+      }),
+    5,
+  );
 
   await task('Generate PDF file', async () => {
     // generate .pdf file
@@ -29,7 +48,7 @@ async function exportResumeAsPdf(task) {
       footerTemplate: `
         <div style="width: 100%; font-style: italic; font-size: 9px; padding: 0; color: #bbb; font-family: 'Lora', serif; position: relative;">
           <div style="position: absolute; right: 9mm; bottom: 5px;">
-            Vitor Mello; page <span class="pageNumber"></span> of <span class="totalPages"></span>.
+            Vitor Mello - Senior Full Stack Engineer - page <span class="pageNumber"></span> of <span class="totalPages"></span>.
           </div>
         </div>
       `,

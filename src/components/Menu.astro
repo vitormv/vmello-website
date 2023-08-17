@@ -1,0 +1,83 @@
+---
+import { Sprite } from 'astro-icon';
+import TrackingEye from 'src/components/TrackingEye.astro';
+
+const route = '/';
+---
+
+<style lang="scss">
+  .link {
+    cursor: pointer;
+    text-decoration: none;
+    transition: none;
+    position: relative;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+
+    &::before {
+      z-index: 5;
+      content: '';
+      width: 100%;
+      transition: transform 150ms ease-out;
+      position: absolute;
+      bottom: -6px;
+      height: 4px;
+      left: 0;
+      display: block;
+      background-color: transparent;
+      transform: rotate(0deg) scaleX(0);
+      background: var(--color-primary);
+      transform-origin: 0% 0%;
+    }
+
+    &.active,
+    &:hover {
+      &::before {
+        bottom: -5px;
+        transform: rotate(-2deg) scaleX(100%);
+      }
+    }
+  }
+</style>
+<div
+  class="relative mx-auto flex h-24 items-center justify-start px-10 text-lg md:justify-around md:px-24 lg:max-w-screen-xl"
+  id="menu"
+>
+  <div class="flex shrink-0 grow-0">
+    <TrackingEye />
+    <a class="logo" href="/" aria-label="back to homepage">
+      <img alt="logo" src="/assets/images/logo.svg" />
+    </a>
+  </div>
+  <div class="grow-0"></div>
+  <div class="hidden grow items-center justify-end gap-4 md:flex">
+    <a class={`link ${route === '/' && 'active'}`} href="/#">
+      <span>Home</span>
+    </a>
+    <a class="link" href="#about" data-smooth-scroll>
+      <span>About</span>
+    </a>
+    <a class="link" href="/vitor-mello-resume.pdf" target="_blank">
+      <span>Resume</span>
+    </a>
+
+    <a
+      href="https://www.linkedin.com/in/vitormv"
+      target="blank"
+      aria-label="LinkedIn profile"
+      rel="noopener noreferrer"
+      class="px-4 text-gray transition-colors hover:text-black"
+    >
+      <Sprite name="mdi:linkedin" />
+    </a>
+    <a
+      href="https://www.github.com/vitormv"
+      target="blank"
+      aria-label="Github profile"
+      rel="noopener noreferrer"
+      class="px-4 text-gray transition-colors hover:text-black"
+    >
+      <Sprite name="fe:github" />
+    </a>
+  </div>
+</div>
