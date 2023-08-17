@@ -3,8 +3,22 @@ import path from 'path';
 import puppeteer from 'puppeteer';
 import tasuku from 'tasuku';
 
-const sourceUrl = 'http://localhost:8081/resume';
+const resumeUrl = 'http://localhost:8081/resume';
 const targetPdfPath = path.join('public', 'vitor-mello-resume.pdf');
+
+const retry = async (promiseFactory, retryCount, delayMs = 500) => {
+  try {
+    return await promiseFactory();
+  } catch (error) {
+    if (retryCount <= 0) {
+      throw error;
+    }
+    await delay(delayMs);
+    return await retry(promiseFactory, retryCount - 1);
+  }
+};
+
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 async function exportResumeAsPdf(task) {
   let browser;
@@ -15,9 +29,13 @@ async function exportResumeAsPdf(task) {
     page = await browser.newPage();
   });
 
-  await task(`Opening "${sourceUrl}"...`, async () => {
-    await page.goto(sourceUrl, { waitUntil: 'networkidle0' });
-  });
+  await retry(
+    () =>
+      task(`Opening "${resumeUrl}"...`, async () => {
+        await page.goto(resumeUrl, { waitUntil: 'networkidle0' });
+      }),
+    5,
+  );
 
   await task('Generate PDF file', async () => {
     // generate .pdf file

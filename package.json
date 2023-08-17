@@ -14,8 +14,9 @@
     "lint:js": "eslint --cache --cache-location node_modules/.cache/eslint/ .",
     "lint:css": "stylelint \"src/**/*.{css,scss,sass}\"",
     "lint:css:fix": "stylelint --fix \"src/**/*.{css,scss,sass}\"",
-    "resume": "yarn build && concurrently --raw --kill-others --success first npm:preview npm:resume:export",
-    "resume:export": "node --trace-warnings cli/export-pdf-resume.mjs"
+    "resume": "yarn build && yarn resume:generate",
+    "resume:generate": "concurrently --raw --kill-others --success first npm:preview npm:resume:save-pdf",
+    "resume:save-pdf": "node --trace-warnings cli/export-pdf-resume.mjs"
   },
   "dependencies": {
     "@astrojs/tailwind": "^4.0.0",
