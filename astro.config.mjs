@@ -4,7 +4,9 @@ import yaml from '@rollup/plugin-yaml';
 
 import tailwind from '@astrojs/tailwind';
 
-// https://astro.build/config
+/**
+ * @see https://astro.build/config
+ */
 export default defineConfig({
   output: 'static',
   integrations: [tailwind()],
