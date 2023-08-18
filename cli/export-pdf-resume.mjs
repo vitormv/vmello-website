@@ -48,7 +48,7 @@ async function exportResumeAsPdf(task) {
       footerTemplate: `
         <div style="width: 100%; font-style: italic; font-size: 9px; padding: 0; color: #bbb; font-family: 'Lora', serif; position: relative;">
           <div style="position: absolute; right: 9mm; bottom: 5px;">
-            Vitor Mello - Senior Full Stack Engineer - page <span class="pageNumber"></span> of <span class="totalPages"></span>.
+            Vitor Mello - Senior Full-Stack Engineer - page <span class="pageNumber"></span> of <span class="totalPages"></span>.
           </div>
         </div>
       `,

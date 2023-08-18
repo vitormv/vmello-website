@@ -107,8 +107,8 @@ const eyeIrisId = 'eyeIris';
   };
 
   // open/close the eye whenever the cursor hovers over any "<a>" element in the page
-  addMultipleEventListeners('a', 'mouseenter', onLinkMouseEnter);
-  addMultipleEventListeners('a', 'mouseleave', onLinkMouseLeave);
+  addMultipleEventListeners('a', 'mouseover', onLinkMouseEnter);
+  addMultipleEventListeners('a', 'mouseout', onLinkMouseLeave);
 
   // move the eye whenever the cursor moves
   document.addEventListener('mousemove', onMouseMove);

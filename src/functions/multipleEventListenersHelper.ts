@@ -3,8 +3,10 @@ const addMultipleEventListeners = (
   eventName: string,
   callback: EventListener,
 ) => {
-  document.querySelectorAll(selector).forEach((element) => {
-    element.addEventListener(eventName, callback);
+  document.addEventListener(eventName, (event) => {
+    if ((event.target as HTMLElement)?.closest(selector)) {
+      callback.call(event.target, event);
+    }
   });
 };
 

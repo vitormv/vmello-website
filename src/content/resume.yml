@@ -1,8 +1,8 @@
 slug: resume
 title: Vitor Mello
-subtitle: Senior Full Stack Engineer
+subtitle: Senior Full-Stack Engineer
 summary: >
-  I have 12+ years of experience as a Full Stack Engineer, with strong skills in typescript,
+  I have 12+ years of experience as a Full-Stack Engineer, with strong skills in typescript,
   React (Redux and Sagas), Node.js (NestJS, Next.js and express) and responsive layouts.
   I've also done a lot of PHP and Symfony3 in the past, and have some knowledge of
   DevOps with Docker, AWS, Google Cloud and CI pipelines.
@@ -68,7 +68,7 @@ work:
     location: Berlin, Germany
     duration: 3 years 9 months
     positions:
-      - position: Senior Full Stack Engineer
+      - position: Senior Full-Stack Engineer
         date: Feb 2016 - October 2019
     summary: >
       Reimplemented the search results page and search form with React, redux and sagas
@@ -82,7 +82,7 @@ work:
     location: Berlin, Germany
     duration: 2 years 7 months
     positions:
-      - position: Senior Full Stack Engineer
+      - position: Senior Full-Stack Engineer
         date: Jun 2013 - Dec 2015
     summary: >
       Development of new features for the frontend and backend with focus on scalability and performance
@@ -98,7 +98,7 @@ work:
     positions:
       - position: Lead Software Engineer
         date: Nov 2012 - May 2013
-      - position: Senior Full Stack Engineer
+      - position: Senior Full-Stack Engineer
         date: Feb 2012 - Oct 2012
     summary: ~
     tags: ~
@@ -107,7 +107,7 @@ work:
     location: Maceió, Brazil
     duration: 3 years 4 months
     positions:
-      - position: Lead Full Stack Engineer
+      - position: Lead Full-Stack Engineer
         date: Jul 2010 - Dec 2011
       - position: Software Engineer
         date: Sep 2008 - Jun 2010
