@@ -37,16 +37,14 @@ work:
       - position: Senior Software Engineer (Frontend)
         date: Jan 2022 - Jul 2023
     summary: >
-      Created tool for automatically generating apollo mocks, greatly reducing complexity
-        and making it easier to write tests
-      • Major refactorings in existing unit/integration tests, greatly improving maintainability
-      and readability of codebase
-      • Promoting best practices in FE development
-      • Create tool for easily overriding feature flags during development/testing
+      Delivered high-quality and high-impact customer-facing features
+      • Greatly increased developer statisfaction with auto-generated apollo mocks for tests
+      • Promoting best practices in FE development and testing
+      • Created tool for easily overriding feature flags during development/cypress tests
       • Mentoring two junior FE developers
       • Team captain of the StartUp League volleyball team, earning 1st place
     tags: >
-      react, SPA, micro-frontends, graphql, testing-library
+      typescript, react, spa, micro-frontends, graphql, testing-library
 
   - company: Coffee Circle
     location: Berlin, Germany
@@ -65,7 +63,7 @@ work:
       • Driving squad initiatives and technical roadmap planning
       • Mentoring and guiding on best practices and design patterns
     tags: >
-      typescript, react, redux, next.js, nestjs, mysql, google cloud, docker
+      typescript, react, redux, next.js, ssr, nestjs, mysql, gcloud, docker
 
   - company: Flixbus
     location: Berlin, Germany
@@ -142,20 +140,17 @@ skills:
   - name: React / Redux / SSR
     level: expert
 
+  - name: node.js
+    level: expert
+
+  - name: html / css / css-in-js
+    level: expert
+
   - name: php / symfony
     level: expert
 
-  - name: node.js
-    level: intermediate
-
-  - name: html / css / sass
-    level: expert
-
-  - name: DevOps
-    level: intermediate
-
-  - name: UX
-    level: intermediate
+  - name: Databases
+    level: experienced
 
 languages:
   - language: English
