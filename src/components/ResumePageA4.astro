@@ -47,9 +47,7 @@ const { resume } = Astro.props;
             {
               resume.education.map((place) => (
                 <Fragment key={`${place.institution}.${place.studyType}`}>
-                  <h4>
-                    {`${place.studyType}, ${place.area}`}
-                  </h4>
+                  <h4>{`${place.studyType}, ${place.area}`}</h4>
                   <p>{place.institution}</p>
                   <em>{place.years}</em>
                 </Fragment>
