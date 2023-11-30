@@ -70,8 +70,17 @@ module.exports = {
     {
       // Define the configuration for `.astro` file.
       files: ['*.astro'],
-      plugins: ['astro'],
-
+      // plugins: ['astro'],
+      parser: 'astro-eslint-parser',
+      // Parse the script in `.astro` as TypeScript by adding the following configuration.
+      // It's the setting you need when using TypeScript.
+      parserOptions: {
+        parser: '@typescript-eslint/parser',
+        project: 'tsconfig.json',
+        extraFileExtensions: ['.astro'],
+        // The script of Astro components uses ESM.
+        sourceType: 'module',
+      },
       // Enable this plugin
       env: {
         // Enables global variables available in Astro components.
@@ -90,17 +99,6 @@ module.exports = {
           },
         },
       },
-      // Allows Astro components to be parsed.
-      parser: 'astro-eslint-parser',
-      // Parse the script in `.astro` as TypeScript by adding the following configuration.
-      // It's the setting you need when using TypeScript.
-      parserOptions: {
-        parser: '@typescript-eslint/parser',
-        project: 'tsconfig.json',
-        extraFileExtensions: ['.astro'],
-        // The script of Astro components uses ESM.
-        sourceType: 'module',
-      },
       rules: {
         // Enable recommended rules
         'astro/no-conflict-set-directives': 'error',
@@ -108,6 +106,15 @@ module.exports = {
         'import/no-unresolved': [2, { ignore: ['astro-icon'] }],
         // override/add rules settings here, such as:
         // "astro/no-set-html-directive": "error"
+      },
+    },
+    {
+      // Define the configuration for `<script>` tag in .astro files.
+      // Script in `<script>` is assigned a virtual file name with the `.js` extension.
+      files: ['**/*.astro/*.js', '*.astro/*.js'],
+      parser: '@typescript-eslint/parser',
+      rules: {
+        'prettier/prettier': 'off',
       },
     },
   ],
