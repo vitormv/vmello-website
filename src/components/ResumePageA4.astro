@@ -57,20 +57,6 @@ const { resume } = Astro.props;
         </section>
 
         <section>
-          <h3>Skills</h3>
-          <ul class="skills">
-            {
-              resume.skills.map((skill) => (
-                <li>
-                  <span class="skillName">{skill.name}</span>
-                  <span class="skillLevel">{` (${skill.level})`}</span>
-                </li>
-              ))
-            }
-          </ul>
-        </section>
-
-        <section>
           <h3>Languages</h3>
           <ul class="languages">
             {
