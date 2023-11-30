@@ -3,7 +3,7 @@ declare module 'src/content/resume.yml' {
     slug: string;
     title: string;
     subtitle: string;
-    summary: string;
+    summary: string[];
     links: ResumeLinkType[];
     education: EducationType[];
     work: ExperienceType[];

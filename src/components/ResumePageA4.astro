@@ -36,9 +36,9 @@ const { resume } = Astro.props;
 
     <main class="row">
       <aside class="sidebar">
-        <section>
+        <section class="summary">
           <h3>Hello</h3>
-          <p style={{ textAlign: 'justify' }}>{resume.summary}</p>
+          {resume.summary.map((item) => <p>{item}</p>)}
         </section>
 
         <section>
@@ -276,6 +276,12 @@ const { resume } = Astro.props;
         &::before {
           content: ' — ';
         }
+      }
+    }
+
+    .summary {
+      p + p {
+        margin-top: 16px;
       }
     }
 

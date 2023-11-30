@@ -1,14 +1,18 @@
 slug: resume
 title: Vitor Mello
 subtitle: Experienced Full-Stack Engineer
-summary: >
-  I have 15+ years of experience as a Software Engineer, and have vast experience in all aspects of
-  a web applications, having worked in backend, frontend and full-stack roles. Nowadays I tend to
-  focus more on the FE side with strong skills in Typescript, React (Redux and Sagas), Node
-  (NestJS & Next.js) and GraphQL.
+summary:
+  - I have 15+ years of experience as a Software Engineer, adept in all facets of web applications -
+    encompassing backend, frontend and even some management roles. However, I've consistently found
+    greater fulfillment through hands-on coding.
 
-  I'm also a strong advocate for readable & maintainable code & tests, and I'm always happy to
-  share knowledge, guide and mentor others to achieve their highest potential.
+  - Nowadays I tend to focus more on the FE side with strong skills in Typescript, React (Redux
+    and Sagas), Node (NestJS & Next.js) and GraphQL.
+
+  - I excel in guiding teams to success by leveraging my extensive experience, helping implement
+    intricate and demanding projects, advocating for code readability, maintainability, and
+    robust testing practices. And I'm always eager to share my knowledge, offering guidance and
+    mentoring others to achieve their highest potential.
 
 links:
   - name: vitor@vmello.com
