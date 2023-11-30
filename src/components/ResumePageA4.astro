@@ -11,7 +11,7 @@ const { resume } = Astro.props;
 <div class={`a4 sheet p-[10mm]`}>
   <article>
     <header class={`row header`}>
-      <aside class="sidebar">
+      <aside>
         <h1>{resume.title}</h1>
         <h2>{resume.subtitle}</h2>
       </aside>
@@ -47,11 +47,7 @@ const { resume } = Astro.props;
             {
               resume.education.map((place) => (
                 <Fragment key={`${place.institution}.${place.studyType}`}>
-                  <h4>
-                    {place.studyType}
-                    {', '}
-                    {place.area}
-                  </h4>
+                  <h4>{`${place.studyType}, ${place.area}`}</h4>
                   <p>{place.institution}</p>
                   <em>{place.years}</em>
                 </Fragment>
@@ -183,10 +179,10 @@ const { resume } = Astro.props;
     .row {
       color: #293241;
       display: flex;
+      gap: 7mm;
 
       .sidebar {
         flex-basis: 55.5mm;
-        margin-right: 7mm;
       }
 
       .content {

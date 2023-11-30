@@ -1,11 +1,14 @@
 slug: resume
 title: Vitor Mello
-subtitle: Senior Full-Stack Engineer
+subtitle: Experienced Full-Stack Engineer
 summary: >
-  I have 12+ years of experience as a Full-Stack Engineer, with strong skills in typescript,
-  React (Redux and Sagas), Node.js (NestJS, Next.js and express) and responsive layouts.
-  I've also done a lot of PHP and Symfony3 in the past, and have some knowledge of
-  DevOps with Docker, AWS, Google Cloud and CI pipelines.
+  I have 15+ years of experience as a Software Engineer, and have vast experience in all aspects of
+  a web applications, having worked in backend, frontend and full-stack roles. Nowadays I tend to
+  focus more on the FE side with strong skills in Typescript, React (Redux and Sagas), Node
+  (NestJS & Next.js) and GraphQL.
+
+  I'm also a strong advocate for readable & maintainable code & tests, and I'm always happy to
+  share knowledge, guide and mentor others to achieve their highest potential.
 
 links:
   - name: vitor@vmello.com
@@ -31,19 +34,17 @@ work:
     location: Berlin, Germany
     duration: 1 year 7 months
     positions:
-      - position: Senior Frontend Engineer
+      - position: Senior Software Engineer (Frontend)
         date: Jan 2022 - Jul 2023
     summary: >
-      Created tool for automatically generating apollo mocks, greatly reducing complexity
-        and making it easier to write tests
-      • Major refactorings in existing unit/integration tests, greatly improving maintainability
-      and readability of codebase
-      • Promoting best practices in FE development
-      • Create tool for easily overriding feature flags during development/testing
+      Delivered high-quality and high-impact customer-facing features
+      • Greatly increased developer statisfaction with auto-generated apollo mocks for tests
+      • Promoting best practices in FE development and testing
+      • Created tool for easily overriding feature flags during development/cypress tests
       • Mentoring two junior FE developers
       • Team captain of the StartUp League volleyball team, earning 1st place
     tags: >
-      react, single-page-application, micro-frontends, graphql, apollo
+      typescript, react, spa, micro-frontends, graphql, testing-library
 
   - company: Coffee Circle
     location: Berlin, Germany
@@ -51,7 +52,7 @@ work:
     positions:
       - position: Head of Engineering
         date: Feb 2021 - Nov 2021
-      - position: Senior Frontend Engineer
+      - position: Senior Software Engineer (Frontend)
         date: Nov 2019 - Jan 2021
     summary: >
       Reimplemented existing blog in Next.js, reducing static export time from 10min to 1min
@@ -62,7 +63,7 @@ work:
       • Driving squad initiatives and technical roadmap planning
       • Mentoring and guiding on best practices and design patterns
     tags: >
-      typescript, react, redux, next.js, nestjs, mysql, google cloud, docker
+      typescript, react, redux, next.js, ssr, nestjs, mysql, gcloud, docker
 
   - company: Flixbus
     location: Berlin, Germany
@@ -74,7 +75,7 @@ work:
       Reimplemented the search results page and search form with React, redux and sagas
       • Greatly increase time to first paint, reducing repaints and rerenders, chunk splitting, suspense
       • Greatly accelerate testing of edge cases by creating tool to create complex mocks easily
-      • Created an unified payment framework in php to speedup integration of 3rd-party payment APIs
+      • Created an internal payment framework in php to speedup integration of 3rd-party payment APIs
     tags: >
       react, redux, jest, css modules, php, symfony, mysql, aws, ab-tests
 
@@ -82,7 +83,7 @@ work:
     location: Berlin, Germany
     duration: 2 years 7 months
     positions:
-      - position: Senior Full-Stack Engineer
+      - position: Senior Software Engineer (PHP)
         date: Jun 2013 - Dec 2015
     summary: >
       Development of new features for the frontend and backend with focus on scalability and performance
@@ -98,7 +99,7 @@ work:
     positions:
       - position: Lead Software Engineer
         date: Nov 2012 - May 2013
-      - position: Senior Full-Stack Engineer
+      - position: Senior Software Engineer (PHP)
         date: Feb 2012 - Oct 2012
     summary: ~
     tags: ~
@@ -139,20 +140,17 @@ skills:
   - name: React / Redux / SSR
     level: expert
 
+  - name: node.js
+    level: expert
+
+  - name: html / css / css-in-js
+    level: expert
+
   - name: php / symfony
     level: expert
 
-  - name: node.js
-    level: intermediate
-
-  - name: html / css / sass
-    level: expert
-
-  - name: DevOps
-    level: intermediate
-
-  - name: UX
-    level: intermediate
+  - name: Databases
+    level: experienced
 
 languages:
   - language: English
