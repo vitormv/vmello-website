@@ -25,6 +25,7 @@ declare module 'src/content/resume.yml' {
 
   export type ExperienceType = {
     company: string;
+    logo?: string;
     location: string;
     duration: string;
     positions?: PositionType[];

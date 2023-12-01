@@ -35,6 +35,7 @@ education:
 
 work:
   - company: Choco
+    logo: choco.jpg
     location: Berlin, Germany
     duration: 1 year 7 months
     positions:
@@ -51,6 +52,7 @@ work:
       typescript, react, spa, micro-frontends, graphql, testing-library
 
   - company: Coffee Circle
+    logo: coffee-circle.jpg
     location: Berlin, Germany
     duration: 2 years 1 month
     positions:
@@ -70,6 +72,7 @@ work:
       typescript, react, redux, next.js, ssr, nestjs, mysql, gcloud, docker
 
   - company: Flixbus
+    logo: flixbus.jpg
     location: Berlin, Germany
     duration: 3 years 9 months
     positions:
@@ -84,6 +87,7 @@ work:
       react, redux, jest, css modules, php, symfony, mysql, aws, ab-tests
 
   - company: Foodpanda
+    logo: foodpanda.png
     location: Berlin, Germany
     duration: 2 years 7 months
     positions:
@@ -98,6 +102,7 @@ work:
       javascript, php, mysql, sass, bootstrap, jquery, aws-sqs, elasticsearch
 
   - company: Mobly
+    logo: mobly.jpg
     location: São Paulo, Brazil
     duration: 1 year 4 months
     positions:

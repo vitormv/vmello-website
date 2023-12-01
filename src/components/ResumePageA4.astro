@@ -77,25 +77,32 @@ const { resume } = Astro.props;
           {
             resume.work.map((job) => (
               <div class="experience">
-                <table class="companyInfo">
-                  <thead>
-                    <tr>
-                      <th>
-                        {job.company}
-                        <span class="location">{job.location}</span>
-                      </th>
-                      <th>{job.duration}</th>
-                    </tr>
-                  </thead>
-                  <tbody>
+                <div class="companyInfo">
+                  {/*
+                    job.logo && false
+                    // <div class="companyLogo">
+                    //   <img src={`/assets/logos/${job.logo}`} />
+                    // </div>
+                   */}
+
+                  <div class="companyRole">
+                    <div>
+                      <span class="title">{job.company}</span>{' '}
+                      <span class="location">{job.location}</span>
+                    </div>
+
                     {job.positions?.map((role) => (
-                      <tr>
-                        <td class="title">{role.position}</td>
-                        <td class="date">{role.date}</td>
-                      </tr>
+                      <div class="title">{role.position}</div>
                     ))}
-                  </tbody>
-                </table>
+                  </div>
+
+                  <div class="timeline">
+                    <div class="duration">{job.duration}</div>
+                    {job.positions?.map((role) => (
+                      <div class="date">{role.date}</div>
+                    ))}
+                  </div>
+                </div>
 
                 {job.summary && <p>{job.summary}</p>}
 
@@ -227,27 +234,28 @@ const { resume } = Astro.props;
       margin: 0;
     }
 
-    table.companyInfo {
+    .companyInfo {
       width: 100%;
       font-family: Lato, sans-serif;
       border-spacing: 0;
       margin-bottom: 3mm;
+      display: flex;
+      gap: 3mm;
 
-      th:first-child,
-      td:first-child {
-        text-align: left;
-        padding: 0;
+      .companyLogo {
+        width: 8.6mm;
       }
+      justify-content: space-between;
 
-      th:last-child,
-      td:last-child {
+      .timeline {
+        flex: 1;
         text-align: right;
         padding: 0;
         color: #666666;
         font-weight: 400;
       }
 
-      td.date {
+      .date {
         font-weight: 300;
       }
 
