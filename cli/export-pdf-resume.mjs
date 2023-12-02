@@ -44,12 +44,11 @@ async function exportResumeAsPdf(task) {
       path: targetPdfPath,
       displayHeaderFooter: true,
       margin: { top: '12mm', right: 0, bottom: '12mm', left: 0 },
+      pageRanges: '1-1',
       headerTemplate: ' ', // <--- empty spaces are needed! ¯\_(ツ)_/¯
       footerTemplate: `
-        <div style="width: 100%; font-style: italic; font-size: 9px; padding: 0; color: #bbb; font-family: 'Lora', serif; position: relative;">
-          <div style="position: absolute; right: 9mm; bottom: 5px;">
-            Vitor Mello - Senior Full-Stack Engineer - page <span class="pageNumber"></span> of <span class="totalPages"></span>.
-          </div>
+        <div style="width: 100%; text-align: center; font-style: italic; font-size: 12px; padding: 0; color: #bbb; font-family: 'Lora', serif; position: relative;">
+          For a comprehensive list of all my previous roles, please check my <a style="color: #bbb; text-decoration: none;" href="https://www.linkedin.com/in/vitormv">LinkedIn profile</a>.
         </div>
       `,
     });

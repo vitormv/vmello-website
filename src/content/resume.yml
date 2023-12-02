@@ -2,17 +2,14 @@ slug: resume
 title: Vitor Mello
 subtitle: Experienced Full-Stack Engineer
 summary:
-  - I have 15+ years of experience as a Software Engineer, adept in all facets of web applications -
-    encompassing backend, frontend and even some management roles. However, I've consistently found
+  - I have 15+ years of experience as a Software Engineer, proficient in all facets of web applications,
+    including backend, frontend, and even some management roles. However, I consistently find
     greater fulfillment through hands-on coding.
 
-  - Nowadays I tend to focus more on the FE side with strong skills in Typescript, React (Redux
+  - Currently I focus more on the frontend side, with strong skills in Typescript, React (Redux
     and Sagas), Node (NestJS & Next.js) and GraphQL.
 
-  - I excel in guiding teams to success by leveraging my extensive experience, helping implement
-    intricate and demanding projects, advocating for code readability, maintainability, and
-    robust testing practices. And I'm always eager to share my knowledge, offering guidance and
-    mentoring others to achieve their highest potential.
+  - "Fun fact: I coded my first website (about Dragon Ball Z) when I was a 14 years old."
 
 links:
   - name: vitor@vmello.com
@@ -42,8 +39,7 @@ work:
       - position: Senior Software Engineer (Frontend)
         date: Jan 2022 - Jul 2023
     summary: >
-      Delivered high-quality and high-impact customer-facing features
-      • Greatly increased developer statisfaction with auto-generated apollo mocks for tests
+      Greatly increased developer satisfaction with auto-generated apollo mocks for tests
       • Promoting best practices in FE development and testing
       • Created tool for easily overriding feature flags during development/cypress tests
       • Mentoring two junior FE developers
@@ -61,15 +57,27 @@ work:
       - position: Senior Software Engineer (Frontend)
         date: Nov 2019 - Jan 2021
     summary: >
-      Reimplemented existing blog in Next.js, reducing static export time from 10min to 1min
-      • Migrate the ecommerce customer authentication to external Auth0 platform
-      • Increased conversion rate by implementing a one-page checkout, also improving UX
-      • Greatly increased dev worflows with automated pipelines
+      Reimplemented the existing blog in Next.js, making the static export time 10x faster
+      • Migrated the ecommerce customer authentication to external Auth0 platform
+      • Implemented a one-page checkout, greatly increasing the conversion rate and UX
+      • Greatly increased dev workflows with automated pipelines
       • Technical interviews for Backend and Frontend roles
       • Driving squad initiatives and technical roadmap planning
       • Mentoring and guiding on best practices and design patterns
     tags: >
       typescript, react, redux, next.js, ssr, nestjs, mysql, gcloud, docker
+
+  - company: Tome Forró Berlin
+    logo: ~
+    location: Berlin, Germany
+    duration: 6 years 9 months
+    positions:
+      - position: Dance Teacher and Organizer
+        date: Jun 2013 - Feb 2020
+    summary: >
+      I was one of the co-founders and volunteers at this non-profit Verein (club) for Forró
+      (Brazilian partner dance). I organized weekly parties and classes in Humboldt University in
+      Berlin (where I used to teach), and also festivals, concerts and workshops with international audiences.
 
   - company: Flixbus
     logo: flixbus.jpg
@@ -79,10 +87,10 @@ work:
       - position: Senior Full-Stack Engineer
         date: Feb 2016 - October 2019
     summary: >
-      Reimplemented the search results page and search form with React, redux and sagas
-      • Greatly increase time to first paint, reducing repaints and rerenders, chunk splitting, suspense
-      • Greatly accelerate testing of edge cases by creating tool to create complex mocks easily
-      • Created an internal payment framework in php to speedup integration of 3rd-party payment APIs
+      Reimplemented the search results page and search form with React, Redux and Sagas
+      • Greatly reduced time to first paint, reducing repaints and rerenders, chunk splitting, suspense
+      • Greatly accelerated testing of edge cases by creating tool to create complex mocks easily
+      • Created an internal payment framework in PHP to speed up integration of 3rd-party payment APIs
     tags: >
       react, redux, jest, css modules, php, symfony, mysql, aws, ab-tests
 
@@ -94,53 +102,10 @@ work:
       - position: Senior Software Engineer (PHP)
         date: Jun 2013 - Dec 2015
     summary: >
-      Development of new features for the frontend and backend with focus on scalability and performance
-      • Running loadtests with jMeter and finding bottlenecks and points of improvement in the application
+      Development of new features for the frontend and backend with a focus on scalability and performance
+      • Running load tests with jMeter and finding bottlenecks and points of improvement in the application
       • Integration with external payment gateways around the world
       • Integration with external restaurant systems and APIs for seamless order dispatching
-    tags: >
-      javascript, php, mysql, sass, bootstrap, jquery, aws-sqs, elasticsearch
-
-  - company: Mobly
-    logo: mobly.jpg
-    location: São Paulo, Brazil
-    duration: 1 year 4 months
-    positions:
-      - position: Lead Software Engineer
-        date: Nov 2012 - May 2013
-      - position: Senior Software Engineer (PHP)
-        date: Feb 2012 - Oct 2012
-    summary: ~
-    tags: ~
-
-  - company: Plus! Agência Digital
-    location: Maceió, Brazil
-    duration: 3 years 4 months
-    positions:
-      - position: Lead Full-Stack Engineer
-        date: Jul 2010 - Dec 2011
-      - position: Software Engineer
-        date: Sep 2008 - Jun 2010
-    summary: ~
-    tags: ~
-
-  - company: Carango
-    location: Maceió, Brazil
-    duration: 1 year 3 months
-    positions:
-      - position: Software Engineer
-        date: Jul 2007 - Sep 2008
-    summary: ~
-    tags: ~
-
-  - company: SEMARHP
-    location: Maceió, Brazil
-    duration: 1 year 6 months
-    positions:
-      - position: Web Developer Intern
-        date: Mar 2007 - Aug 2008
-    summary: ~
-    tags: ~
 
 skills:
   - name: Typescript

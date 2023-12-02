@@ -11,10 +11,14 @@ const { resume } = Astro.props;
 <div class={`a4 sheet p-[10mm]`}>
   <article>
     <header class={`row header`}>
-      <aside>
+      <div>
+        <img src="/assets/images/vitor-round-300px.png" width="96" />
+      </div>
+
+      <div>
         <h1>{resume.title}</h1>
         <h2>{resume.subtitle}</h2>
-      </aside>
+      </div>
 
       <div class="content">
         <ul class="contact">
@@ -165,7 +169,7 @@ const { resume } = Astro.props;
 
     .header {
       flex-grow: 0;
-      align-items: flex-end;
+      align-items: center;
       margin-bottom: 8mm;
     }
 
