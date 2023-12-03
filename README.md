@@ -7,7 +7,7 @@
 
 This is the source code for my website. It is a statically generated using **Astro**.
 
-### Why Astro and not (\_\_YOUR_FAVORITE_FRAMEWORK\_\_)?
+### Why Astro and not (XYZ)?
 
 Well, this is a very simple website that can be statically generated and barely need any client-side
 Javascript at all. While Next.js, Remix, etc can do static site generation, they still do
