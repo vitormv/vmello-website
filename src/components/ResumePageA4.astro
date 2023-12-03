@@ -12,7 +12,7 @@ const { resume } = Astro.props;
   <article>
     <header class={`row header`}>
       <div>
-        <img src="/assets/images/vitor-round-300px.png" width="96" />
+        <img src="/assets/images/vitor-round-300px.png" width="120" />
       </div>
 
       <div>
@@ -21,7 +21,7 @@ const { resume } = Astro.props;
       </div>
 
       <div class="content">
-        <ul class="contact">
+        <ul class="contact text-xs">
           {
             resume.links.map((link) => (
               <li>
@@ -170,7 +170,7 @@ const { resume } = Astro.props;
     .header {
       flex-grow: 0;
       align-items: center;
-      margin-bottom: 8mm;
+      margin-bottom: 5mm;
     }
 
     .row {

@@ -43,7 +43,7 @@ async function exportResumeAsPdf(task) {
       format: 'A4',
       path: targetPdfPath,
       displayHeaderFooter: true,
-      margin: { top: '12mm', right: 0, bottom: '12mm', left: 0 },
+      margin: { top: '8mm', right: 0, bottom: '12mm', left: 0 },
       pageRanges: '1-1',
       headerTemplate: ' ', // <--- empty spaces are needed! ¯\_(ツ)_/¯
       footerTemplate: `

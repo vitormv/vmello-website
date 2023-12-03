@@ -9,7 +9,8 @@ summary:
   - Currently I focus more on the frontend side, with strong skills in Typescript, React (Redux
     and Sagas), Node (NestJS & Next.js) and GraphQL.
 
-  - "Fun fact: I coded my first website (about Dragon Ball Z) when I was a 14 years old."
+  - "Outside work, I love snowboarding, running, video games and teaching my dog new tricks.
+    Fun fact: I coded my first website (about Dragon Ball Z) when I was a 14 years old."
 
 links:
   - name: vitor@vmello.com
@@ -58,10 +59,10 @@ work:
         date: Nov 2019 - Jan 2021
     summary: >
       Reimplemented the existing blog in Next.js, making the static export time 10x faster
-      • Migrated the ecommerce customer authentication to external Auth0 platform
       • Implemented a one-page checkout, greatly increasing the conversion rate and UX
-      • Greatly increased dev workflows with automated pipelines
       • Technical interviews for Backend and Frontend roles
+      • Migrated the ecommerce customer authentication to external Auth0 platform
+      • Greatly increased dev workflows with automated pipelines
       • Driving squad initiatives and technical roadmap planning
       • Mentoring and guiding on best practices and design patterns
     tags: >
@@ -88,7 +89,7 @@ work:
         date: Feb 2016 - October 2019
     summary: >
       Reimplemented the search results page and search form with React, Redux and Sagas
-      • Greatly reduced time to first paint, reducing repaints and rerenders, chunk splitting, suspense
+      • Greatly reduced time to first byte, reducing repaints and rerenders, chunk splitting, suspense
       • Greatly accelerated testing of edge cases by creating tool to create complex mocks easily
       • Created an internal payment framework in PHP to speed up integration of 3rd-party payment APIs
     tags: >
