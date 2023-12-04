@@ -47,6 +47,7 @@
     "sass": "^1.69.5",
     "stylelint": "^15.11.0",
     "stylelint-config-sass-guidelines": "^10.0.0",
+    "tailwindcss-themer": "^4.0.0",
     "tasuku": "^2.0.1",
     "typescript": "^5.2.2",
     "vite-remark-html": "^1.1.1"

@@ -1747,6 +1747,7 @@ __metadata:
     stylelint: "npm:^15.11.0"
     stylelint-config-sass-guidelines: "npm:^10.0.0"
     tailwindcss: "npm:^3.3.5"
+    tailwindcss-themer: "npm:^4.0.0"
     tasuku: "npm:^2.0.1"
     typescript: "npm:^5.2.2"
     vite-remark-html: "npm:^1.1.1"
@@ -2295,7 +2296,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"color@npm:^4.2.3":
+"color@npm:^4.1.0, color@npm:^4.2.3":
   version: 4.2.3
   resolution: "color@npm:4.2.3"
   dependencies:
@@ -5130,6 +5131,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"just-unique@npm:^4.2.0":
+  version: 4.2.0
+  resolution: "just-unique@npm:4.2.0"
+  checksum: 7a3dac146483ae03d7a7bc85cb0b1c011d79835f410d5159ee89cd927c3fd9af45d3a1cb1bd1a4f8d898e0e7ff898ad7083e72b015da4b2b14228a1ea4a4845c
+  languageName: node
+  linkType: hard
+
 "keyv@npm:^4.5.3":
   version: 4.5.4
   resolution: "keyv@npm:4.5.4"
@@ -5232,6 +5240,13 @@ __metadata:
   version: 4.6.2
   resolution: "lodash.merge@npm:4.6.2"
   checksum: d0ea2dd0097e6201be083865d50c3fb54fbfbdb247d9cc5950e086c991f448b7ab0cdab0d57eacccb43473d3f2acd21e134db39f22dac2d6c9ba6bf26978e3d6
+  languageName: node
+  linkType: hard
+
+"lodash.mergewith@npm:^4.6.2":
+  version: 4.6.2
+  resolution: "lodash.mergewith@npm:4.6.2"
+  checksum: aea75a4492541a4902ac7e551dc6c54b722da0c187f84385d02e8fc33a7ae3454b837822446e5f63fcd5ad1671534ea408740b776670ea4d9c7890b10105fce0
   languageName: node
   linkType: hard
 
@@ -8689,6 +8704,20 @@ __metadata:
     string-width: "npm:^4.2.3"
     strip-ansi: "npm:^6.0.1"
   checksum: 512c4f2bfb6f46f4d5ced19943ae5db1a5163eac1f23ce752625eb49715f84217c1c62bc2d017eb8985b37e0f85731108f654df809c0b34cca1678a672e7ea20
+  languageName: node
+  linkType: hard
+
+"tailwindcss-themer@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "tailwindcss-themer@npm:4.0.0"
+  dependencies:
+    color: "npm:^4.1.0"
+    just-unique: "npm:^4.2.0"
+    lodash.merge: "npm:^4.6.2"
+    lodash.mergewith: "npm:^4.6.2"
+  peerDependencies:
+    tailwindcss: ^3.1.0
+  checksum: dcb7d2d0c830c3a1b92740a89d058b2308bbd97b59b34c2bb1176bb85e5331ae21d93b5eed8f0f51a26a9de0b4af062b156aa4356c29f7badd18c7bc01c15ed3
   languageName: node
   linkType: hard
 

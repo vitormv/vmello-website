@@ -1,5 +1,7 @@
 ---
 import type { ResumeType } from 'src/content/resume.yml';
+import ExperienceSection from 'src/components/Resume/Experiences.astro';
+import Section from 'src/components/Resume/Section.astro';
 
 type Props = {
   resume: ResumeType;
@@ -8,26 +10,31 @@ type Props = {
 const { resume } = Astro.props;
 ---
 
-<div class={`a4 sheet p-[10mm]`}>
-  <article>
-    <header class={`row header`}>
+<div class="a4 sheet p-[10mm] leading-normal">
+  <article class="flex h-full flex-col font-serif text-black">
+    <header class="mb-[5mm] flex grow-0 items-center gap-[7mm]">
       <div>
         <img src="/assets/images/vitor-round-300px.png" width="120" />
       </div>
 
-      <div>
-        <h1>{resume.title}</h1>
-        <h2>{resume.subtitle}</h2>
+      <div class="font-display">
+        <h1 class="m-0 p-0 text-3xl">{resume.title}</h1>
+        <h2 class="m-0 p-0 text-xl">{resume.subtitle}</h2>
       </div>
 
-      <div class="content">
-        <ul class="contact text-xs">
+      <div class="flex-1">
+        <ul class="m-0 list-none text-right text-xs leading-normal">
           {
             resume.links.map((link) => (
               <li>
                 {!link.href && link.name}
                 {link.href && (
-                  <a href={link.href} target="_blank" rel="noopener noreferrer">
+                  <a
+                    class="relative inline-block text-link no-underline hover:top-[1px] hover:underline"
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {link.name}
                   </a>
                 )}
@@ -38,92 +45,62 @@ const { resume } = Astro.props;
       </div>
     </header>
 
-    <main class="row">
-      <aside class="sidebar">
-        <section class="summary">
-          <h3>Hello</h3>
-          {resume.summary.map((item) => <p>{item}</p>)}
-        </section>
-
-        <section>
-          <h3>Education</h3>
-          <div class="education">
-            {
-              resume.education.map((place) => (
-                <Fragment key={`${place.institution}.${place.studyType}`}>
-                  <h4>{`${place.studyType}, ${place.area}`}</h4>
-                  <p>{place.institution}</p>
-                  <em>{place.years}</em>
-                </Fragment>
-              ))
-            }
+    <main class="flex flex-1 gap-[7mm]">
+      <aside class="basis-[55.5mm]">
+        <Section title="Hello">
+          <div class="flex flex-col gap-[16px]">
+            {resume.summary.map((item) => <p class="m-0 p-0">{item}</p>)}
           </div>
-        </section>
+        </Section>
 
-        <section>
-          <h3>Languages</h3>
-          <ul class="languages">
+        <Section title="Education">
+          {
+            resume.education.map((place) => (
+              <Fragment key={`${place.institution}.${place.studyType}`}>
+                <h4 class="m-0 mb-[1mm] font-sans text-base font-bold">{`${place.studyType}, ${place.area}`}</h4>
+                <p class="mb-[1mm]">{place.institution}</p>
+                <em class="font-sans not-italic text-gray">{place.years}</em>
+              </Fragment>
+            ))
+          }
+        </Section>
+
+        <Section title="Languages">
+          <ul class="m-0 list-none p-0 font-sans">
             {
               resume.languages.map((item) => (
-                <li>
-                  <span class="languageName">{item.language}</span>
-                  <span class="languageLevel">{` (${item.fluency})`}</span>
+                <li class="mb-[0.5mm]">
+                  <span class="font-bold">{item.language}</span>
+                  <span class="text-gray">{` (${item.fluency})`}</span>
                 </li>
               ))
             }
           </ul>
-        </section>
+        </Section>
       </aside>
 
-      <div class="content">
-        <section>
-          <h3>Experience</h3>
-          {
-            resume.work.map((job) => (
-              <div class="experience">
-                <div class="companyInfo">
-                  {/*
-                    job.logo && false
-                    // <div class="companyLogo">
-                    //   <img src={`/assets/logos/${job.logo}`} />
-                    // </div>
-                   */}
-
-                  <div class="companyRole">
-                    <div>
-                      <span class="title">{job.company}</span>{' '}
-                      <span class="location">{job.location}</span>
-                    </div>
-
-                    {job.positions?.map((role) => (
-                      <div class="title">{role.position}</div>
-                    ))}
-                  </div>
-
-                  <div class="timeline">
-                    <div class="duration">{job.duration}</div>
-                    {job.positions?.map((role) => (
-                      <div class="date">{role.date}</div>
-                    ))}
-                  </div>
-                </div>
-
-                {job.summary && <p>{job.summary}</p>}
-
-                {job.tags && (
-                  <p>
-                    <span class="techStack">Tech Stack:&nbsp;</span>
-                    {job.tags}
-                  </p>
-                )}
-              </div>
-            ))
-          }
-        </section>
+      <div class="flex-1">
+        <ExperienceSection experiences={resume.work} />
       </div>
     </main>
   </article>
 </div>
+
+<style is:global lang="scss">
+  /* Unscoped, delivered as-is to the browser.
+     Applies to all <h1> tags on your site. */
+  .sheet {
+    margin: 0 auto;
+    font-size: 10pt;
+    font-weight: 400;
+    // line-height: 1.4em;
+
+    &.a4 {
+      width: 210mm;
+      min-height: 296mm;
+    }
+  }
+</style>
 
 <style lang="scss">
   .sheet {
@@ -131,255 +108,12 @@ const { resume } = Astro.props;
     box-sizing: border-box;
     page-break-after: always;
     margin: 0 auto;
+    font-size: 10pt;
+    font-weight: 400 !important;
 
     &.a4 {
       width: 210mm;
       min-height: 296mm;
-    }
-  }
-
-  .sheet {
-    font-size: 10pt;
-    font-weight: 400 !important;
-
-    article {
-      color: #293241;
-      display: flex;
-      height: 100%;
-      flex-direction: column;
-      font-family: 'Lora', serif;
-
-      * {
-        line-height: 1.4em;
-      }
-
-      a {
-        text-decoration: none;
-        color: #0044cc;
-        display: inline-block;
-        position: relative;
-
-        &:hover {
-          color: #0044cc;
-          top: 1px;
-          text-decoration: underline;
-        }
-      }
-    }
-
-    .header {
-      flex-grow: 0;
-      align-items: center;
-      margin-bottom: 5mm;
-    }
-
-    .row {
-      color: #293241;
-      display: flex;
-      gap: 7mm;
-
-      .sidebar {
-        flex-basis: 55.5mm;
-      }
-
-      .content {
-        flex: 1;
-      }
-    }
-
-    main {
-      flex: 1;
-    }
-
-    h1 {
-      margin: 0;
-      padding: 0;
-      font-size: 30pt;
-      font-family: Raleway, Lato, sans-serif;
-      line-height: 1em;
-    }
-
-    h2 {
-      margin: 0;
-      padding: 0;
-      font-family: Raleway, Lora, serif;
-      font-size: 12pt;
-    }
-
-    h3 {
-      color: #c35940;
-      font-family: Lora, serif;
-      font-size: 18pt;
-      font-weight: normal;
-      margin: 0 0 3mm;
-    }
-
-    h4 {
-      font-family: Lato, sans-serif;
-      font-size: 9pt;
-      font-weight: 700;
-      margin: 0 0 1mm;
-    }
-
-    p {
-      margin-top: 0;
-      margin-bottom: 1mm;
-      font-size: 9pt;
-    }
-
-    section {
-      margin-bottom: 7mm;
-      font-size: 9pt;
-    }
-
-    .contact {
-      text-align: right;
-      list-style-type: none;
-      margin: 0;
-    }
-
-    .companyInfo {
-      width: 100%;
-      font-family: Lato, sans-serif;
-      border-spacing: 0;
-      margin-bottom: 3mm;
-      display: flex;
-      gap: 3mm;
-
-      .companyLogo {
-        width: 8.6mm;
-      }
-      justify-content: space-between;
-
-      .timeline {
-        flex: 1;
-        text-align: right;
-        padding: 0;
-        color: #666666;
-        font-weight: 400;
-      }
-
-      .date {
-        font-weight: 300;
-      }
-
-      .title {
-        font-weight: bold;
-      }
-
-      .location {
-        font-weight: 300;
-        color: #666666;
-
-        &::before {
-          content: ' — ';
-        }
-      }
-    }
-
-    .summary {
-      p + p {
-        margin-top: 16px;
-      }
-    }
-
-    .experience {
-      margin-bottom: 7mm;
-      break-inside: avoid;
-
-      &:last-child {
-        margin-bottom: 0;
-
-        .companyInfo {
-          margin-bottom: 0;
-        }
-      }
-
-      p {
-        font-family: Lora, serif;
-        margin: 0 0 2mm;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-
-      .techStack {
-        font-weight: bold;
-        font-family: Lato, sans-serif;
-      }
-    }
-  }
-
-  .education {
-    em {
-      font-style: normal;
-      color: #666666;
-      font-family: Lato, sans-serif;
-    }
-  }
-
-  .skills {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    font-family: Lato, sans-serif;
-
-    > li {
-      position: relative;
-      margin-bottom: 1mm;
-      display: flex;
-      color: #ffffff;
-      padding: 1mm 2mm;
-      font-size: 10pt;
-      overflow: hidden;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-
-      &::before {
-        // usually browsers wont print background colors by default,
-        // by using an svg image we enforce the colors will be replicated on print
-        content: url('/assets/images/skill-bg.svg');
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 0;
-      }
-
-      .skillName {
-        flex: 1;
-        font-weight: 300;
-        z-index: 1;
-        position: relative;
-      }
-
-      .skillLevel {
-        font-weight: 300;
-        text-align: right;
-        display: inline-block;
-        z-index: 1;
-        position: relative;
-        opacity: 0.5;
-      }
-    }
-  }
-
-  .languages {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    font-family: Lato, sans-serif;
-
-    > li {
-      margin-bottom: 0.5mm;
-
-      .languageName {
-        font-weight: 700;
-      }
-
-      .languageLevel {
-        color: #666666;
-      }
     }
   }
 
@@ -394,10 +128,6 @@ const { resume } = Astro.props;
 
     .sheet {
       padding: 0 12mm;
-    }
-
-    table.companyInfo {
-      page-break-inside: avoid;
     }
   }
 

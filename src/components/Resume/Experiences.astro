@@ -1,0 +1,109 @@
+---
+import Section from 'src/components/Resume/Section.astro';
+import type { ExperienceType } from 'src/content/resume.yml';
+
+type Props = {
+  experiences: ExperienceType[];
+};
+
+const { experiences } = Astro.props;
+---
+
+<Section title="Experience">
+  {
+    experiences.map((job) => (
+      <div class="experience">
+        <div class="companyInfo">
+          {/*
+            job.logo && false
+            // <div class="companyLogo">
+            //   <img src={`/assets/logos/${job.logo}`} />
+            // </div>
+            */}
+
+          <div class="companyRole">
+            <div>
+              <span class="font-bold">{job.company}</span>
+              <span class="font-light text-gray">
+                {' — '} {job.location}
+              </span>
+            </div>
+
+            {job.positions?.map((role) => (
+              <div class="font-bold">{role.position}</div>
+            ))}
+          </div>
+
+          <div class="timeline">
+            <div class="duration">{job.duration}</div>
+            {job.positions?.map((role) => (
+              <div class="font-light">{role.date}</div>
+            ))}
+          </div>
+        </div>
+        {job.summary && <p class="mt-0 mb-[1mm] text-base">{job.summary}</p>}
+        {job.tags && (
+          <p>
+            <span class="font-bold font-sans">Tech Stack:&nbsp;</span>
+            {job.tags}
+          </p>
+        )}
+      </div>
+    ))
+  }
+</Section>
+
+<style lang="scss">
+  .companyInfo {
+    width: 100%;
+    font-family: Lato, sans-serif;
+    border-spacing: 0;
+    margin-bottom: 3mm;
+    display: flex;
+    gap: 3mm;
+
+    .companyLogo {
+      width: 8.6mm;
+    }
+    justify-content: space-between;
+
+    .timeline {
+      flex: 1;
+      text-align: right;
+      padding: 0;
+      color: #666666;
+      font-weight: 400;
+    }
+  }
+
+  .experience {
+    margin-bottom: 7mm;
+    break-inside: avoid;
+
+    &:last-child {
+      margin-bottom: 0;
+
+      .companyInfo {
+        margin-bottom: 0;
+      }
+    }
+
+    p {
+      font-family: Lora, serif;
+      margin: 0 0 2mm;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // -----------------------------------
+  // PRINT
+  // -----------------------------------
+  @media print {
+    .companyInfo {
+      page-break-inside: avoid;
+    }
+  }
+</style>
