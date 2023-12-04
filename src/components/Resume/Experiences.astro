@@ -10,47 +10,52 @@ const { experiences } = Astro.props;
 ---
 
 <Section title="Experience">
-  {
-    experiences.map((job) => (
-      <div class="experience">
-        <div class="companyInfo">
-          {/*
+  <div class="flex flex-col break-inside-avoid gap-[7mm]">
+    {
+      experiences.map((job) => (
+        <div class="experience">
+          <div class="companyInfo">
+            {/*
             job.logo && false
             // <div class="companyLogo">
             //   <img src={`/assets/logos/${job.logo}`} />
             // </div>
             */}
 
-          <div class="companyRole">
-            <div>
-              <span class="font-bold">{job.company}</span>
-              <span class="font-light text-gray">
-                {' — '} {job.location}
-              </span>
+            <div class="companyRole">
+              <div>
+                <span class="font-bold">{job.company}</span>
+                <span class="font-light text-gray">
+                  {' — '} {job.location}
+                </span>
+              </div>
+
+              {job.positions?.map((role) => (
+                <div class="font-bold">{role.position}</div>
+              ))}
             </div>
 
-            {job.positions?.map((role) => (
-              <div class="font-bold">{role.position}</div>
-            ))}
+            <div class="timeline">
+              <div class="duration">{job.duration}</div>
+              {job.positions?.map((role) => (
+                <div class="font-light">{role.date}</div>
+              ))}
+            </div>
           </div>
 
-          <div class="timeline">
-            <div class="duration">{job.duration}</div>
-            {job.positions?.map((role) => (
-              <div class="font-light">{role.date}</div>
-            ))}
+          <div class="flex font-serif flex-col gap-[2mm]">
+            {job.summary && <p class="m-0 text-base">{job.summary}</p>}
+            {job.tags && (
+              <p class="m-0">
+                <span class="font-bold font-sans">Tech Stack:&nbsp;</span>
+                {job.tags}
+              </p>
+            )}
           </div>
         </div>
-        {job.summary && <p class="mt-0 mb-[1mm] text-base">{job.summary}</p>}
-        {job.tags && (
-          <p>
-            <span class="font-bold font-sans">Tech Stack:&nbsp;</span>
-            {job.tags}
-          </p>
-        )}
-      </div>
-    ))
-  }
+      ))
+    }
+  </div>
 </Section>
 
 <style lang="scss">
@@ -73,28 +78,6 @@ const { experiences } = Astro.props;
       padding: 0;
       color: #666666;
       font-weight: 400;
-    }
-  }
-
-  .experience {
-    margin-bottom: 7mm;
-    break-inside: avoid;
-
-    &:last-child {
-      margin-bottom: 0;
-
-      .companyInfo {
-        margin-bottom: 0;
-      }
-    }
-
-    p {
-      font-family: Lora, serif;
-      margin: 0 0 2mm;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
     }
   }
 

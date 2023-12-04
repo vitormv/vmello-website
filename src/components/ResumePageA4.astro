@@ -46,7 +46,7 @@ const { resume } = Astro.props;
     </header>
 
     <main class="flex flex-1 gap-[7mm]">
-      <aside class="basis-[55.5mm]">
+      <aside class="flex basis-[55.5mm] flex-col gap-[7mm]">
         <Section title="Hello">
           <div class="flex flex-col gap-[16px]">
             {resume.summary.map((item) => <p class="m-0 p-0">{item}</p>)}
