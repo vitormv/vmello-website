@@ -9,8 +9,8 @@ summary:
   - Currently I focus more on the frontend side, with strong skills in Typescript, React (Redux
     and Sagas), Node (NestJS & Next.js) and GraphQL.
 
-  - "Outside work, I love snowboarding, running, video games and teaching my dog new tricks.
-    Fun fact: I coded my first website (about Dragon Ball Z) when I was a 14 years old."
+  - 'Outside work, I love snowboarding, running, video games and teaching my dog new tricks.
+    Fun fact: I coded my first website (about Dragon Ball Z) when I was a 14 years old.'
 
 links:
   - name: vitor@vmello.com
@@ -32,6 +32,17 @@ education:
     years: 2005 - 2009
 
 work:
+  - company: Moss GmbH
+    logo: choco.jpg
+    location: Berlin, Germany
+    duration: ~
+    positions:
+      - position: Senior Software Engineer (Frontend)
+        date: Oct 2023 - Present
+    summary: ~
+    tags: >
+      typescript, react, spa, micro-frontends, graphql, testing-library
+
   - company: Choco
     logo: choco.jpg
     location: Berlin, Germany
@@ -40,7 +51,7 @@ work:
       - position: Senior Software Engineer (Frontend)
         date: Jan 2022 - Jul 2023
     summary: >
-      Greatly increased developer satisfaction with auto-generated apollo mocks for tests
+      Greatly increased developer productivity with auto-generated apollo mocks for tests
       • Promoting best practices in FE development and testing
       • Created tool for easily overriding feature flags during development/cypress tests
       • Mentoring two junior FE developers
@@ -53,9 +64,9 @@ work:
     location: Berlin, Germany
     duration: 2 years 1 month
     positions:
-      - position: Head of Engineering
+      - position: Engineering Lead (Full-Stack)
         date: Feb 2021 - Nov 2021
-      - position: Senior Software Engineer (Frontend)
+      - position: Senior Software Engineer (Full-Stack)
         date: Nov 2019 - Jan 2021
     summary: >
       Reimplemented the existing blog in Next.js, making the static export time 10x faster
@@ -102,11 +113,6 @@ work:
     positions:
       - position: Senior Software Engineer (PHP)
         date: Jun 2013 - Dec 2015
-    summary: >
-      Development of new features for the frontend and backend with a focus on scalability and performance
-      • Running load tests with jMeter and finding bottlenecks and points of improvement in the application
-      • Integration with external payment gateways around the world
-      • Integration with external restaurant systems and APIs for seamless order dispatching
 
 skills:
   - name: Typescript

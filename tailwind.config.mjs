@@ -22,6 +22,18 @@ export default {
             sans: ['Biotif', 'system-ui'],
             serif: ['Bogart', 'Georgia'],
             display: ['Bogart', 'serif'],
+            hero: ['Bogart', 'serif'],
+          },
+          fontSize: {
+            sm: '0.875rem',
+            base: '1rem',
+            xl: '1.12rem',
+            '2xl': '1.5rem',
+            '3xl': '1.875rem',
+          },
+          lineHeight: {
+            normal: '1.5',
+            12: '3rem',
           },
           colors: {
             transparent: 'transparent',
