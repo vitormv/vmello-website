@@ -32,16 +32,16 @@ education:
     years: 2005 - 2009
 
 work:
-  - company: Moss GmbH
-    logo: choco.jpg
+  - company: Nelly Solutions GmbH
+    logo: nelly.jpg
     location: Berlin, Germany
-    duration: ~
+    duration: '—'
     positions:
-      - position: Senior Software Engineer (Frontend)
-        date: Oct 2023 - Present
+      - position: Senior Full-Stack Engineer
+        date: May 2024 - Present
     summary: ~
     tags: >
-      typescript, react, RTL, design-system
+      typescript, react, nextjs, fastify, postgres, aws, docker
 
   - company: Choco
     logo: choco.jpg
